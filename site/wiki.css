@@ -368,17 +368,24 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
 .stamp-frame {
   container-type: inline-size;
 }
-.hero .frame, .plan .frame, .sec2 .frame { overflow-x: auto; }
+/* Every frame scrolls sideways, because the floor below means a wide plate can
+   now be wider than the column it sits in. A picture that runs off the edge
+   can be pushed back into view; one shrunk to grey noise cannot. */
+.frame, .stamp-frame { overflow-x: auto; }
 
-/* The rule. --cols is carried per plate in the markup. */
+/* The rule. --cols is carried per plate in the markup.
+   The floor is 9px: below that a monospace grid stops being a drawing and
+   becomes texture. A 156-column band on a 390px phone would compute to about
+   3px without it, so it holds at 9px and the frame scrolls instead. */
 @supports (font-size: round(down, 1px, 1px)) {
   pre.autostep, .autostep {
-    font-size: round(down, calc(100cqi / (var(--cols) * 0.6)), 1px);
+    font-size: max(round(down, calc(100cqi / (var(--cols) * 0.6)), 1px), 9px);
   }
   /* a single face panel or a small crop must not balloon to fill a monitor:
      plans cap at 20px, and the frame is left-aligned at its natural width */
   .plan pre.autostep {
-    font-size: min(round(down, calc(100cqi / (var(--cols) * 0.6)), 1px), 20px);
+    font-size: clamp(9px,
+      round(down, calc(100cqi / (var(--cols) * 0.6)), 1px), 20px);
   }
 }
 
@@ -910,15 +917,48 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
 }
 .forecast .margin-cell { border-bottom: 1px solid var(--hair); }
 
-/* --- plan (the map crop) ------------------------------------------------- */
+/* --- plan (the map crop) -------------------------------------------------
+   The drawing and its key are one instrument: a number in the net is only a
+   number until the key beside it says whose number it is. On the map sheet
+   the key stands in the same row as the plan; on the front it falls under
+   the crop in three columns. */
 .plan { border-top: 1px solid var(--hair); padding: var(--line) 0; }
-.plan .plain-list {
+.plan-key { padding-top: var(--line); }
+.plan-key h3 { margin: 0 0 calc(var(--line) / 4) 0; }
+.plan-key-list {
   columns: 3;
   column-gap: 3ch;
   font-size: var(--step-tiny);
-  padding-top: var(--line);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.plan .plain-list li { break-inside: avoid; }
+.plan-key-list li { break-inside: avoid; }
+.plan-key-list a {
+  display: flex;
+  gap: 1ch;
+  border-bottom: 0;
+  color: var(--body);
+}
+.plan-key-list a:hover { color: var(--ink); }
+.plan-key-list .no {
+  color: var(--small);
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 960px) {
+  .plan--beside {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22ch, 34ch);
+    column-gap: 3ch;
+    align-items: start;
+  }
+  .plan--beside .eyebrow { grid-column: 1 / -1; }
+  .plan--beside .figcap { grid-column: 1 / -1; }
+  .plan--beside .plan-key { padding-top: 0; }
+  .plan--beside .plan-key-list { columns: 2; }
+}
 
 /* --- gazetteer-table (OP-18, Ordnance Survey index) ---------------------- */
 .gazetteer-table { border-top: 1px solid var(--hair); padding: var(--line) 0; }
@@ -1128,25 +1168,59 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
   padding-block: calc(var(--line) / 2) var(--line);
 }
 .entry .standfirst { font-family: var(--sans); color: var(--body); max-width: var(--measure); }
-.record-fields {
-  display: grid;
-  grid-template-columns: 16ch 1fr;
+/* The infobox: the record's fields, boxed in the aside under the small map.
+   What a reader asks first stands at the top in full weight; the identifier
+   and the date the sheet was set down fall to a small footer, because they
+   are provenance and not description. */
+.infobox {
+  border: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 1ch;
+  margin-top: var(--line);
   font-size: var(--step-small);
-  margin: var(--line) 0;
 }
-.record-fields dt {
+.infobox .eyebrow { margin-bottom: calc(var(--line) / 4); }
+.infobox dl {
+  display: grid;
+  grid-template-columns: 10ch 1fr;
+  margin: 0;
+}
+.infobox dt {
   color: var(--small);
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .06em;
   border-bottom: 1px solid var(--hair);
   padding: calc(var(--line) / 4) 1ch calc(var(--line) / 4) 0;
 }
-.record-fields dd {
+.infobox dd {
   margin: 0;
   color: var(--ink);
   border-bottom: 1px solid var(--hair);
   padding: calc(var(--line) / 4) 0;
+  overflow-wrap: anywhere;
 }
+.infobox-foot {
+  margin-top: calc(var(--line) / 2);
+  font-size: var(--step-tiny);
+}
+.infobox-foot dt, .infobox-foot dd { border-bottom: 0; color: var(--small); }
+
+/* See also: four doors per reason, the reason set as a label beside them. */
+.see-also .also-row {
+  display: grid;
+  grid-template-columns: 18ch 1fr;
+  column-gap: 1ch;
+  border-top: 1px solid var(--hair);
+  padding: calc(var(--line) / 4) 0;
+  font-size: var(--step-small);
+}
+.see-also .also-row:first-of-type { border-top: 0; }
+.see-also .also-why {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: var(--step-tiny);
+}
+
 .entry-block { border-top: 1px solid var(--hair); padding: var(--line) 0; }
 .entry-block h2 {
   color: var(--small);
@@ -1378,3 +1452,27 @@ body:has(#canon-only:checked) .card[data-status="draft"] { display: none; }
   .taxo-row { grid-template-columns: 1fr; }
   .band-head { gap: 0 1ch; }
 }
+
+/* --- the dated run (a day inside a month band) ---------------------------
+   A month is a heading, a day is a rule with a count on it, and a beat under
+   that rule carries only its hour. Without this the same date printed 117
+   times reads as one repeated stamp and the year loses its shape. */
+.day-run + .day-run { margin-top: var(--line); }
+.day-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2ch;
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: calc(var(--line) / 4);
+  margin-bottom: calc(var(--line) / 2);
+  font-size: var(--step-tiny);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.day-head .day-date a { color: var(--ink); }
+.day-head .day-count { color: var(--small); }
+
+/* The random door sits at the end of the index strip and changes with the
+   date, so a reader who has run out of questions still has one left. */
+.index-strip .random-door .no { color: var(--small); }
