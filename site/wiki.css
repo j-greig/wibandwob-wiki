@@ -1734,6 +1734,69 @@ a.wordmark-link:hover pre.plate { color: var(--lead); }
   .field-notes dt { padding-top: 0; }
 }
 
+/* ----------------------------------------------------------------- the tales
+   The third register, and the only one written from outside. It sits under
+   the hand-written panel and is marked differently on purpose: a single rule
+   rather than a double one, the words indented behind a bar, and a label that
+   names the docket. Nothing here is edited, so the type says quoted. */
+.tales-panel { border-top: 1px solid var(--hair); }
+.tale-note {
+  color: var(--small);
+  font-size: var(--step-tiny);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin: calc(var(--line) / -2) 0 var(--line) 0;
+}
+.tale-label {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: var(--step-small);
+  letter-spacing: .04em;
+  margin-bottom: calc(var(--line) / 4);
+}
+.tale-badge {
+  border: 1px solid var(--hair);
+  color: var(--small);
+  font-size: var(--step-tiny);
+  letter-spacing: .12em;
+  padding: 0 .6ch;
+  margin-left: 1ch;
+}
+.tale-doc + .tale-doc {
+  border-top: 1px solid var(--hair);
+  margin-top: var(--line);
+  padding-top: var(--line);
+}
+.tale-doc h3 { font-size: var(--step-title); margin-bottom: calc(var(--line) / 2); }
+.tale-doc h4 {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: var(--step-tiny);
+  margin: var(--line) 0 calc(var(--line) / 4) 0;
+}
+/* The bar is the quotation mark: everything to the right of it is somebody
+   else's sentence, printed as they set it down. */
+.tale-prose {
+  border-left: 2px solid var(--hair);
+  padding-left: 2ch;
+  color: var(--body);
+}
+.tale-prose p { margin-bottom: calc(var(--line) / 2); }
+.tale-prov {
+  color: var(--small);
+  font-size: var(--step-small);
+  margin-top: calc(var(--line) / 2);
+}
+.tale-list .row { grid-template-columns: 1fr 14ch; }
+.tale-list .row .docket {
+  color: var(--lead);
+  font-family: var(--mono);
+  font-size: var(--step-small);
+  text-align: right;
+}
+.tale-list .row .sh { grid-column: 1 / -1; }
+
 /* ------------------------------------------------------- the biome portal
    An area opens with its field notes and its cast, before its own record
    fields. Six boxed cells, one per measure, so an unwritten measure is a
@@ -1813,4 +1876,88 @@ pre.ladder a { white-space: pre; }
 @media (max-width: 480px) {
   .biome-cells { grid-template-columns: 1fr; }
   .cast-chip { min-width: 100%; }
+}
+
+
+/* --------------------------------------------------------------------------
+   9  THE DOCUMENT NEVER SCROLLS SIDEWAYS
+
+   The font floor in section 4 means a plate may be wider than the column it
+   stands in, and that is the intent: a picture that runs off the edge can be
+   pushed back into view. What must never happen is the page itself carrying
+   that width, because then the prose scrolls too and a phone reader loses the
+   left margin of every line.
+
+   So: every container that holds a drawing is its own scroll box, every child
+   of a grid may shrink below its content, and no `pre` is ever allowed to set
+   the width of the document. This block is last in the file on purpose, so it
+   settles any earlier rule of the same weight.
+   -------------------------------------------------------------------------- */
+
+/* The last half-pixel: a word broken mid-letter lands on a fraction of a
+   cell, and the document rounds that up into a scrollbar. The page box takes
+   the fraction. `clip` and not `hidden`, so nothing here becomes a scroll box
+   and the sticky index strip goes on working. */
+.page { overflow-x: clip; }
+
+.frame,
+.stamp-frame,
+.minimap-frame,
+.plate-cell {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+}
+/* A gallery cell crops rather than scrolls, and that is settled where the
+   cell is defined; it keeps its own overflow. */
+.card-grid .stamp-frame { overflow: hidden; }
+
+/* Grid and flex children carry an automatic minimum equal to their content,
+   which is how one wide row used to widen every row beside it. */
+.page > *,
+.page > * > *,
+main.contents > *,
+.entry > *,
+.entry-block > *,
+.sec2 > *,
+.marginalia > *,
+.card-grid > *,
+.biome-cells > *,
+.cast-strip > * { min-width: 0; }
+
+pre,
+pre.plate,
+pre.worldmap,
+pre.minimap,
+pre.ladder,
+pre.lore-art { max-width: 100%; }
+
+/* Narrow windows: any band that reasons in fixed character columns folds to
+   one, so nothing measured in `ch` can outrun a 390px screen. */
+@media (max-width: 959px) {
+  .masthead { grid-template-columns: 1fr; }
+  .masthead .ear,
+  .masthead .ear--right { text-align: left; }
+  .marginalia { grid-template-columns: 1fr; }
+  .marginalia > div { padding-right: 0; }
+  .cast-chip { min-width: 0; }
+}
+@media (max-width: 640px) {
+  .taxo-row,
+  .field-notes dl { grid-template-columns: 1fr; }
+}
+
+/* Prose, headings, kickers and summaries carry world slugs with no spaces in
+   them, so a narrow column is allowed to break inside a word rather than let
+   one name set the width of the page. A drawing is exempt: it breaks nowhere. */
+body { overflow-wrap: anywhere; }
+pre, pre * , .cite, code { overflow-wrap: normal; }
+
+/* A table of relations is wider than a phone and stays a table, so it scrolls
+   in its own box. */
+.entry-block table,
+table.cast {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
 }

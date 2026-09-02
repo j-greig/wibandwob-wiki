@@ -3906,6 +3906,12 @@
   "line": "89 hand-written documents, 23 unrecorded"
  },
  {
+  "path": "tales/index.html",
+  "title": "Tales",
+  "kicker": "Tales",
+  "line": "1 tales, 0 with a docket"
+ },
+ {
   "path": "map/ladder.html",
   "title": "The Ladder",
   "kicker": "Map",
