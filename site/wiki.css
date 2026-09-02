@@ -1153,6 +1153,49 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
 .backlinks li { font-size: var(--step-small); }
 .plate-aside { padding-top: var(--line); }
 
+/* The chronicle: a date column against a left rule, one beat per happening,
+   hairlines between them. The dates are fixed at 12ch so every summary starts
+   on the same column down the page. */
+.chronicle {
+  display: grid;
+  grid-template-columns: 12ch 1fr;
+  column-gap: calc(var(--line) / 2);
+  border-left: 1px solid var(--hair);
+  padding-left: calc(var(--line) / 2);
+}
+.chronicle > * {
+  border-top: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 0;
+}
+.chronicle > :nth-child(1),
+.chronicle > :nth-child(2) { border-top: 0; padding-top: 0; }
+.chronicle .docket {
+  color: var(--small);
+  font-size: var(--step-tiny);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.chronicle .beat-body,
+.chronicle .beat-route { font-size: var(--step-small); color: var(--lead); }
+.chronicle .beat-body,
+.chronicle .beat-route,
+.chronicle .beat-foot { margin-top: calc(var(--line) / 4); }
+.chronicle .beat-foot {
+  font-size: var(--step-tiny);
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.chronicle .beat-more { white-space: nowrap; }
+
+/* The small cube. It scales to the width of the column it sits in, so its
+   marks stay one cell wide however narrow the page gets. */
+.minimap-frame { container-type: inline-size; overflow-x: auto; }
+pre.minimap { color: var(--lead); }
+pre.minimap a { color: var(--ink); border-bottom: 0; }
+pre.minimap a:hover { border-bottom: 0; color: var(--small); }
+.minimap-legend { margin-top: calc(var(--line) / 4); }
+
 
 /* --------------------------------------------------------------------------
    6  MOTION
