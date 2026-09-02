@@ -534,18 +534,23 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
 
 /* --- skybox (OP-02), a scroll-driven ticker ------------------------------ */
 .skybox {
-  height: calc(var(--line) * 3);
   overflow: hidden;
   border-bottom: 1px solid var(--hair);
 }
 .skybox .run {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
 }
 .skybox .run > * {
   padding: calc(var(--line) / 2) 1ch;
   font-size: var(--step-small);
+  min-width: 0;
+}
+.skybox .hook {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .skybox .run > * + * { border-left: 1px solid var(--hair); }
 .skybox .label {
@@ -623,9 +628,9 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
 .card {
   container-type: inline-size;
   container-name: card;
-  border: 1px solid var(--hair);
-  padding: calc(var(--line) / 2) 1ch var(--line);
+  padding: calc(var(--line) / 2) 0 var(--line);
 }
+/* one frame per card: the picture cell carries it, the card itself has none */
 
 /* OP-12, cut-and-paste: alternate cards drop one whole line and shift one
    whole cell, so the row reads as pasted-up fragments. The offset is
@@ -1161,17 +1166,6 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
     @keyframes sky-run {
       from { transform: translateX(0); }
       to   { transform: translateX(-100%); }
-    }
-    .skybox {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 100%;
-    }
-    .skybox .run + .run { display: grid; }
-    .skybox .run {
-      animation: sky-run linear both;
-      animation-timeline: scroll(root block);
-      animation-range: 0 100%;
     }
   }
 
