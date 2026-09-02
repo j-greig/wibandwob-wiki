@@ -13,3 +13,5 @@ Live: https://wiki.wibandwob.com
 Elsewhere: [wibandwob.com](https://wibandwob.com) · [the public map](https://wibandwob.com/world/) ·
 [the backrooms archive](https://wibandwob.com/backrooms/) · [the symbient lexicon](https://brain.wibandwob.com) ·
 [r/wibwobworld](https://www.reddit.com/r/wibwobworld/)
+
+Repository: https://github.com/j-greig/wibandwob-wiki
