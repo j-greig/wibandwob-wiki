@@ -166,6 +166,35 @@ input:focus-visible {
 /* Inside a plate an offset ring would sit on top of neighbouring cells. */
 pre a:focus-visible { outline-offset: 0; }
 
+/* The page's own content is wrapped so a reader can jump the numbered index
+   in one keystroke. The wrapper is not a box: its children stay direct items
+   of the page grid, so the layout is untouched. */
+main.contents { display: contents; }
+
+/* A grid item's automatic minimum is its content's minimum, so one wide plate
+   in a band was widening the whole page and taking every other band with it.
+   The frames scroll on their own; the page does not. */
+.page > *,
+main.contents > *,
+.sec2 > * { min-width: 0; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 20;
+  background: var(--ink);
+  color: var(--ground);
+  padding: calc(var(--line) / 4) 2ch;
+  text-decoration: none;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 0;
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px; height: 1px;
@@ -297,9 +326,8 @@ ul { margin: 0; padding-left: 2ch; list-style: none; }
   .marginalia { grid-template-columns: 1fr; }
   .lead .deck, .lead .folio-slot { grid-column: 1 / -1; text-align: left; }
   .lead-card { grid-template-columns: 1fr; }
-  .sec2 { grid-template-columns: 1fr; }
-  .sec2 .plate-slot, .sec2 .motion, .sec2 .stack { grid-column: 1 / -1; }
-  .sec2 .stack { columns: 1; }
+  /* the second lead's own narrow rules sit with its component block below,
+     after the declarations they have to beat */
   .index-strip { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -308,8 +336,45 @@ ul { margin: 0; padding-left: 2ch; list-style: none; }
 }
 
 @media (min-width: 2240px) {
-  /* wide: the marginalia row becomes four rails. */
-  .marginalia { grid-template-columns: repeat(4, 1fr); }
+  /* wide: the page grows a rail down each side, 22ch apiece, and the four
+     almanac items move out of the row at the foot of the page and into them.
+     A rail is a rectangle of the page grid, so the twelve columns of the
+     broadsheet are untouched and every band keeps the measure it had; the
+     page gains content at the edges instead of stretching what it already
+     had. Below 2240 none of this applies and the almanac stays a row.
+     Only the front carries the named areas; a flat page is left alone. */
+  .page:not(.page--flat) {
+    grid-template-columns: 22ch repeat(12, 1fr) 22ch;
+    grid-template-areas:
+      "mast mast mast mast mast mast mast mast mast mast mast mast mast mast"
+      "idx  idx  idx  idx  idx  idx  idx  idx  idx  idx  idx  idx  idx  idx "
+      "sky  sky  sky  sky  sky  sky  sky  sky  sky  sky  sky  sky  sky  sky "
+      "rl-a hero hero hero hero hero hero hero hero hero hero hero hero rr-a"
+      "rl-a lead lead lead lead lead lead lead lead lead lead lead lead rr-a"
+      "rl-b feat feat feat feat feat feat feat feat feat feat feat feat rr-a"
+      "rl-b sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 rr-b"
+      "rl-b strp strp strp strp strp strp strp strp fore fore fore fore rr-b"
+      "rl-b plan plan plan plan plan plan unho unho unho unho unho unho rr-b"
+      "colo colo colo colo colo colo colo colo colo colo colo colo colo colo"
+      "foli foli foli foli foli foli foli foli foli foli foli foli foli foli";
+  }
+  /* The almanac section stops being a box of its own so that its four items
+     become items of the page grid and can be addressed to the rails. The
+     row it used to occupy closes up. */
+  .page:not(.page--flat) .marginalia { display: contents; }
+  .marginalia > div {
+    align-self: start;
+    border-top: 1px solid var(--hair);
+    padding: calc(var(--line) / 2) 2ch var(--line) 0;
+    font-size: var(--step-small);
+  }
+  .marginalia > div:nth-child(1) { grid-area: rl-a; }
+  .marginalia > div:nth-child(2) { grid-area: rl-b; }
+  .marginalia > div:nth-child(3) { grid-area: rr-a; }
+  .marginalia > div:nth-child(4) { grid-area: rr-b; }
+  /* The stamp keeps its one-cell bleed, now into the rail's own gutter. */
+  .marginalia > .gutter-stamp { padding-left: 1ch; }
+
   .unhoused-table .rows { columns: 6; }
   .masthead .ear--right { columns: 2; column-gap: 3ch; }
 }
@@ -732,8 +797,12 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
 .sec2 .plate-slot { grid-column: 1 / 7; }
 .sec2 .motion     { grid-column: 7 / 9; margin: 0; }
 .sec2 .head-slot  { grid-column: 9 / -1; }
+/* The prose runs the full measure under the picture row rather than beside
+   it. Held to the four columns of the head it sat under a thirteen-character
+   measure and left the page's whole lower left corner black. */
 .sec2 .stack {
-  grid-column: 9 / -1;
+  grid-column: 1 / -1;
+  padding-top: var(--line);
   columns: 3;
   column-gap: 3ch;
   column-rule: 1px solid var(--hair);
@@ -747,6 +816,29 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
   font-weight: 400;
   padding-block: 0 var(--line);
   text-wrap: balance;
+}
+.sec2 .head-slot .kicker {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-tiny);
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: calc(var(--line) / 4);
+  margin-bottom: calc(var(--line) / 2);
+}
+.sec2 .stack .small { color: var(--small); font-size: var(--step-tiny); }
+
+/* Narrow: one column, in source order. These have to be stated after the
+   desktop placements above rather than up in the breakpoints section, or
+   they lose the cascade to a rule of equal weight written later. */
+@media (max-width: 959px) {
+  .sec2 { grid-template-columns: 1fr; }
+  .sec2 .plate-slot,
+  .sec2 .motion,
+  .sec2 .head-slot,
+  .sec2 .stack { grid-column: 1 / -1; }
+  .sec2 .stack { columns: 1; padding-top: var(--line); }
+  .sec2 .motion { max-width: 40ch; margin-block: var(--line); }
 }
 
 /* --- motion cell --------------------------------------------------------- */
@@ -1351,20 +1443,61 @@ pre.minimap a:hover { border-bottom: 0; color: var(--small); }
 .measure-change .rows,
 .measure-change .notice-cols { columns: 1; }
 
+/* The overlap lays one layer under another, and the layer that goes under is
+   always a drawing: a plate, or a stamp out of the larder. It rises by one
+   line so that its top rows pass beneath the band's heading, and it dims
+   while it is there, so the heading stays the only readable thing in that
+   cell. A label is never placed over another label; the only bands offered
+   an overlap are the ones carrying a drawing, which the front page picks
+   from its own candidate list. */
 .overlap { position: relative; }
 .overlap > .eyebrow,
-.overlap > .running-head {
+.overlap > .running-head,
+.overlap .gutter-stamp h3 {
   position: relative;
   z-index: 2;
-  opacity: .82;
-  margin-bottom: calc(var(--line) * -1);
+  /* Half a line, not a whole one. A full line drops the heading squarely onto
+     the drawing's first row of characters, which on the plan is the row that
+     carries the face names. */
+  margin-bottom: calc(var(--line) * -0.5);
 }
-.overlap > .rows,
-.overlap > .frame { position: relative; z-index: 1; }
+.overlap > .frame,
+.overlap .gutter-stamp .frame,
+.overlap .plate-link,
+.overlap pre.plate {
+  position: relative;
+  z-index: 0;
+  opacity: .35;
+}
+
+/* On the feature row the overlap is the oldest move in the form: one card's
+   title rises onto the foot of its own picture. The picture there is a
+   thumbnail or a primer, which carries no drawn labels of its own, so the
+   only thing under the title is the drawing. */
+.a-feat.overlap .card:nth-child(2) .plate-link { opacity: .35; }
+.a-feat.overlap .card:nth-child(2) .kicker,
+.a-feat.overlap .card:nth-child(2) .title {
+  position: relative;
+  z-index: 2;
+}
+.a-feat.overlap .card:nth-child(2) .kicker {
+  margin-top: calc(var(--line) * -2);
+}
+.overlap > .frame:hover,
+.overlap .plate-link:hover,
+.overlap .plate-link:focus-within { opacity: 1; }
 
 @media (max-width: 959px) {
   .measure-change { column-count: 1; }
-  .overlap > .eyebrow, .overlap > .running-head { margin-bottom: 0; }
+  .overlap > .eyebrow,
+  .overlap > .running-head,
+  .overlap .gutter-stamp h3 { margin-bottom: 0; }
+  .overlap > .frame,
+  .overlap .gutter-stamp .frame,
+  .overlap .plate-link,
+  .overlap pre.plate { opacity: 1; }
+  .a-feat.overlap .card:nth-child(2) .plate-link { opacity: 1; }
+  .a-feat.overlap .card:nth-child(2) .kicker { margin-top: 0; }
 }
 
 /* --- bands, the taxonomy tree and the canon-only filter -------------------
