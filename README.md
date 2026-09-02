@@ -15,3 +15,4 @@ Elsewhere: [wibandwob.com](https://wibandwob.com) · [the public map](https://wi
 [r/wibwobworld](https://www.reddit.com/r/wibwobworld/)
 
 Repository: https://github.com/j-greig/wibandwob-wiki
+
