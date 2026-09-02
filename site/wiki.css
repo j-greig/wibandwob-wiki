@@ -621,6 +621,13 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
   text-align: right;
 }
 
+/* A picture cell is a link to the page its title links to; the hairline
+   brightens on hover so the whole plate reads as one door. */
+a.plate-link { display: block; color: inherit; text-decoration: none; }
+a.plate-link:hover .stamp-frame, a.plate-link:hover .plate-cell,
+a.plate-link:focus-visible .stamp-frame { border-color: var(--ink); }
+a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .15s; }
+
 /* --- card (OP-06 / OP-25) ------------------------------------------------ */
 /* A card restyles from its OWN width, not the viewport, so the same card
    works in a four-up feature row, a nine-up row on a large monitor, and a
