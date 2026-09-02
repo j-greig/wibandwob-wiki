@@ -11,6 +11,7 @@ lore/
 ├── biomes/    a place written up with its weather, sound, flora, fauna
 ├── places/    one file per row of LOCATIONS.md
 ├── beings/    a being the character folder does not already cover
+├── things/    an object, and the physics it runs on
 └── history/   the dated chronicle
 ```
 
@@ -39,11 +40,17 @@ are the field notes and only a biome normally carries them.
 | `## When` | history, dates, cycles, what recurs |
 | `## With` | relations stated in the files, one line each, cited |
 | `## Weather` `## Sound` `## Flora` `## Fauna` `## Altitude` `## Season` | the field notes |
+| `## Who lives here` | one being per line, `Name: note`, drawn as the cast strip |
+| `## Field notes` | the physics of a thing, drawn as a box at the top of its page |
 | `## Seam` | what is written here that the world has no row for |
 
 **Every line cites the file it came from, inline, in brackets.** A lore file is a
 compilation of what the corpus already says. New invention goes through the world
 lane and becomes a row; it does not enter here as an unsourced sentence.
+
+A biome file is what fills the six field notes at the top of a face page and of
+any place holding other places, and the first clause of its `## Weather` and
+`## Sound` is what the front page's forecast reads for that region.
 
 A file with `attaches_to: none` gets a page of its own carrying a "not yet on the
 record" badge, and is listed on the seams page. A file naming a record path that

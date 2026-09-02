@@ -3852,10 +3852,70 @@
   "line": "place, written by hand, not on the record"
  },
  {
+  "path": "lore/things/die-ii.html",
+  "title": "Die II",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/socket-eleven.html",
+  "title": "Socket Eleven",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/survey-return-208-a.html",
+  "title": "Survey Return 208-A",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/the-float-slip.html",
+  "title": "The Float Slip",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/the-floor-plan-booklet.html",
+  "title": "The Floor-Plan Booklet",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/the-interval-engine.html",
+  "title": "The Interval Engine",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/the-return-shaft.html",
+  "title": "The Return Shaft",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
+  "path": "lore/things/the-stamps.html",
+  "title": "The Stamps",
+  "kicker": "Lore",
+  "line": "thing, written by hand, not on the record"
+ },
+ {
   "path": "lore/index.html",
   "title": "Lore",
   "kicker": "Lore",
-  "line": "72 hand-written documents, 15 unrecorded"
+  "line": "89 hand-written documents, 23 unrecorded"
+ },
+ {
+  "path": "map/ladder.html",
+  "title": "The Ladder",
+  "kicker": "Map",
+  "line": "39 bands by altitude, +3,800 down to −890"
+ },
+ {
+  "path": "record/history.html",
+  "title": "History",
+  "kicker": "Record",
+  "line": "17 dated entries, by hand"
  },
  {
   "path": "record/seams.html",

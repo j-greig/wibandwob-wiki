@@ -89,3 +89,8 @@ garden, at Night Row Depot 4, Stop 9 · rack graveyard −0.2 · compost line �
 ## Season
 No season is stated. The cycle here is a daily one: Niff forages at twilight and
 checks the garden every dusk. [characters/niff.md]
+
+## Who lives here
+- The vent-moth: at the rack graveyard, Row C, with the 0400 draught. [research/world-census/LORE-DIGEST-2026-09-02.md]
+- The deprecated moths: wings showing fragments of old endpoint URLs, drawn to the hum. [characters/niff.md]
+- The cache beetles: small and iridescent, eating cached data gone stale. [characters/niff.md]
