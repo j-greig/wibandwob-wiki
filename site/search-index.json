@@ -3762,6 +3762,102 @@
   "line": "3 changes on 2026-09-02"
  },
  {
+  "path": "lore/beings/consultant-fluff.html",
+  "title": "Consultant Fluff",
+  "kicker": "Lore",
+  "line": "being, written by hand, not on the record"
+ },
+ {
+  "path": "lore/beings/frog-conductors.html",
+  "title": "Frog Conductors",
+  "kicker": "Lore",
+  "line": "being, written by hand, not on the record"
+ },
+ {
+  "path": "lore/beings/reg.html",
+  "title": "Reginald",
+  "kicker": "Lore",
+  "line": "being, written by hand, not on the record"
+ },
+ {
+  "path": "lore/beings/tsukumogami-fence-posts.html",
+  "title": "Tsukumogami Fence Posts",
+  "kicker": "Lore",
+  "line": "being, written by hand, not on the record"
+ },
+ {
+  "path": "lore/history/chronicle.html",
+  "title": "The dated chronicle",
+  "kicker": "Lore",
+  "line": "history, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/castle-forest-threshold.html",
+  "title": "Castle-Forest Threshold",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/castle-forest-threshold.frog-marsh.html",
+  "title": "Frog Conductors' Marsh",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/castle.gardens.anchor-beds.html",
+  "title": "The Anchor Beds",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/central-shore.html",
+  "title": "The Central Shore",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/null-coordinates.html",
+  "title": "Null Coordinates",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/outer-zones.html",
+  "title": "The Outer Zones",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/paradox-plateau.html",
+  "title": "Paradox Plateau",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/the-wastelands.copper-quorum.html",
+  "title": "The Copper Quorum",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/transitions.html",
+  "title": "The Transitions",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/places/transitions.the-refusal-chamber.html",
+  "title": "The Refusal Chamber",
+  "kicker": "Lore",
+  "line": "place, written by hand, not on the record"
+ },
+ {
+  "path": "lore/index.html",
+  "title": "Lore",
+  "kicker": "Lore",
+  "line": "72 hand-written documents, 15 unrecorded"
+ },
+ {
   "path": "record/seams.html",
   "title": "Seams",
   "kicker": "Register",

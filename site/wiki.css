@@ -1174,7 +1174,7 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
 
 /* --- entry (a gazetteer entry page) -------------------------------------- */
 .entry { border-top: 2px solid var(--hair); padding-top: var(--line); }
-.entry .title {
+.entry > .title {
   color: var(--ink);
   font-size: var(--step-head);
   line-height: 1.06;
@@ -1525,3 +1525,78 @@ a.wordmark-link:hover pre.plate { color: var(--lead); }
 
 /* A primer page prints every drawing in the file, each measured under it. */
 .entry-block .frame + .figcap { margin-bottom: var(--line); }
+
+/* ------------------------------------------------------------------ the lore
+   The hand-written layer sits inside an entry as a second register. It is
+   marked off by a double rule and a label, so a reader can see at a glance
+   which sentences the world set down and which a person did. Citations are
+   printed rather than hidden: the provenance is part of the reading. */
+.lore-panel { border-top: 3px double var(--hair); }
+.lore-label {
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: var(--step-tiny);
+  margin: calc(var(--line) / -2) 0 var(--line) 0;
+}
+.lore-label::before { content: "✎ "; }
+.lore-doc + .lore-doc {
+  border-top: 1px solid var(--hair);
+  margin-top: var(--line);
+  padding-top: var(--line);
+}
+.lore-doc h3 { font-size: var(--step-title); margin-bottom: calc(var(--line) / 2); }
+.lore-doc h4 {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: var(--step-tiny);
+  margin: var(--line) 0 calc(var(--line) / 4) 0;
+}
+.lore-doc h4:first-child { margin-top: 0; }
+.lore-doc p { margin-bottom: calc(var(--line) / 2); }
+.lore-doc ul { margin-bottom: calc(var(--line) / 2); }
+.lore-doc .cite {
+  color: var(--small);
+  font-size: var(--step-small);
+  white-space: nowrap;
+}
+.lore-doc .cite::before { content: "["; }
+.lore-doc .cite::after  { content: "]"; }
+.lore-doc pre.lore-art {
+  color: var(--lead);
+  font-size: var(--step-small);
+  overflow-x: auto;
+  margin-bottom: var(--line);
+}
+/* The six field notes: the biome read as a set of measures, not as prose. */
+.field-notes {
+  border: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 1ch;
+  margin: var(--line) 0;
+}
+.field-notes .eyebrow { margin-bottom: calc(var(--line) / 2); }
+.field-notes dl {
+  display: grid;
+  grid-template-columns: 10ch 1fr;
+  column-gap: 1ch;
+}
+.field-notes dt {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: var(--step-tiny);
+  padding-top: .35em;
+}
+.field-notes dd { margin: 0 0 calc(var(--line) / 2) 0; }
+.field-notes dd p { margin: 0 0 calc(var(--line) / 4) 0; }
+.lore-prov {
+  color: var(--small);
+  font-size: var(--step-small);
+  border-top: 1px solid var(--hair);
+  padding-top: calc(var(--line) / 4);
+}
+@media (max-width: 640px) {
+  .field-notes dl { grid-template-columns: 1fr; }
+  .field-notes dt { padding-top: 0; }
+}
