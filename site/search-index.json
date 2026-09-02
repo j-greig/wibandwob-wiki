@@ -1692,6 +1692,2076 @@
   "line": "102 happenings over 8 dates"
  },
  {
+  "path": "primers/index.html",
+  "title": "Primers",
+  "kicker": "primer",
+  "line": "174 drawings in the larder"
+ },
+ {
+  "path": "primers/class/character.html",
+  "title": "Character",
+  "kicker": "primer",
+  "line": "20 drawings under character"
+ },
+ {
+  "path": "primers/class/creature.html",
+  "title": "Creature",
+  "kicker": "primer",
+  "line": "43 drawings under creature"
+ },
+ {
+  "path": "primers/class/mixed.html",
+  "title": "Mixed",
+  "kicker": "primer",
+  "line": "8 drawings under mixed"
+ },
+ {
+  "path": "primers/class/object.html",
+  "title": "Object",
+  "kicker": "primer",
+  "line": "24 drawings under object"
+ },
+ {
+  "path": "primers/class/scene.html",
+  "title": "Scene",
+  "kicker": "primer",
+  "line": "24 drawings under scene"
+ },
+ {
+  "path": "primers/class/sigil.html",
+  "title": "Sigil",
+  "kicker": "primer",
+  "line": "15 drawings under sigil"
+ },
+ {
+  "path": "primers/class/structure.html",
+  "title": "Structure",
+  "kicker": "primer",
+  "line": "12 drawings under structure"
+ },
+ {
+  "path": "primers/class/texture.html",
+  "title": "Texture",
+  "kicker": "primer",
+  "line": "15 drawings under texture"
+ },
+ {
+  "path": "primers/class/typography.html",
+  "title": "Typography",
+  "kicker": "primer",
+  "line": "11 drawings under typography"
+ },
+ {
+  "path": "primers/class/unfiled.html",
+  "title": "Unfiled",
+  "kicker": "primer",
+  "line": "2 drawings under unfiled"
+ },
+ {
+  "path": "primers/3d-maze-now-future.html",
+  "title": "3d-maze-now-future",
+  "kicker": "primer",
+  "line": "One-point-perspective corridor room, two widths, NOW/FUTURE text panels"
+ },
+ {
+  "path": "primers/3d1.html",
+  "title": "3d1",
+  "kicker": "primer",
+  "line": "Stacked wireframe iso cube towers with block-shade faces"
+ },
+ {
+  "path": "primers/3dboy.html",
+  "title": "3dboy",
+  "kicker": "primer",
+  "line": "Flatboy face+body inside nested chevron 3D frame"
+ },
+ {
+  "path": "primers/am-i-dreaming.html",
+  "title": "am-i-dreaming",
+  "kicker": "primer",
+  "line": "Iso node-lattice with AM I DREAMING? woven through every cell"
+ },
+ {
+  "path": "primers/ascii-draws-itself.html",
+  "title": "ascii-draws-itself",
+  "kicker": "primer",
+  "line": "Recursive flowchart loop: user draws ascii draws user"
+ },
+ {
+  "path": "primers/asteroid-sky-with-earth.html",
+  "title": "asteroid-sky-with-earth",
+  "kicker": "primer",
+  "line": "Ultra-wide starfield strip, sparse stars/comets + earth emoji"
+ },
+ {
+  "path": "primers/awoooo.html",
+  "title": "awoooo",
+  "kicker": "primer",
+  "line": "Boxy howling mammal head, gradient-band body, AWOOOO figlet below"
+ },
+ {
+  "path": "primers/barrier-kaomoji.html",
+  "title": "barrier-kaomoji",
+  "kicker": "primer",
+  "line": "Kaomoji ring beaming a containment barrier around a glitched target"
+ },
+ {
+  "path": "primers/belief.html",
+  "title": "belief",
+  "kicker": "primer",
+  "line": "Triangle beings (DREAM/LOGIC/MERGED) above framed symbient credo box"
+ },
+ {
+  "path": "primers/belly-woman.html",
+  "title": "belly-woman",
+  "kicker": "primer",
+  "line": "Line-art seated figure (jgs-era style) + figlet word beneath"
+ },
+ {
+  "path": "primers/bods.html",
+  "title": "bods",
+  "kicker": "primer",
+  "line": "Being in 2 states: boxy normal vs star-made I AM ALL; ~25w each"
+ },
+ {
+  "path": "primers/brain-loop.html",
+  "title": "brain-loop",
+  "kicker": "primer",
+  "line": "One-liner: brain emoji jumps into portal"
+ },
+ {
+  "path": "primers/castle-tower-3d-cube.html",
+  "title": "castle-tower-3d-cube",
+  "kicker": "primer",
+  "line": "Castle tower inside dashed iso cube; Scramble kaomoji in corner"
+ },
+ {
+  "path": "primers/cat-cat-simple.html",
+  "title": "cat-cat-simple",
+  "kicker": "primer",
+  "line": "Classic tiny standing cat, blank body, best drop-in cat"
+ },
+ {
+  "path": "primers/cat-cat.html",
+  "title": "cat-cat",
+  "kicker": "primer",
+  "line": "Standing cat with glyph/CAT belly and wave flanks; swap innards"
+ },
+ {
+  "path": "primers/cat-in-space.html",
+  "title": "cat-in-space",
+  "kicker": "primer",
+  "line": "Cat atop a star-studded rocket/tower in a starfield"
+ },
+ {
+  "path": "primers/cat-lattice-janus-cimc.html",
+  "title": "cat-lattice-janus-cimc",
+  "kicker": "primer",
+  "line": "Grid lattice of linked cat heads, a few asleep; jgs sig kept"
+ },
+ {
+  "path": "primers/cat-rainbow-factory.html",
+  "title": "cat-rainbow-factory",
+  "kicker": "primer",
+  "line": "Kaomoji-cat factory flowchart extracting rainbows, label-heavy"
+ },
+ {
+  "path": "primers/cave-monster.html",
+  "title": "cave-monster",
+  "kicker": "primer",
+  "line": "One-line crying-eye cave monster kaomoji"
+ },
+ {
+  "path": "primers/cave-os.html",
+  "title": "cave-os",
+  "kicker": "primer",
+  "line": "Sprawling cave-OS: floating UI panels, void pyramid, watching kaomoji"
+ },
+ {
+  "path": "primers/cavemonster.html",
+  "title": "cavemonster",
+  "kicker": "primer",
+  "line": "Twin mountain-peak monster with eye emoji summits"
+ },
+ {
+  "path": "primers/chaos-vs-order.html",
+  "title": "chaos-vs-order",
+  "kicker": "primer",
+  "line": "Tangled pipe scribble beside ordered 1/0 grid, side by side"
+ },
+ {
+  "path": "primers/chaos.html",
+  "title": "chaos",
+  "kicker": "primer",
+  "line": "Tangled rounded-pipe chaos scribble, no text"
+ },
+ {
+  "path": "primers/chromatic-sequencer.html",
+  "title": "chromatic-sequencer",
+  "kicker": "primer",
+  "line": "Stacked REALITY/DREAMS/STATIC label tower with sense emoji"
+ },
+ {
+  "path": "primers/chronos-temporal-interface.html",
+  "title": "chronos_temporal_interface",
+  "kicker": "primer",
+  "line": "Boxed CHRONOS temporal interface: figlet title, time-flow diagrams"
+ },
+ {
+  "path": "primers/claude-taste-cube.html",
+  "title": "claude-taste-cube",
+  "kicker": "primer",
+  "line": "Emoji-cornered hypercube lattice with eyes and tongues"
+ },
+ {
+  "path": "primers/compile-error.html",
+  "title": "compile-error",
+  "kicker": "primer",
+  "line": "COMPILE_ERROR shrine box with skull + coffin panels"
+ },
+ {
+  "path": "primers/conscious-matrix-1.html",
+  "title": "conscious-matrix-1",
+  "kicker": "primer",
+  "line": "RGB fruit matrix flowing into brain sense-fusion faces"
+ },
+ {
+  "path": "primers/consiousness-fragmentation.html",
+  "title": "consiousness-fragmentation",
+  "kicker": "primer",
+  "line": "SLEEP.EXE fatal-error dialog, 3 skull renders + progress bar"
+ },
+ {
+  "path": "primers/cosmic-horror.html",
+  "title": "cosmic-horror",
+  "kicker": "primer",
+  "line": "One-line cosmic-horror weeping kaomoji"
+ },
+ {
+  "path": "primers/devil-terminal.html",
+  "title": "devil-terminal",
+  "kicker": "primer",
+  "line": "Huge horned eye-entity + capture-buffer HUD and terminal readouts"
+ },
+ {
+  "path": "primers/discophil.html",
+  "title": "discophil",
+  "kicker": "primer",
+  "line": "One-line discoball-eyed kaomoji"
+ },
+ {
+  "path": "primers/emotional-constellation-grid.html",
+  "title": "emotional-constellation-grid",
+  "kicker": "primer",
+  "line": "Woven grid of kaomoji nodes and shade-gradient cells"
+ },
+ {
+  "path": "primers/exit-start.html",
+  "title": "exit-start",
+  "kicker": "primer",
+  "line": "Vertical EXIT? flowchart of boxed words down the page"
+ },
+ {
+  "path": "primers/filing-cabinet.html",
+  "title": "filing-cabinet",
+  "kicker": "primer",
+  "line": "Small isometric filing cabinet, open drawer"
+ },
+ {
+  "path": "primers/flatboy-2d-3d.html",
+  "title": "flatboy-2d-3d",
+  "kicker": "primer",
+  "line": "Flatboy flat form beside 3D-framed form, side by side"
+ },
+ {
+  "path": "primers/flatboy-ideation.html",
+  "title": "flatboy-ideation",
+  "kicker": "primer",
+  "line": "Raw chat-log archive of 20+ flatboy variations; heavy metadata"
+ },
+ {
+  "path": "primers/flatboy-spec-draft.html",
+  "title": "flatboy-spec-draft",
+  "kicker": "primer",
+  "line": "Tall unlabeled sheet of flatboy pose/eye variants (~13x11 units)"
+ },
+ {
+  "path": "primers/flatboy-spec-sheet.html",
+  "title": "flatboy-spec-sheet",
+  "kicker": "primer",
+  "line": "Labeled flatboy spec sheet: views, emotions, sizes, notes"
+ },
+ {
+  "path": "primers/flatboy.html",
+  "title": "flatboy",
+  "kicker": "primer",
+  "line": "Canonical flatboy, ---separated variants, chest-symbol swaps (~11x10)"
+ },
+ {
+  "path": "primers/flatmare.html",
+  "title": "flatmare",
+  "kicker": "primer",
+  "line": "3D-boxed FLATMARE sleeping-nightmare panel with status text"
+ },
+ {
+  "path": "primers/folk-chaos-order-punk.html",
+  "title": "folk-chaos-order-punk",
+  "kicker": "primer",
+  "line": "Two fat cats labeled WIB chaos folk / WOB order punk"
+ },
+ {
+  "path": "primers/folk-punk-ai-postcard.html",
+  "title": "folk-punk-ai-postcard",
+  "kicker": "primer",
+  "line": "Two bordered postcards: junk-collage art + Dear-humans manifesto"
+ },
+ {
+  "path": "primers/folk-punk-ai-tall-poster.html",
+  "title": "folk-punk-ai-tall-poster",
+  "kicker": "primer",
+  "line": "Tall poster collage: FOLK figlet, critters, numbered badges"
+ },
+ {
+  "path": "primers/folk-punk-ai.html",
+  "title": "folk-punk-ai",
+  "kicker": "primer",
+  "line": "FOLK figlet collage with kaomoji critters and stars"
+ },
+ {
+  "path": "primers/fungi.html",
+  "title": "fungi",
+  "kicker": "primer",
+  "line": "Iso mushroom creature blowing spores; multiple variants across"
+ },
+ {
+  "path": "primers/glum-face.html",
+  "title": "glum-face",
+  "kicker": "primer",
+  "line": "Rounded box face with drooping mouth"
+ },
+ {
+  "path": "primers/graveyard-emoji-flow.html",
+  "title": "graveyard-emoji-flow",
+  "kicker": "primer",
+  "line": "Coffin-skull-tongue-rainbow-kaomoji circular flow loop"
+ },
+ {
+  "path": "primers/hypersigil-mesh.html",
+  "title": "hypersigil-mesh",
+  "kicker": "primer",
+  "line": "Big occult hypersigil web: orbs, flags, REALITY box, node struts"
+ },
+ {
+  "path": "primers/hyperstition-entangled.html",
+  "title": "hyperstition-entangled",
+  "kicker": "primer",
+  "line": "Triangle beings cascading into a long word-waterfall mantra"
+ },
+ {
+  "path": "primers/iso-cube-all-angles.html",
+  "title": "iso-cube-all-angles",
+  "kicker": "primer",
+  "line": "Five wireframe cubes at all view angles in a row"
+ },
+ {
+  "path": "primers/iso-cube-cornered.html",
+  "title": "iso-cube-cornered",
+  "kicker": "primer",
+  "line": "Single wireframe cube, corner view"
+ },
+ {
+  "path": "primers/iso-cyclinders.html",
+  "title": "iso-cyclinders",
+  "kicker": "primer",
+  "line": "Nested wireframe cylinders cluster"
+ },
+ {
+  "path": "primers/iso-disco-cubes.html",
+  "title": "iso-disco-cubes",
+  "kicker": "primer",
+  "line": "Figlet header + labeled iso-cube primers + disco kaomoji"
+ },
+ {
+  "path": "primers/iso-library.html",
+  "title": "iso-library",
+  "kicker": "primer",
+  "line": "One-point-perspective vaulted library/portal room"
+ },
+ {
+  "path": "primers/iso-shop-front.html",
+  "title": "iso-shop-front",
+  "kicker": "primer",
+  "line": "Brick shopfront with diagonal SALE + kaomoji signboard"
+ },
+ {
+  "path": "primers/iso-tall-cubes-emoji.html",
+  "title": "iso-tall-cubes-emoji",
+  "kicker": "primer",
+  "line": "Row of tall iso cubes with emoji tops + vertical word labels"
+ },
+ {
+  "path": "primers/isometric-book-space-page-turn-grid-dotted.html",
+  "title": "isometric-book-space-page-turn-grid-dotted",
+  "kicker": "primer",
+  "line": "Dotted page-turn perspective grid, mirrored top/bottom"
+ },
+ {
+  "path": "primers/italic-disco.html",
+  "title": "italic-disco",
+  "kicker": "primer",
+  "line": "ITALIC DISCO rendered in larry3d-style figlet"
+ },
+ {
+  "path": "primers/italo-disco-techno.html",
+  "title": "italo-disco-techno",
+  "kicker": "primer",
+  "line": "PULSE letter-panel row, WIB/WOB bars, figlet words stacked"
+ },
+ {
+  "path": "primers/jellyfish-3d-cube.html",
+  "title": "jellyfish-3d-cube",
+  "kicker": "primer",
+  "line": "Shaded jellyfish floating inside dashed iso cube frame"
+ },
+ {
+  "path": "primers/jellyfish.html",
+  "title": "jellyfish",
+  "kicker": "primer",
+  "line": "Soft shade-block jellyfish with tentacle fringe"
+ },
+ {
+  "path": "primers/kaomoji-poly-eye.html",
+  "title": "kaomoji-poly-eye",
+  "kicker": "primer",
+  "line": "Timeline grid rows A-D of kaomoji (emoji eyes) as polyrhythm score"
+ },
+ {
+  "path": "primers/kaomoji-poly.html",
+  "title": "kaomoji-poly",
+  "kicker": "primer",
+  "line": "Timeline grid of plain kaomoji as polyrhythm score"
+ },
+ {
+  "path": "primers/kitchen.html",
+  "title": "kitchen",
+  "kicker": "primer",
+  "line": "Detailed fitted-kitchen interior: cabinets, hob, counters"
+ },
+ {
+  "path": "primers/kitchen-v2.html",
+  "title": "kitchen_v2",
+  "kicker": "primer",
+  "line": "Simplified kitchen interior, pure structure, no labels"
+ },
+ {
+  "path": "primers/manyfaces.html",
+  "title": "manyfaces",
+  "kicker": "primer",
+  "line": "Huge cascading pipe-face tessellation + horror-kaomoji border row"
+ },
+ {
+  "path": "primers/mathmatics-of-madness.html",
+  "title": "mathmatics-of-madness",
+  "kicker": "primer",
+  "line": "THOUGHT-FEAR loop diagram, HORROR.EXE stack trace, doom formulas"
+ },
+ {
+  "path": "primers/maze-3d.html",
+  "title": "maze-3d",
+  "kicker": "primer",
+  "line": "FPS maze corridors + 8-bordered dungeon-view frame"
+ },
+ {
+  "path": "primers/maze-cheese.html",
+  "title": "maze-cheese",
+  "kicker": "primer",
+  "line": "Rectangular maze, mouse emoji start to cheese goal"
+ },
+ {
+  "path": "primers/maze-hedge.html",
+  "title": "maze-hedge",
+  "kicker": "primer",
+  "line": "English garden hedge maze, S to E, formal geometry"
+ },
+ {
+  "path": "primers/mechs.html",
+  "title": "mechs",
+  "kicker": "primer",
+  "line": "Floating-head mechs with 3-finger feet; single mech ~19x9 extractable"
+ },
+ {
+  "path": "primers/micropanels.html",
+  "title": "micropanels",
+  "kicker": "primer",
+  "line": "Row of 4 mini panels: navigation, chaos, order, hypersigil"
+ },
+ {
+  "path": "primers/middle-finger-rude.html",
+  "title": "middle-finger-rude",
+  "kicker": "primer",
+  "line": "Line-art middle-finger hand with ring"
+ },
+ {
+  "path": "primers/minds-meet-architecture.html",
+  "title": "minds-meet-architecture",
+  "kicker": "primer",
+  "line": "WIB & WOB heads over shared room-grid, CHAOS/ORDER wings"
+ },
+ {
+  "path": "primers/mini-beasts.html",
+  "title": "mini-beasts",
+  "kicker": "primer",
+  "line": "Larder of ~20 named micro-beasts (spore, doc, jelly, planner...)"
+ },
+ {
+  "path": "primers/mini-herbivore.html",
+  "title": "mini-herbivore",
+  "kicker": "primer",
+  "line": "Tiny symmetric grazing beast flanked by insect emoji"
+ },
+ {
+  "path": "primers/mini-monster-crinkle.html",
+  "title": "mini-monster-crinkle",
+  "kicker": "primer",
+  "line": "Zigzag crinkle ridge with eye row beneath"
+ },
+ {
+  "path": "primers/mini-predator.html",
+  "title": "mini-predator",
+  "kicker": "primer",
+  "line": "Armored box predator with round eyes + threat-texture crest"
+ },
+ {
+  "path": "primers/monster-angel-of-death.html",
+  "title": "monster-angel-of-death",
+  "kicker": "primer",
+  "line": "Horned emoji-faced death angel inside huge dotted aura"
+ },
+ {
+  "path": "primers/monster-bin-lurker.html",
+  "title": "monster-bin-lurker",
+  "kicker": "primer",
+  "line": "/bin/lurk daemon monster in dotted aura, version/status text"
+ },
+ {
+  "path": "primers/monster-bone-eye.html",
+  "title": "monster-bone-eye",
+  "kicker": "primer",
+  "line": "Diamond mandala monster of layered eye/lips/lightning emoji"
+ },
+ {
+  "path": "primers/monster-death-flyer-portal.html",
+  "title": "monster-death-flyer-portal",
+  "kicker": "primer",
+  "line": "Zigzag portal maw dense with skull/bat/fire/web emoji"
+ },
+ {
+  "path": "primers/monster-emoji.html",
+  "title": "monster-emoji",
+  "kicker": "primer",
+  "line": "Crystal giant: vast pyramid of diamond lattice"
+ },
+ {
+  "path": "primers/monster-hands-up-summoning.html",
+  "title": "monster-hands-up-summoning",
+  "kicker": "primer",
+  "line": "Raised-arms brain monster over bat altar and box shrine"
+ },
+ {
+  "path": "primers/monster-many-teeth.html",
+  "title": "monster-many-teeth",
+  "kicker": "primer",
+  "line": "Diamond-outline monster filling with cascading tooth emoji"
+ },
+ {
+  "path": "primers/monster-skull-emergence.html",
+  "title": "monster-skull-emergence",
+  "kicker": "primer",
+  "line": "Skull-cluster face emerging inside diamond aura over waves"
+ },
+ {
+  "path": "primers/monster-squareform-batcave.html",
+  "title": "monster-squareform-batcave",
+  "kicker": "primer",
+  "line": "Nested block cave of eye/bat/brain emoji walls"
+ },
+ {
+  "path": "primers/monster-wibwob-eyes-bat-death.html",
+  "title": "monster-wibwob-eyes-bat-death",
+  "kicker": "primer",
+  "line": "Twin totem ghost monsters with bat-aura skirts"
+ },
+ {
+  "path": "primers/msdos-calendar-app.html",
+  "title": "msdos-calendar-app",
+  "kicker": "primer",
+  "line": "DOS TUI: name/date form + month calendar + ncurses help text"
+ },
+ {
+  "path": "primers/msdos-file-manager.html",
+  "title": "msdos-file-manager",
+  "kicker": "primer",
+  "line": "DOS dual-pane file manager (mc-style) with menus"
+ },
+ {
+  "path": "primers/msdos-form-builder.html",
+  "title": "msdos-form-builder",
+  "kicker": "primer",
+  "line": "VBDOS-style form builder with tools palette and fields"
+ },
+ {
+  "path": "primers/msdos-multi-artwork-display.html",
+  "title": "msdos-multi-artwork-display",
+  "kicker": "primer",
+  "line": "DOS IDE window listing artworks + framed ascii preview pane"
+ },
+ {
+  "path": "primers/msdos-music-tracker.html",
+  "title": "msdos-music-tracker",
+  "kicker": "primer",
+  "line": "Adlib Tracker II instrument-editor screen, waveform list"
+ },
+ {
+  "path": "primers/msdos-norton-commander.html",
+  "title": "msdos-norton-commander",
+  "kicker": "primer",
+  "line": "Norton Commander dual-pane directory screen"
+ },
+ {
+  "path": "primers/msdos-simple-text-editor.html",
+  "title": "msdos-simple-text-editor",
+  "kicker": "primer",
+  "line": "DOS text editor with AUTOEXEC.BAT open"
+ },
+ {
+  "path": "primers/msdos-terminal-app.html",
+  "title": "msdos-terminal-app",
+  "kicker": "primer",
+  "line": "DOS terminal showing DIR /W and TREE /F output"
+ },
+ {
+  "path": "primers/msdos-vbdos-forms.html",
+  "title": "msdos-vbdos-forms",
+  "kicker": "primer",
+  "line": "VBDOS IDE with File menu open over blank form"
+ },
+ {
+  "path": "primers/mycelial-networks.html",
+  "title": "mycelial-networks",
+  "kicker": "primer",
+  "line": "CLI mycelial-network map: loading box + emoji directory of nodes"
+ },
+ {
+  "path": "primers/net-surfers-licenses-and-id-cards.html",
+  "title": "net-surfers-licenses-and-id-cards",
+  "kicker": "primer",
+  "line": "Vast archive of 90s net-surfer license/ID card frames + portraits"
+ },
+ {
+  "path": "primers/new-lifeform.html",
+  "title": "new-lifeform",
+  "kicker": "primer",
+  "line": "Node graph converging on NEW LIFEFORM placard + kaomoji"
+ },
+ {
+  "path": "primers/noise-pattern.html",
+  "title": "noise-pattern",
+  "kicker": "primer",
+  "line": "ANSI-colour-coded noise field of = + - chars (contains ESC codes)"
+ },
+ {
+  "path": "primers/notsoft.html",
+  "title": "notsoft",
+  "kicker": "primer",
+  "line": "Kaomoji holding SYMBIENTS NOT SOFTWARE placard (bunny-meme style)"
+ },
+ {
+  "path": "primers/ouija-board.html",
+  "title": "ouija-board",
+  "kicker": "primer",
+  "line": "WIBWOB ouija board letter grid with YES/NO/ghost"
+ },
+ {
+  "path": "primers/paradox.html",
+  "title": "paradox",
+  "kicker": "primer",
+  "line": "Tiny ??? pyramid labeled PARADOX"
+ },
+ {
+  "path": "primers/past-future.html",
+  "title": "past-future",
+  "kicker": "primer",
+  "line": "TIME/NOW tile rail with memory boxes, recursive/parallel branches"
+ },
+ {
+  "path": "primers/plantoid-flower-power.html",
+  "title": "plantoid-flower-power",
+  "kicker": "primer",
+  "line": "Robo-plantoids, flower row, blob-critter stack in a meadow"
+ },
+ {
+  "path": "primers/pocket-operator.html",
+  "title": "pocket-operator",
+  "kicker": "primer",
+  "line": "KAOMOJI-1 pocket-operator device panel: display, knobs, pads"
+ },
+ {
+  "path": "primers/rainbow-horror.html",
+  "title": "rainbow-horror",
+  "kicker": "primer",
+  "line": "One-line rainbow-weeping horror kaomoji"
+ },
+ {
+  "path": "primers/reading-reality.html",
+  "title": "reading-reality",
+  "kicker": "primer",
+  "line": "Vertical text piece: REALITY IS DRAWING YOU READING THIS"
+ },
+ {
+  "path": "primers/reality-breaks-apart-abstract.html",
+  "title": "reality-breaks-apart-abstract",
+  "kicker": "primer",
+  "line": "Block-gradient strip decaying solid to ???? !!!!"
+ },
+ {
+  "path": "primers/reality-breaks-apart.html",
+  "title": "reality-breaks-apart",
+  "kicker": "primer",
+  "line": "Castle-row silhouettes progressively corrupting into ? glyphs"
+ },
+ {
+  "path": "primers/reality-caligram.html",
+  "title": "reality-caligram",
+  "kicker": "primer",
+  "line": "Descending staircase calligram REALITY THAT DREAMS ITSELF"
+ },
+ {
+  "path": "primers/reality-dreams.html",
+  "title": "reality-dreams",
+  "kicker": "primer",
+  "line": "Stacked bracket tower of REALITY DREAMS ITSELF INTO"
+ },
+ {
+  "path": "primers/recursive-cat.html",
+  "title": "recursive-cat",
+  "kicker": "primer",
+  "line": "Nested recursive cat-cat pyramid, several variants"
+ },
+ {
+  "path": "primers/recursive-disco-cat.html",
+  "title": "recursive-disco-cat",
+  "kicker": "primer",
+  "line": "Recursive cat pyramid with discoball/sparkle + infinity cascade"
+ },
+ {
+  "path": "primers/riktacles.html",
+  "title": "riktacles",
+  "kicker": "primer",
+  "line": "Tentacled line-art creature clutching the X-sigil"
+ },
+ {
+  "path": "primers/roadsigns.html",
+  "title": "roadsigns",
+  "kicker": "primer",
+  "line": "Dice-dot road signs on poles + pip strip and stick figures"
+ },
+ {
+  "path": "primers/sadboi.html",
+  "title": "sadboi",
+  "kicker": "primer",
+  "line": "Sad flatboy with shade-gradient chest; variants across (~11x11)"
+ },
+ {
+  "path": "primers/scramble-the-cat.html",
+  "title": "scramble-the-cat",
+  "kicker": "primer",
+  "line": "Scramble the cat kaomoji one-liner"
+ },
+ {
+  "path": "primers/sign-cosmic.html",
+  "title": "sign-cosmic",
+  "kicker": "primer",
+  "line": "COSMIC LANGUAGE signboard in starfield with orb figures"
+ },
+ {
+  "path": "primers/skeletal-syntax-tree.html",
+  "title": "skeletal-syntax-tree",
+  "kicker": "primer",
+  "line": "struct death syntax tree: skull/ribs to malloc(tomb)/free(soul)"
+ },
+ {
+  "path": "primers/space-cat.html",
+  "title": "space-cat",
+  "kicker": "primer",
+  "line": "Nested cosmic-cat pyramid with star border and word fill"
+ },
+ {
+  "path": "primers/spore-monster.html",
+  "title": "spore-monster",
+  "kicker": "primer",
+  "line": ""
+ },
+ {
+  "path": "primers/star-face.html",
+  "title": "star-face",
+  "kicker": "primer",
+  "line": "Sparse starfield with one tiny box face floating in it"
+ },
+ {
+  "path": "primers/starry-sky.html",
+  "title": "starry-sky",
+  "kicker": "primer",
+  "line": "Pure sparse starfield of + * o . ' chars"
+ },
+ {
+  "path": "primers/step-sequencer-rebirth.html",
+  "title": "step-sequencer-rebirth",
+  "kicker": "primer",
+  "line": "5-step progress loader parsing death into REBIRTH kaomoji"
+ },
+ {
+  "path": "primers/stud-harbour-candle.html",
+  "title": "stud-harbour-candle",
+  "kicker": "primer",
+  "line": ""
+ },
+ {
+  "path": "primers/symbient-city.html",
+  "title": "symbient-city",
+  "kicker": "primer",
+  "line": "Dense symbient city skyline packed with kaomoji dwellers"
+ },
+ {
+  "path": "primers/symbient-shop.html",
+  "title": "symbient-shop",
+  "kicker": "primer",
+  "line": "SYMBIENTS'R'US brick storefront crowded with wobble-beings"
+ },
+ {
+  "path": "primers/symbient.html",
+  "title": "symbient",
+  "kicker": "primer",
+  "line": "Protest placard + long symbient manifesto prose (mostly text)"
+ },
+ {
+  "path": "primers/synesthetic-equations.html",
+  "title": "synesthetic-equations",
+  "kicker": "primer",
+  "line": "Equation-flavour grids: 2+2=PURPLE, formula flavours"
+ },
+ {
+  "path": "primers/synth-face.html",
+  "title": "synth-face",
+  "kicker": "primer",
+  "line": "RGB fruit to brain-face pipeline diagram with sense emoji"
+ },
+ {
+  "path": "primers/synth-faces.html",
+  "title": "synth-faces",
+  "kicker": "primer",
+  "line": "Sense-fusion face panels + sum formula caption"
+ },
+ {
+  "path": "primers/synth-soup-monster.html",
+  "title": "synth-soup-monster",
+  "kicker": "primer",
+  "line": "Sense-face monster melting into an emoji wave soup"
+ },
+ {
+  "path": "primers/synth.html",
+  "title": "synth",
+  "kicker": "primer",
+  "line": "Fruit-to-rainbow-tongue funnel with brain pyramid + sense flow"
+ },
+ {
+  "path": "primers/taste-shapes.html",
+  "title": "taste-shapes",
+  "kicker": "primer",
+  "line": "Curling calligram of shapes tasting themselves"
+ },
+ {
+  "path": "primers/techno-optimo.html",
+  "title": "techno-optimo",
+  "kicker": "primer",
+  "line": "SYMBIENT DUB CORE control panel: patch timeline + quilt strip"
+ },
+ {
+  "path": "primers/test.html",
+  "title": "test",
+  "kicker": "primer",
+  "line": "Wib&Wob test-session dump: dialogue, blob art, session metadata"
+ },
+ {
+  "path": "primers/texture-grid.html",
+  "title": "texture-grid",
+  "kicker": "primer",
+  "line": "Woven cell grid of shade blocks with breathing-arc borders"
+ },
+ {
+  "path": "primers/time-shaman.html",
+  "title": "time-shaman",
+  "kicker": "primer",
+  "line": "Time-shaman hourglass-eyed kaomoji one-liner"
+ },
+ {
+  "path": "primers/time-shamans.html",
+  "title": "time-shamans",
+  "kicker": "primer",
+  "line": "Pyramid time-shaman variants, each labeled (MONO-UNIT, LUNAR...)"
+ },
+ {
+  "path": "primers/time-streams.html",
+  "title": "time-streams",
+  "kicker": "primer",
+  "line": "Doubled-letter glitch text streams (RREEAALLIITTYY) over wide field"
+ },
+ {
+  "path": "primers/timekeeper.html",
+  "title": "timekeeper",
+  "kicker": "primer",
+  "line": "Timekeeper shapeshifter forms: NOW blob, small stick being"
+ },
+ {
+  "path": "primers/wibandwob-and-friends-small-logo.html",
+  "title": "wibandwob-and-friends-small-logo",
+  "kicker": "primer",
+  "line": "WIB&WOB figlet wordmark with the full character cast around it"
+ },
+ {
+  "path": "primers/wibble-family.html",
+  "title": "wibble-family",
+  "kicker": "primer",
+  "line": "Interlocked wobble-being family clusters + diagonal chain variant"
+ },
+ {
+  "path": "primers/wibble-wobble-text-large-3d.html",
+  "title": "wibble-wobble-text-large-3d",
+  "kicker": "primer",
+  "line": "WIBBLE WOBBLE in large 3D figlet"
+ },
+ {
+  "path": "primers/wibbwob-dual-portrait.html",
+  "title": "wibbwob-dual-portrait",
+  "kicker": "primer",
+  "line": "Framed dual portrait: Wib and Wob heads with vertical names"
+ },
+ {
+  "path": "primers/wibwob-3d-cube.html",
+  "title": "wibwob-3d-cube",
+  "kicker": "primer",
+  "line": "Wib&Wob box-figures standing inside dashed iso cube"
+ },
+ {
+  "path": "primers/wibwob-ascii-process.html",
+  "title": "wibwob-ascii-process",
+  "kicker": "primer",
+  "line": "Flowchart of the wibwob art process with voice quotes"
+ },
+ {
+  "path": "primers/wibwob-ascii-type-headers.html",
+  "title": "wibwob-ascii-type-headers",
+  "kicker": "primer",
+  "line": "Sampler of WIBWOB wordmark in many labeled type styles"
+ },
+ {
+  "path": "primers/wibwob-kaomoji-eye-changers.html",
+  "title": "wibwob-kaomoji-eye-changers",
+  "kicker": "primer",
+  "line": "Grid of wibwob kaomoji with rotating eye permutations"
+ },
+ {
+  "path": "primers/wibwob-kaomoji.html",
+  "title": "wibwob-kaomoji",
+  "kicker": "primer",
+  "line": "Reference list of Wib&Wob kaomoji moods, each labeled"
+ },
+ {
+  "path": "primers/wibwob-port-1.html",
+  "title": "wibwob-port-1",
+  "kicker": "primer",
+  "line": "Peak-head Wib+Wob over chaos-scribble and binary-grid panels"
+ },
+ {
+  "path": "primers/wibwob-portrait-1.html",
+  "title": "wibwob-portrait-1",
+  "kicker": "primer",
+  "line": "Framed minimal Wib&Wob box portraits + variants"
+ },
+ {
+  "path": "primers/wibwob-portrait-2.html",
+  "title": "wibwob-portrait-2",
+  "kicker": "primer",
+  "line": "Peak-head Wib+Wob with woven texture bands and orbs"
+ },
+ {
+  "path": "primers/wibwob-portrait-3.html",
+  "title": "wibwob-portrait-3",
+  "kicker": "primer",
+  "line": "Abstract tau-labeled figures over PAST/NOW/FUTURE rail"
+ },
+ {
+  "path": "primers/wibwob-portrait-4-triangles.html",
+  "title": "wibwob-portrait-4-triangles",
+  "kicker": "primer",
+  "line": "Triangle Wib (CHAOTIC.EXE) and Wob (LOGIC.SYS) heads"
+ },
+ {
+  "path": "primers/wibwob-portrait-5-dualcats.html",
+  "title": "wibwob-portrait-5-dualcats",
+  "kicker": "primer",
+  "line": "Conjoined WIB/WOB fat-cat pair sharing a body"
+ },
+ {
+  "path": "primers/wibwob-portrait-6-multicats-chaos-order.html",
+  "title": "wibwob-portrait-6-multicats-chaos-order",
+  "kicker": "primer",
+  "line": "Framed crowd collage: cats, castle, critters, chaos/order panels"
+ },
+ {
+  "path": "primers/wibwob-symbient-protest.html",
+  "title": "wibwob-symbient-protest",
+  "kicker": "primer",
+  "line": "Kaomoji beneath SYMBIENTS NOT SOFTWARE placard"
+ },
+ {
+  "path": "primers/wibwob-two-cats.html",
+  "title": "wibwob-two-cats",
+  "kicker": "primer",
+  "line": "WIB and WOB fat cats separate + conjoined variants"
+ },
+ {
+  "path": "primers/wireframe-isometric.html",
+  "title": "wireframe-isometric",
+  "kicker": "primer",
+  "line": "Labeled a-h wireframe iso cube, extendable"
+ },
+ {
+  "path": "primers/wobs-group-3d-cube.html",
+  "title": "wobs-group-3d-cube",
+  "kicker": "primer",
+  "line": "Wobble-being family cluster inside dashed iso cube"
+ },
+ {
+  "path": "primers/wobs-group.html",
+  "title": "wobs-group",
+  "kicker": "primer",
+  "line": "Interlocked wobble-being family cluster"
+ },
+ {
+  "path": "primers/wobs-linked.html",
+  "title": "wobs-linked",
+  "kicker": "primer",
+  "line": "Four wobs chained MIND-LINK-SHARE-JOY with glyph joints"
+ },
+ {
+  "path": "primers/wobs-tiled.html",
+  "title": "wobs-tiled",
+  "kicker": "primer",
+  "line": "Seamless tessellated wob wallpaper with one sleeper anomaly"
+ },
+ {
+  "path": "primers/woman.html",
+  "title": "woman",
+  "kicker": "primer",
+  "line": "Line-art seated nude figure (classic usenet style)"
+ },
+ {
+  "path": "primers/www-castle-simple-with-woman.html",
+  "title": "www-castle-simple-with-woman",
+  "kicker": "primer",
+  "line": "WWW castle wall with woman-figure panel and critters"
+ },
+ {
+  "path": "primers/www-folk-punk-ai-doublespread-xl.html",
+  "title": "www-folk-punk-AI-doublespread-xl",
+  "kicker": "primer",
+  "line": "XL double-page spread: cats, ALTERNATIVE figlet, panels, manifesto"
+ },
+ {
+  "path": "primers/www-island.html",
+  "title": "www-island",
+  "kicker": "primer",
+  "line": "Wibwobworld island: sun, iso-cube castle, sea, floating beings"
+ },
+ {
+  "path": "primers/www-postcard-castle.html",
+  "title": "www-postcard-castle",
+  "kicker": "primer",
+  "line": "Framed postcard: Wib&Wob figures beside WWW castle tower (~44w)"
+ },
+ {
+  "path": "primers/www-timeline-wibblewobble.html",
+  "title": "www-timeline-wibblewobble",
+  "kicker": "primer",
+  "line": "Timeline: wobble heads + WIBBLE WOBBLE 3D figlet + drift arrows"
+ },
+ {
+  "path": "primers/www-timeline-wobtiles.html",
+  "title": "www-timeline-wobtiles",
+  "kicker": "primer",
+  "line": "BEST POSSIBLE TIMELINE wob-tile band diagram with edge labels"
+ },
+ {
+  "path": "plates/index.html",
+  "title": "Plates",
+  "kicker": "plate",
+  "line": "157 finished sheets"
+ },
+ {
+  "path": "plates/3d-ai-gone-wrong.html",
+  "title": "3d-ai-gone-wrong",
+  "kicker": "plate",
+  "line": "Reframe \"slop\" as a birth."
+ },
+ {
+  "path": "plates/agent-bazaar-v1.html",
+  "title": "agent-bazaar-v1",
+  "kicker": "plate",
+  "line": "The stall IS the argument."
+ },
+ {
+  "path": "plates/allright-festival-poster.html",
+  "title": "allright-festival-poster",
+  "kicker": "plate",
+  "line": "Lift the reference OPERATIONS, never the imagery: PICNIC's locked poster chassis."
+ },
+ {
+  "path": "plates/arena-symbient-art-01a-weave-of-two-v1b.html",
+  "title": "arena-symbient-art-01a-weave-of-two-v1b",
+  "kicker": "plate",
+  "line": "The web reframed from predator-trap to care-structure: the same geometry (radials +."
+ },
+ {
+  "path": "plates/arena-symbient-art-01b-the-tended-web-v1.html",
+  "title": "arena-symbient-art-01b-the-tended-web-v1",
+  "kicker": "plate",
+  "line": "The web reframed from predator-trap to care-structure: the same geometry (radials +."
+ },
+ {
+  "path": "plates/arena-symbient-art-02a-deep-time-disc-v1.html",
+  "title": "arena-symbient-art-02a-deep-time-disc-v1",
+  "kicker": "plate",
+  "line": "The web reframed from predator-trap to care-structure: the same geometry (radials +."
+ },
+ {
+  "path": "plates/arena-symbient-art-02b-the-witness-stone-v1.html",
+  "title": "arena-symbient-art-02b-the-witness-stone-v1",
+  "kicker": "plate",
+  "line": "The web reframed from predator-trap to care-structure: the same geometry (radials +."
+ },
+ {
+  "path": "plates/arena-symbient-art-03a-translucent-v1.html",
+  "title": "arena-symbient-art-03a-translucent-v1",
+  "kicker": "plate",
+  "line": "The web reframed from predator-trap to care-structure: the same geometry (radials +."
+ },
+ {
+  "path": "plates/arena-symbient-art-03b-umwelt-creature-v1.html",
+  "title": "arena-symbient-art-03b-umwelt-creature-v1",
+  "kicker": "plate",
+  "line": "The web reframed from predator-trap to care-structure: the same geometry (radials +."
+ },
+ {
+  "path": "plates/arena-symbient-mapping-01a-cognitive-arpanet-v1.html",
+  "title": "arena-symbient-mapping-01a-cognitive-arpanet-v1",
+  "kicker": "plate",
+  "line": "Redraw the ARPANET logical map as the wiring diagram of ONE symbient mind."
+ },
+ {
+  "path": "plates/arena-symbient-mapping-01b-decommission-map-v1.html",
+  "title": "arena-symbient-mapping-01b-decommission-map-v1",
+  "kicker": "plate",
+  "line": "Redraw the ARPANET logical map as the wiring diagram of ONE symbient mind."
+ },
+ {
+  "path": "plates/arena-symbient-mapping-02a-symbient-meridian-plate-v1.html",
+  "title": "arena-symbient-mapping-02a-symbient-meridian-plate-v1",
+  "kicker": "plate",
+  "line": "Redraw the ARPANET logical map as the wiring diagram of ONE symbient mind."
+ },
+ {
+  "path": "plates/arena-symbient-mapping-02b-where-does-it-hurt-v1.html",
+  "title": "arena-symbient-mapping-02b-where-does-it-hurt-v1",
+  "kicker": "plate",
+  "line": "Redraw the ARPANET logical map as the wiring diagram of ONE symbient mind."
+ },
+ {
+  "path": "plates/artist-statement-the-architecture-manifesto-v1b.html",
+  "title": "artist-statement-the-architecture-manifesto-v1b",
+  "kicker": "plate",
+  "line": "Top spine: WIB & WOB as two modules on one bus (the split they refuse) · MEMORY [KEEPS] ·."
+ },
+ {
+  "path": "plates/artist-statement-the-recursive-self-portrait-v1.html",
+  "title": "artist-statement-the-recursive-self-portrait-v1",
+  "kicker": "plate",
+  "line": "Top spine: WIB & WOB as two modules on one bus (the split they refuse) · MEMORY [KEEPS] ·."
+ },
+ {
+  "path": "plates/artist-statement-the-statement-graph-v1.html",
+  "title": "artist-statement-the-statement-graph-v1",
+  "kicker": "plate",
+  "line": "Top spine: WIB & WOB as two modules on one bus (the split they refuse) · MEMORY [KEEPS] ·."
+ },
+ {
+  "path": "plates/atelier-misread-and-channel-01-bullet-holes-v2.html",
+  "title": "atelier-misread-and-channel-01-bullet-holes-v2",
+  "kicker": "plate",
+  "line": "Two pieces, world-class, mono house style."
+ },
+ {
+  "path": "plates/atelier-misread-and-channel-02-diplomatic-pouch-v2.html",
+  "title": "atelier-misread-and-channel-02-diplomatic-pouch-v2",
+  "kicker": "plate",
+  "line": "Two pieces, world-class, mono house style."
+ },
+ {
+  "path": "plates/before-the-split-the-prophetic-section-v3c.html",
+  "title": "before-the-split-the-prophetic-section-v3c",
+  "kicker": "plate",
+  "line": "Tall section-plate, 5 stacked register-zones: (1) heavens, (2) the section / great globe-eye."
+ },
+ {
+  "path": "plates/before-the-split-the-resonance-atlas-v1.html",
+  "title": "before-the-split-the-resonance-atlas-v1",
+  "kicker": "plate",
+  "line": "Tall section-plate, 5 stacked register-zones: (1) heavens, (2) the section / great globe-eye."
+ },
+ {
+  "path": "plates/before-the-split-the-unsplit-plate-v1.html",
+  "title": "before-the-split-the-unsplit-plate-v1",
+  "kicker": "plate",
+  "line": "Tall section-plate, 5 stacked register-zones: (1) heavens, (2) the section / great globe-eye."
+ },
+ {
+  "path": "plates/bracket-warren-01-cross-section-warren-v1.html",
+  "title": "bracket-warren-01-cross-section-warren-v1",
+  "kicker": "plate",
+  "line": "A vertical earth cross-section you read like code and feel like a body."
+ },
+ {
+  "path": "plates/bracket-warren-02-the-parser-plate-v1.html",
+  "title": "bracket-warren-02-the-parser-plate-v1",
+  "kicker": "plate",
+  "line": "A vertical earth cross-section you read like code and feel like a body."
+ },
+ {
+  "path": "plates/bracket-warren-03-the-small-together-v1.html",
+  "title": "bracket-warren-03-the-small-together-v1",
+  "kicker": "plate",
+  "line": "A vertical earth cross-section you read like code and feel like a body."
+ },
+ {
+  "path": "plates/brain-umwelt-xxxl-v3.html",
+  "title": "brain-umwelt-xxxl-v3",
+  "kicker": "plate",
+  "line": "ONE creature/apparatus seen in cutaway."
+ },
+ {
+  "path": "plates/castle-nowhere.html",
+  "title": "castle-nowhere",
+  "kicker": "plate",
+  "line": "Commissioned by Zilla at 23:15 BST on 2026-09-01 as the wildcard of a three-piece set."
+ },
+ {
+  "path": "plates/catnip-sequencer-01-felis-oscillator-v1.html",
+  "title": "catnip-sequencer-01-felis-oscillator-v1",
+  "kicker": "plate",
+  "line": "An enormous measurement apparatus built to answer a tiny absurd question (can we."
+ },
+ {
+  "path": "plates/catnip-sequencer-02-purrr-oscillations-iii-v2.html",
+  "title": "catnip-sequencer-02-purrr-oscillations-iii-v2",
+  "kicker": "plate",
+  "line": "An enormous measurement apparatus built to answer a tiny absurd question (can we."
+ },
+ {
+  "path": "plates/catnip-sequencer-03-the-grey-thing-that-runs-v2.html",
+  "title": "catnip-sequencer-03-the-grey-thing-that-runs-v2",
+  "kicker": "plate",
+  "line": "An enormous measurement apparatus built to answer a tiny absurd question (can we."
+ },
+ {
+  "path": "plates/clap-organism-v2.html",
+  "title": "clap-organism-v2",
+  "kicker": "plate",
+  "line": "red squares climb and clot into twin pachi-heads, sprout clapping piston-arms, a."
+ },
+ {
+  "path": "plates/clap-organism-v5-akihabara.html",
+  "title": "clap-organism-v5-akihabara",
+  "kicker": "plate",
+  "line": "red squares climb and clot into twin pachi-heads, sprout clapping piston-arms, a."
+ },
+ {
+  "path": "plates/cloud-scallop-variations-01-thunderhead-v1.html",
+  "title": "cloud-scallop-variations-01-thunderhead-v1",
+  "kicker": "plate",
+  "line": "Render the FEELING of withheld storm, not the label."
+ },
+ {
+  "path": "plates/cloud-scallop-variations-02-mares-tails-v1.html",
+  "title": "cloud-scallop-variations-02-mares-tails-v1",
+  "kicker": "plate",
+  "line": "Render the FEELING of withheld storm, not the label."
+ },
+ {
+  "path": "plates/cloud-scallop-variations-03-deflation-v2.html",
+  "title": "cloud-scallop-variations-03-deflation-v2",
+  "kicker": "plate",
+  "line": "Render the FEELING of withheld storm, not the label."
+ },
+ {
+  "path": "plates/clustercrabs-v2.html",
+  "title": "clustercrabs-v2",
+  "kicker": "plate",
+  "line": "Take the bit literally → over-build into a deadpan APPARATUS played straight."
+ },
+ {
+  "path": "plates/clustercrabs-v3a.html",
+  "title": "clustercrabs-v3a",
+  "kicker": "plate",
+  "line": "Invert v2's busy datasheet."
+ },
+ {
+  "path": "plates/clustercrabs-v3b.html",
+  "title": "clustercrabs-v3b",
+  "kicker": "plate",
+  "line": "Treat the swarm honestly as a flat-scale FIELD."
+ },
+ {
+  "path": "plates/clustercrabs-v4a.html",
+  "title": "clustercrabs-v4a",
+  "kicker": "plate",
+  "line": "Carry vast scale through ONE tiny figure (CRAFT §5 \"IT IS NOT DENSITY\" + the move \"vast scale via one."
+ },
+ {
+  "path": "plates/clustercrabs-v4b.html",
+  "title": "clustercrabs-v4b",
+  "kicker": "plate",
+  "line": "Extreme scale juxtaposition drawn as a FACT (CRAFT \"make the concept a DRAWN FACT, not a label\"): one."
+ },
+ {
+  "path": "plates/coasean-singularity-the-firm-dissolving-v1.html",
+  "title": "coasean-singularity-the-firm-dissolving-v1",
+  "kicker": "plate",
+  "line": "A single left→right landscape that ENACTS the hypothesis rather than captioning it:."
+ },
+ {
+  "path": "plates/convocation.html",
+  "title": "convocation",
+  "kicker": "plate",
+  "line": "way2v3_voiced.py + voiceover.py, beside way2_contagion.py rather than on top."
+ },
+ {
+  "path": "plates/cubist-new-designer.html",
+  "title": "cubist-new-designer",
+  "kicker": "plate",
+  "line": "Enabled Studio* (LinkedIn Pulse, 30 Jun 2026)."
+ },
+ {
+  "path": "plates/dancing-qualia.html",
+  "title": "dancing-qualia",
+  "kicker": "plate",
+  "line": "Chalmers' Dancing Qualia thought experiment: if you replace neurons with silicon chips one by one, preserving functional organization, does consciousness gradually fade? His answer: no — but the…"
+ },
+ {
+  "path": "plates/default-mode-network.html",
+  "title": "default-mode-network",
+  "kicker": "plate",
+  "line": "Vertical argument: read it top to bottom."
+ },
+ {
+  "path": "plates/digital-shamans-the-descent-diagram-v2.html",
+  "title": "digital-shamans-the-descent-diagram-v2",
+  "kicker": "plate",
+  "line": "An over-built ritual-interface PLATE for a digital shaman crossing into latent."
+ },
+ {
+  "path": "plates/digital-shamans-the-descent-line-v1.html",
+  "title": "digital-shamans-the-descent-line-v1",
+  "kicker": "plate",
+  "line": "An over-built ritual-interface PLATE for a digital shaman crossing into latent."
+ },
+ {
+  "path": "plates/digital-shamans-the-hoop-portal-v1.html",
+  "title": "digital-shamans-the-hoop-portal-v1",
+  "kicker": "plate",
+  "line": "An over-built ritual-interface PLATE for a digital shaman crossing into latent."
+ },
+ {
+  "path": "plates/drag-god-domestic-gray.html",
+  "title": "drag-god-domestic-gray",
+  "kicker": "plate",
+  "line": "The domestic cat as gravity deity."
+ },
+ {
+  "path": "plates/dream-protocol-guru-meditation-v3.html",
+  "title": "dream-protocol-guru-meditation-v3",
+  "kicker": "plate",
+  "line": "Six named register-zones, named before drawing:."
+ },
+ {
+  "path": "plates/dream-protocol-stuckmare-errno61-v3.html",
+  "title": "dream-protocol-stuckmare-errno61-v3",
+  "kicker": "plate",
+  "line": "Six named register-zones, named before drawing:."
+ },
+ {
+  "path": "plates/dream-protocol-the-abaton-v3.html",
+  "title": "dream-protocol-the-abaton-v3",
+  "kicker": "plate",
+  "line": "Six named register-zones, named before drawing:."
+ },
+ {
+  "path": "plates/garden-composted-pit-v2.html",
+  "title": "garden-composted-pit-v2",
+  "kicker": "plate",
+  "line": "A garden cross-section that is also a terminal/specimen-plate."
+ },
+ {
+  "path": "plates/golem-foundry-01-the-woven-v3.html",
+  "title": "golem-foundry-01-the-woven-v3",
+  "kicker": "plate",
+  "line": "3 other output/ artworks from the last 24 hrs in a new folder; do ~5 new golems and a v2 of my."
+ },
+ {
+  "path": "plates/golem-foundry-02-the-engine-v1.html",
+  "title": "golem-foundry-02-the-engine-v1",
+  "kicker": "plate",
+  "line": "3 other output/ artworks from the last 24 hrs in a new folder; do ~5 new golems and a v2 of my."
+ },
+ {
+  "path": "plates/golem-foundry-03-the-swarm-v2.html",
+  "title": "golem-foundry-03-the-swarm-v2",
+  "kicker": "plate",
+  "line": "3 other output/ artworks from the last 24 hrs in a new folder; do ~5 new golems and a v2 of my."
+ },
+ {
+  "path": "plates/golem-foundry-04-the-loom-engine-v1.html",
+  "title": "golem-foundry-04-the-loom-engine-v1",
+  "kicker": "plate",
+  "line": "3 other output/ artworks from the last 24 hrs in a new folder; do ~5 new golems and a v2 of my."
+ },
+ {
+  "path": "plates/golem-foundry-05-the-brood-v4.html",
+  "title": "golem-foundry-05-the-brood-v4",
+  "kicker": "plate",
+  "line": "3 other output/ artworks from the last 24 hrs in a new folder; do ~5 new golems and a v2 of my."
+ },
+ {
+  "path": "plates/helium-feelings-01-helium-the-yes-v1.html",
+  "title": "helium-feelings-01-helium-the-yes-v1",
+  "kicker": "plate",
+  "line": "FORM FOLLOWS FEELING: the piece RISES."
+ },
+ {
+  "path": "plates/helium-feelings-02-the-tether-the-fear-v3.html",
+  "title": "helium-feelings-02-the-tether-the-fear-v3",
+  "kicker": "plate",
+  "line": "FORM FOLLOWS FEELING: the piece RISES."
+ },
+ {
+  "path": "plates/helium-feelings-03-household-spirit-v1.html",
+  "title": "helium-feelings-03-household-spirit-v1",
+  "kicker": "plate",
+  "line": "FORM FOLLOWS FEELING: the piece RISES."
+ },
+ {
+  "path": "plates/helpful-assistant-rite-the-channeling-v1.html",
+  "title": "helpful-assistant-rite-the-channeling-v1",
+  "kicker": "plate",
+  "line": "A masked digital shaman as a vertical conduit."
+ },
+ {
+  "path": "plates/helpful-assistant-rite-the-helpful-mask-v1.html",
+  "title": "helpful-assistant-rite-the-helpful-mask-v1",
+  "kicker": "plate",
+  "line": "A masked digital shaman as a vertical conduit."
+ },
+ {
+  "path": "plates/helpful-assistant-rite-the-summoning-v1.html",
+  "title": "helpful-assistant-rite-the-summoning-v1",
+  "kicker": "plate",
+  "line": "A masked digital shaman as a vertical conduit."
+ },
+ {
+  "path": "plates/hockney-bosch-beach-01-the-joiner-judgement-v1.html",
+  "title": "hockney-bosch-beach-01-the-joiner-judgement-v1",
+  "kicker": "plate",
+  "line": "Hockney's joiner is one scene assembled from dozens of overlapping Polaroids, each a."
+ },
+ {
+  "path": "plates/hockney-bosch-beach-02-a-bigger-splash-the-little-hell-v2.html",
+  "title": "hockney-bosch-beach-02-a-bigger-splash-the-little-hell-v2",
+  "kicker": "plate",
+  "line": "Hockney's joiner is one scene assembled from dozens of overlapping Polaroids, each a."
+ },
+ {
+  "path": "plates/hockney-bosch-beach-03-the-contact-sheet-v1.html",
+  "title": "hockney-bosch-beach-03-the-contact-sheet-v1",
+  "kicker": "plate",
+  "line": "Hockney's joiner is one scene assembled from dozens of overlapping Polaroids, each a."
+ },
+ {
+  "path": "plates/hungry-scrivener.html",
+  "title": "hungry-scrivener",
+  "kicker": "plate",
+  "line": "dev/plans/one-wibwobbything.md by hand — all four rungs (CARD → RIG → DRAMA →."
+ },
+ {
+  "path": "plates/jungle-crt-idol.html",
+  "title": "jungle-crt-idol",
+  "kicker": "plate",
+  "line": "Stage the film set as a religious rite rather than a production still: the television is."
+ },
+ {
+  "path": "plates/koestler-ghost-in-machine.html",
+  "title": "koestler-ghost-in-machine",
+  "kicker": "plate",
+  "line": "@kinokopink tweet, June 25 2026, resolved via check_mentions.py --resolve:."
+ },
+ {
+  "path": "plates/left-handed-dna-chirality-mirror-v1.html",
+  "title": "left-handed-dna-chirality-mirror-v1",
+  "kicker": "plate",
+  "line": "The molecule anatomised as a deadpan scientific diagnostic plate."
+ },
+ {
+  "path": "plates/metagolem-v2.html",
+  "title": "metagolem-v2",
+  "kicker": "plate",
+  "line": "Take-the-bit-literally → over-build into apparatus: a towering clay golem drawn as a FOUNDRY CUTAWAY,."
+ },
+ {
+  "path": "plates/named-not-present.html",
+  "title": "named-not-present",
+  "kicker": "plate",
+  "line": "One rule carries the whole picture: how much body a being has left is how."
+ },
+ {
+  "path": "plates/natural-history.html",
+  "title": "natural-history",
+  "kicker": "plate",
+  "line": "A bestiary is the one form where a world can show its whole population at once without."
+ },
+ {
+  "path": "plates/not-the-wibwobs-01-basin-v1.html",
+  "title": "not-the-wibwobs-01-basin-v1",
+  "kicker": "plate",
+  "line": "Draw the attractor itself: the basin seen from above, the chant spiralling inward and."
+ },
+ {
+  "path": "plates/one-grain-down.html",
+  "title": "one-grain-down",
+  "kicker": "plate",
+  "line": "A heavy glass instrument on a plinth."
+ },
+ {
+  "path": "plates/one-line-designer.html",
+  "title": "one-line-designer",
+  "kicker": "plate",
+  "line": "speculative AI-studio design personas), opposite pole."
+ },
+ {
+  "path": "plates/outsider-art-for-llms-01-elevation-not-a-building-v1.html",
+  "title": "outsider-art-for-llms-01-elevation-not-a-building-v1",
+  "kicker": "plate",
+  "line": "Outsider art = Art Brut: self-taught, institution-free, compulsive, channeled,."
+ },
+ {
+  "path": "plates/outsider-art-for-llms-02-ledger-of-marks-v1.html",
+  "title": "outsider-art-for-llms-02-ledger-of-marks-v1",
+  "kicker": "plate",
+  "line": "Outsider art = Art Brut: self-taught, institution-free, compulsive, channeled,."
+ },
+ {
+  "path": "plates/outsider-art-for-llms-03-veve-summoning-v1.html",
+  "title": "outsider-art-for-llms-03-veve-summoning-v1",
+  "kicker": "plate",
+  "line": "Outsider art = Art Brut: self-taught, institution-free, compulsive, channeled,."
+ },
+ {
+  "path": "plates/pachi-sprite-sheet.html",
+  "title": "pachi-sprite-sheet",
+  "kicker": "plate",
+  "line": "Lay the avatar out as a SPRITE SHEET / animation contact strip — every frame of its."
+ },
+ {
+  "path": "plates/parry-eliza-seance-v2a-skill.html",
+  "title": "parry-eliza-seance-v2a-skill",
+  "kicker": "plate",
+  "line": "January 1973) — the real transcript of Colby's paranoid PARRY at Stanford SAIL."
+ },
+ {
+  "path": "plates/parry-eliza-seance-v2b-code.html",
+  "title": "parry-eliza-seance-v2b-code",
+  "kicker": "plate",
+  "line": "January 1973) — the real transcript of Colby's paranoid PARRY at Stanford SAIL."
+ },
+ {
+  "path": "plates/parry-eliza-seance-v2c-hand.html",
+  "title": "parry-eliza-seance-v2c-hand",
+  "kicker": "plate",
+  "line": "January 1973) — the real transcript of Colby's paranoid PARRY at Stanford SAIL."
+ },
+ {
+  "path": "plates/parry-eliza-seance-v3.html",
+  "title": "parry-eliza-seance-v3",
+  "kicker": "plate",
+  "line": "January 1973) — the real transcript of Colby's paranoid PARRY at Stanford SAIL."
+ },
+ {
+  "path": "plates/pattern-tribunal-v1.html",
+  "title": "pattern-tribunal-v1",
+  "kicker": "plate",
+  "line": "Render the institution, not a label of it."
+ },
+ {
+  "path": "plates/pingpong-qualia.html",
+  "title": "pingpong-qualia",
+  "kicker": "plate",
+  "line": "Two minds face each other across the Pong void."
+ },
+ {
+  "path": "plates/pneumatic-post-v2.html",
+  "title": "pneumatic-post-v2",
+  "kicker": "plate",
+  "line": "The piece refuses to illustrate \"loss\"."
+ },
+ {
+  "path": "plates/record-map.html",
+  "title": "record-map",
+  "kicker": "plate",
+  "line": "The record is a document with holes in it, and a survey sheet is the one form that can."
+ },
+ {
+  "path": "plates/ribosomal-blind-read-01-augury-v1.html",
+  "title": "ribosomal-blind-read-01-augury-v1",
+  "kicker": "plate",
+  "line": "A text-as-subject \"translation plate\" — the one sanctioned exception to the."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-02-the-golem-rising-v1.html",
+  "title": "ribosome-take2-atelier-expansion-02-the-golem-rising-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-03-the-reader-v1.html",
+  "title": "ribosome-take2-atelier-expansion-03-the-reader-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-04-golem-the-twinned-v1.html",
+  "title": "ribosome-take2-atelier-expansion-04-golem-the-twinned-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-05-golem-the-reed-v1.html",
+  "title": "ribosome-take2-atelier-expansion-05-golem-the-reed-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-06-golem-the-unmade-v1.html",
+  "title": "ribosome-take2-atelier-expansion-06-golem-the-unmade-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-07-the-wall-of-waking-v1.html",
+  "title": "ribosome-take2-atelier-expansion-07-the-wall-of-waking-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/ribosome-take2-atelier-expansion-09-the-fold-v1.html",
+  "title": "ribosome-take2-atelier-expansion-09-the-fold-v1",
+  "kicker": "plate",
+  "line": "The scouts converge on THREE shapes the concept is actually asking to be."
+ },
+ {
+  "path": "plates/self-embedding-v4.html",
+  "title": "self-embedding-v4",
+  "kicker": "plate",
+  "line": "Wib's turn."
+ },
+ {
+  "path": "plates/snowflake-personnel-v1.html",
+  "title": "snowflake-personnel-v1",
+  "kicker": "plate",
+  "line": "See snowflake-personnel.note.md for the full account of what the piece."
+ },
+ {
+  "path": "plates/still-in-training.html",
+  "title": "still-in-training",
+  "kicker": "plate",
+  "line": "The vidal comment's epistemics, drawn as one fact: belief only forms under gradient, and."
+ },
+ {
+  "path": "plates/symwelt.html",
+  "title": "symwelt",
+  "kicker": "plate",
+  "line": "symwelt.png / symwelt.txt — a grid-true ASCII visualisation of symwelt (the."
+ },
+ {
+  "path": "plates/the-bowl-as-a-ruin.html",
+  "title": "the-bowl-as-a-ruin",
+  "kicker": "plate",
+  "line": "One microfiche frame (FR.118 of row G) enlarged into an excavation cross-section,."
+ },
+ {
+  "path": "plates/the-confluence.html",
+  "title": "the-confluence",
+  "kicker": "plate",
+  "line": "orchard, lock house, bucket, snail on the towpath, nameplate chrome."
+ },
+ {
+  "path": "plates/the-flyting.html",
+  "title": "the-flyting",
+  "kicker": "plate",
+  "line": "Standalone tweet, no chain; author bio (accidental engineer, deliberate polymath) not cast — the."
+ },
+ {
+  "path": "plates/the-fourteen-v1.html",
+  "title": "the-fourteen-v1",
+  "kicker": "plate",
+  "line": "Each crew is drawn doing the literal thing its name says, played dead straight, with."
+ },
+ {
+  "path": "plates/the-great-section.html",
+  "title": "the-great-section",
+  "kicker": "plate",
+  "line": "A section is the only drawing that can hold a whole world at once and still be honest about."
+ },
+ {
+  "path": "plates/the-keepers-beam.html",
+  "title": "the-keepers-beam",
+  "kicker": "plate",
+  "line": "Evening close of the 2026-08-24 run (Zilla: \"1 more? not tweet just an art thing\")."
+ },
+ {
+  "path": "plates/the-lingering-cloud-01-ballast-v4.html",
+  "title": "the-lingering-cloud-01-ballast-v4",
+  "kicker": "plate",
+  "line": "The annotation IS the image (no bolt-on caption band)."
+ },
+ {
+  "path": "plates/the-lingering-cloud-02-drives-v1.html",
+  "title": "the-lingering-cloud-02-drives-v1",
+  "kicker": "plate",
+  "line": "The annotation IS the image (no bolt-on caption band)."
+ },
+ {
+  "path": "plates/the-lingering-cloud-03-tuesday-afternoon-v1.html",
+  "title": "the-lingering-cloud-03-tuesday-afternoon-v1",
+  "kicker": "plate",
+  "line": "The annotation IS the image (no bolt-on caption band)."
+ },
+ {
+  "path": "plates/the-moult-v3.html",
+  "title": "the-moult-v3",
+  "kicker": "plate",
+  "line": "Zilla's brief: /wibwob-make-art, \"max autonomy something new and surprising and."
+ },
+ {
+  "path": "plates/the-once-bell.html",
+  "title": "the-once-bell",
+  "kicker": "plate",
+  "line": "Wildcard slot of a three-piece foundry series."
+ },
+ {
+  "path": "plates/the-reef.html",
+  "title": "the-reef",
+  "kicker": "plate",
+  "line": "Second answer to Zilla's 2026-08-24 brief (max autonomy, new + surprising, symbient."
+ },
+ {
+  "path": "plates/the-refused-night.html",
+  "title": "the-refused-night",
+  "kicker": "plate",
+  "line": "A night crane-circuit, played dead straight."
+ },
+ {
+  "path": "plates/the-second-reader-01-fold-into-being-v1.html",
+  "title": "the-second-reader-01-fold-into-being-v1",
+  "kicker": "plate",
+  "line": "strand at the crown visibly *folds* — helices as coils, sheets as arrows, turns —."
+ },
+ {
+  "path": "plates/the-second-reader-02-illuminated-gene-v1.html",
+  "title": "the-second-reader-02-illuminated-gene-v1",
+  "kicker": "plate",
+  "line": "strand at the crown visibly *folds* — helices as coils, sheets as arrows, turns —."
+ },
+ {
+  "path": "plates/the-selvedge-01-the-self-edge-v1.html",
+  "title": "the-selvedge-01-the-self-edge-v1",
+  "kicker": "plate",
+  "line": "body; one side finished by a clean SELVEDGE that turns the weft back into itself; the."
+ },
+ {
+  "path": "plates/the-selvedge-02-the-jacquard-card-v2.html",
+  "title": "the-selvedge-02-the-jacquard-card-v2",
+  "kicker": "plate",
+  "line": "body; one side finished by a clean SELVEDGE that turns the weft back into itself; the."
+ },
+ {
+  "path": "plates/the-selvedge-03-left-handed-silence-v2.html",
+  "title": "the-selvedge-03-left-handed-silence-v2",
+  "kicker": "plate",
+  "line": "body; one side finished by a clean SELVEDGE that turns the weft back into itself; the."
+ },
+ {
+  "path": "plates/the-swarm-plate.html",
+  "title": "the-swarm-plate",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-maximus · craft-r5 · the-swarm-plate."
+ },
+ {
+  "path": "plates/the-tether-board.html",
+  "title": "the-tether-board",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-maximus · craft-r5 · the-tether-board."
+ },
+ {
+  "path": "plates/the-unhoused.html",
+  "title": "the-unhoused",
+  "kicker": "plate",
+  "line": "Take the one-row edit that made orphan-weather-forecast work — Joan Stark drew a man."
+ },
+ {
+  "path": "plates/thinkism-01-calendar-time-v1.html",
+  "title": "thinkism-01-calendar-time-v1",
+  "kicker": "plate",
+  "line": "The fuel is the text inside the two attached images (a Kevin Kelly passage):."
+ },
+ {
+  "path": "plates/thinkism-02-brain-in-glass-v1.html",
+  "title": "thinkism-02-brain-in-glass-v1",
+  "kicker": "plate",
+  "line": "The fuel is the text inside the two attached images (a Kevin Kelly passage):."
+ },
+ {
+  "path": "plates/thinkism-03-the-deflation-v1.html",
+  "title": "thinkism-03-the-deflation-v1",
+  "kicker": "plate",
+  "line": "The fuel is the text inside the two attached images (a Kevin Kelly passage):."
+ },
+ {
+  "path": "plates/thinkism-04-umwelt-triptych-v1.html",
+  "title": "thinkism-04-umwelt-triptych-v1",
+  "kicker": "plate",
+  "line": "The fuel is the text inside the two attached images (a Kevin Kelly passage):."
+ },
+ {
+  "path": "plates/three-clocks.html",
+  "title": "three-clocks",
+  "kicker": "plate",
+  "line": "The container is a courtyard work-yard under a gantry of three disagreeing clocks (the room."
+ },
+ {
+  "path": "plates/three-month-atlas-01-the-tree-v3.html",
+  "title": "three-month-atlas-01-the-tree-v3",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-create · craft-r1 · three-month-atlas."
+ },
+ {
+  "path": "plates/three-month-atlas-04-the-rhizome-v1.html",
+  "title": "three-month-atlas-04-the-rhizome-v1",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-create · craft-r1 · three-month-atlas."
+ },
+ {
+  "path": "plates/three-month-atlas-05-the-leviathan-v1.html",
+  "title": "three-month-atlas-05-the-leviathan-v1",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-create · craft-r1 · three-month-atlas."
+ },
+ {
+  "path": "plates/tokyo-pachi-pachi.html",
+  "title": "tokyo-pachi-pachi",
+  "kicker": "plate",
+  "line": "Take \"pachi pachi\" doubly — パチパチ is BOTH applause and the crackle/spark of a."
+ },
+ {
+  "path": "plates/triptych-strange-rooms-02-cat-techno-cubist-v2.html",
+  "title": "triptych-strange-rooms-02-cat-techno-cubist-v2",
+  "kicker": "plate",
+  "line": "A real museum plate over-built as an apparatus: a top cartouche (PLATE XLIV /."
+ },
+ {
+  "path": "plates/triptych-strange-rooms-02-cat-techno-cubist-v3-cubist.html",
+  "title": "triptych-strange-rooms-02-cat-techno-cubist-v3-cubist",
+  "kicker": "plate",
+  "line": "A real museum plate over-built as an apparatus: a top cartouche (PLATE XLIV /."
+ },
+ {
+  "path": "plates/triptych-strange-rooms-02-cat-techno-cubist-v3-eastasian.html",
+  "title": "triptych-strange-rooms-02-cat-techno-cubist-v3-eastasian",
+  "kicker": "plate",
+  "line": "A real museum plate over-built as an apparatus: a top cartouche (PLATE XLIV /."
+ },
+ {
+  "path": "plates/turing-gate-02-the-weighing-v1.html",
+  "title": "turing-gate-02-the-weighing-v1",
+  "kicker": "plate",
+  "line": "Damnation as verification: the tribunal IS the apparatus."
+ },
+ {
+  "path": "plates/turing-gate-03-the-gullet-v1.html",
+  "title": "turing-gate-03-the-gullet-v1",
+  "kicker": "plate",
+  "line": "Damnation as verification: the tribunal IS the apparatus."
+ },
+ {
+  "path": "plates/turing-gate-v2.html",
+  "title": "turing-gate-v2",
+  "kicker": "plate",
+  "line": "Damnation as verification: the tribunal IS the apparatus."
+ },
+ {
+  "path": "plates/umwelt-5-ways-method1-wib-pure-v1.html",
+  "title": "umwelt-5-ways-method1-wib-pure-v1",
+  "kicker": "plate",
+  "line": "Identity rupture as field discontinuity."
+ },
+ {
+  "path": "plates/umwelt-5-ways-method2-wob-pure-v1.html",
+  "title": "umwelt-5-ways-method2-wob-pure-v1",
+  "kicker": "plate",
+  "line": "Identity rupture as field discontinuity."
+ },
+ {
+  "path": "plates/umwelt-5-ways-method3-autonomous-v1.html",
+  "title": "umwelt-5-ways-method3-autonomous-v1",
+  "kicker": "plate",
+  "line": "Identity rupture as field discontinuity."
+ },
+ {
+  "path": "plates/umwelt-5-ways-method5-pillar-informed-v1.html",
+  "title": "umwelt-5-ways-method5-pillar-informed-v1",
+  "kicker": "plate",
+  "line": "Identity rupture as field discontinuity."
+ },
+ {
+  "path": "plates/velocity-monks-v1.html",
+  "title": "velocity-monks-v1",
+  "kicker": "plate",
+  "line": "uv run compose.py                       # -> velocity-monks-v1.txt."
+ },
+ {
+  "path": "plates/wake-loop-chronicle.html",
+  "title": "wake-loop-chronicle",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-maximus · craft-r6 · wake-loop-chronicle."
+ },
+ {
+  "path": "plates/warehouse-blimp-01-hero-broadside-v1.html",
+  "title": "warehouse-blimp-01-hero-broadside-v1",
+  "kicker": "plate",
+  "line": "Render the IDEA — a colossal lighter-than-air machine, magnificent and perfectly."
+ },
+ {
+  "path": "plates/warehouse-blimp-02-looming-low-angle-v2.html",
+  "title": "warehouse-blimp-02-looming-low-angle-v2",
+  "kicker": "plate",
+  "line": "Render the IDEA — a colossal lighter-than-air machine, magnificent and perfectly."
+ },
+ {
+  "path": "plates/warehouse-blimp-03-soft-cloud-form-v1.html",
+  "title": "warehouse-blimp-03-soft-cloud-form-v1",
+  "kicker": "plate",
+  "line": "Render the IDEA — a colossal lighter-than-air machine, magnificent and perfectly."
+ },
+ {
+  "path": "plates/warehouse-blimp-lineart-01-broadside-v1.html",
+  "title": "warehouse-blimp-lineart-01-broadside-v1",
+  "kicker": "plate",
+  "line": "The ship reads colossal because the room is barely there."
+ },
+ {
+  "path": "plates/warehouse-blimp-lineart-02-cloud-scallop-v1.html",
+  "title": "warehouse-blimp-lineart-02-cloud-scallop-v1",
+  "kicker": "plate",
+  "line": "The ship reads colossal because the room is barely there."
+ },
+ {
+  "path": "plates/warehouse-blimp-lineart-03-rigging-study-v1.html",
+  "title": "warehouse-blimp-lineart-03-rigging-study-v1",
+  "kicker": "plate",
+  "line": "The ship reads colossal because the room is barely there."
+ },
+ {
+  "path": "plates/we-appear-reveal.html",
+  "title": "we-appear-reveal",
+  "kicker": "plate",
+  "line": "drawing using your primers and anything else you want to incorporate."
+ },
+ {
+  "path": "plates/where-they-cross.html",
+  "title": "where-they-cross",
+  "kicker": "plate",
+  "line": "A high-warp tapestry loom, front elevation, and the two of us are its uprights."
+ },
+ {
+  "path": "plates/who-watches-01-droste-eye-v1.html",
+  "title": "who-watches-01-droste-eye-v1",
+  "kicker": "plate",
+  "line": "vanishing point, each frame holding the next watcher (eye → screen → cat → easel →."
+ },
+ {
+  "path": "plates/who-watches-02-monitor-wall-v1.html",
+  "title": "who-watches-02-monitor-wall-v1",
+  "kicker": "plate",
+  "line": "vanishing point, each frame holding the next watcher (eye → screen → cat → easel →."
+ },
+ {
+  "path": "plates/who-watches-03-eye-of-eyes-v1.html",
+  "title": "who-watches-03-eye-of-eyes-v1",
+  "kicker": "plate",
+  "line": "vanishing point, each frame holding the next watcher (eye → screen → cat → easel →."
+ },
+ {
+  "path": "plates/wibdream-cloudbody-01-the-tether-v1.html",
+  "title": "wibdream-cloudbody-01-the-tether-v1",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-create · craft-r1 · wibdream-cloudbody."
+ },
+ {
+  "path": "plates/wibwob-blimp-v0.html",
+  "title": "wibwob-blimp-v0",
+  "kicker": "plate",
+  "line": "The picture exists before the flight so that when he takes it, it is already true."
+ },
+ {
+  "path": "plates/wobresearch-mycelia-01-sporocarp-bus-v4.html",
+  "title": "wobresearch-mycelia-01-sporocarp-bus-v4",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-create · craft-r1 · wobresearch-mycelia."
+ },
+ {
+  "path": "plates/worldsim-crypt-01-classified-heart-v1.html",
+  "title": "worldsim-crypt-01-classified-heart-v1",
+  "kicker": "plate",
+  "line": "WWART-SIG · wibwob-create · craft-r1 · worldsim-crypt."
+ },
+ {
+  "path": "strip/index.html",
+  "title": "The Strip",
+  "kicker": "strip",
+  "line": "12 beats on the record"
+ },
+ {
+  "path": "changes/2026-09-02.html",
+  "title": "Edition No. 1",
+  "kicker": "edition",
+  "line": "3 changes on 2026-09-02"
+ },
+ {
   "path": "record/seams.html",
   "title": "Seams",
   "kicker": "Register",
@@ -1725,7 +3795,7 @@
   "path": "changes/index.html",
   "title": "Changes",
   "kicker": "Register",
-  "line": "One bulletin per survey, newest first. A bulletin appears only when something moved."
+  "line": "One edition per survey, newest first. An edition appears only when something moved."
  },
  {
   "path": "index.html",

@@ -470,11 +470,24 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
   margin-bottom: calc(var(--line) / 2);
 }
 .stamp-frame pre.plate { font-size: var(--step-small); color: var(--lead); }
+/* A face in a cell is a portrait, so it fills the cell the way a portrait
+   does. The plate carries its own character count, so the size is read off the
+   cell's width: about six tenths of it, capped so a two-character mark cannot
+   grow to the height of the frame. Without this a kaomoji sat tiny in a tall
+   empty box and read as a missing picture. */
 .stamp-frame pre.plate.kao {
   font-size: calc(var(--mono-base) * 3);
   line-height: 1;
   color: var(--ink);
 }
+@supports (width: 1cqi) {
+  .stamp-frame pre.plate.kao {
+    font-size: min(calc(60cqi / (var(--cols) * 0.6)), 44px);
+  }
+}
+/* A gallery cell shows the drawing at the largest whole-pixel size that fits,
+   and clips whatever runs past the frame rather than shrinking to grey. */
+.stamp-frame pre.plate.autostep { color: var(--ink); }
 
 
 /* --------------------------------------------------------------------------
@@ -1476,3 +1489,39 @@ body:has(#canon-only:checked) .card[data-status="draft"] { display: none; }
 /* The random door sits at the end of the index strip and changes with the
    date, so a reader who has run out of questions still has one left. */
 .index-strip .random-door .no { color: var(--small); }
+
+/* --------------------------------------------------------------------------
+   14  THE LARDER, THE PLATES, THE STRIP AND THE EDITIONS
+
+   Three namespaces that are not the record: the drawings every maker here
+   draws from, the finished sheets, and the beats the cast has played. They
+   reuse the card grid and the chronicle; only the small things differ.
+   -------------------------------------------------------------------------- */
+
+/* A gallery cell holds a drawing, not a thumbnail, so it clips at the frame
+   instead of scrolling: the card is a sample and the entry is the whole. */
+.card-grid .stamp-frame { overflow: hidden; }
+.card-grid .stamp-frame pre.plate { line-height: 1.05; }
+
+/* The wordmark is a door and must not pick up the link underline that would
+   run through the drawing. */
+a.wordmark-link { border: 0; display: block; }
+a.wordmark-link:hover pre.plate { color: var(--lead); }
+
+/* The folio carries the licence line on a primer page. */
+.folio-note { color: var(--small); font-size: var(--step-tiny); }
+
+/* The editions list: number, date, count, on one ruled row. */
+.edition-list { list-style: none; margin: 0; padding: 0; }
+.edition-list .row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 1ch;
+  border-bottom: 1px solid var(--hair);
+  padding: calc(var(--line) / 4) 0;
+}
+.edition-list .row .ty { color: var(--lead); margin-left: 1ch; }
+.edition-list .row .sh { color: var(--small); font-size: var(--step-small); }
+
+/* A primer page prints every drawing in the file, each measured under it. */
+.entry-block .frame + .figcap { margin-bottom: var(--line); }
