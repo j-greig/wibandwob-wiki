@@ -375,6 +375,11 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
   pre.autostep, .autostep {
     font-size: round(down, calc(100cqi / (var(--cols) * 0.6)), 1px);
   }
+  /* a single face panel or a small crop must not balloon to fill a monitor:
+     plans cap at 20px, and the frame is left-aligned at its natural width */
+  .plan pre.autostep {
+    font-size: min(round(down, calc(100cqi / (var(--cols) * 0.6)), 1px), 20px);
+  }
 }
 
 /* The fallback for engines without round(): the original class ladder, driven
@@ -1273,4 +1278,103 @@ pre.minimap a:hover { border-bottom: 0; color: var(--small); }
 @media (max-width: 959px) {
   .measure-change { column-count: 1; }
   .overlap > .eyebrow, .overlap > .running-head { margin-bottom: 0; }
+}
+
+/* --- bands, the taxonomy tree and the canon-only filter -------------------
+
+   A section front is no longer one flat grid. It is a run of bands, each one
+   opened by a small drawn header, and the two list forms inside a band are the
+   card grid and the chronicle. Everything here is CSS only: the canon-only
+   control is a checkbox read by `:has()`, so a reader with no script still
+   gets the filter.
+   -------------------------------------------------------------------------- */
+.band { padding-top: var(--line); }
+.band + .band { border-top: 1px solid var(--hair); }
+.band-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 3ch;
+  padding-bottom: calc(var(--line) / 2);
+}
+.band-head pre.band-plate {
+  color: var(--lead);
+  font-size: var(--step-small);
+  margin: 0;
+}
+.band-meta {
+  display: flex;
+  gap: 0 3ch;
+  flex-wrap: wrap;
+  color: var(--small);
+  font-size: var(--step-tiny);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding-bottom: calc(var(--line) / 2);
+}
+.band-meta a { color: var(--body); }
+
+.opening-map { padding-bottom: var(--line); }
+.opening-map .minimap-frame { max-width: 100%; }
+
+ul.tree, ul.tree ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: var(--step-small);
+}
+ul.tree ul {
+  padding-left: 3ch;
+  border-left: 1px solid var(--hair);
+  margin-left: 1ch;
+}
+ul.tree li { padding: 0 0 calc(var(--line) / 8); }
+ul.tree li::before { content: "\2500\00a0"; color: var(--hair); }
+ul.tree a.small, ul.tree span.small { color: var(--small); }
+
+.canon-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1ch;
+  align-items: baseline;
+  font-size: var(--step-tiny);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--small);
+  padding-bottom: var(--line);
+}
+.canon-toggle input { accent-color: var(--ink); }
+.canon-toggle label { cursor: pointer; }
+body:has(#canon-only:checked) .card[data-status="draft"] { display: none; }
+
+.taxo { display: block; }
+.taxo-row {
+  display: grid;
+  grid-template-columns: 18ch 1fr;
+  gap: 0 var(--gutter);
+  border-top: 1px solid var(--hair);
+  padding: var(--line) 0;
+}
+.taxo-row:first-child { border-top: 0; }
+.taxo-glyph pre.plate {
+  color: var(--ink);
+  font-size: var(--step-small);
+  margin: 0;
+}
+.taxo-glyph pre.taxo-mark { font-size: calc(var(--step-small) * 2); }
+.taxo-body h3 {
+  color: var(--ink);
+  font-size: var(--step-small);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.taxo-count { color: var(--small); }
+.taxo-members { font-size: var(--step-small); color: var(--body); }
+.taxo-members a { color: var(--body); }
+.taxo-members a:hover { color: var(--ink); }
+
+@media (max-width: 959px) {
+  .taxo-row { grid-template-columns: 1fr; }
+  .band-head { gap: 0 1ch; }
 }
