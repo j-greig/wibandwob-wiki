@@ -1,0 +1,1179 @@
+/* ==========================================================================
+   WIBWOBWIKI - prototype stylesheet
+   Written by hand. No framework, no preprocessor, no remote font.
+   Loaded second, after vendor/monospace-web.css.
+
+   Section order follows dev/plans/wibwobiki-design-system.md:
+     1  tokens            (spec section 1)
+     2  reset + page grid (spec section 2)
+     3  breakpoints       (spec section 2)
+     4  plates            (spec section 4, the integer rule)
+     5  components        (spec section 3, one block per named component)
+     6  motion            (scroll timelines, view transitions, reduced motion)
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   0  FACES
+   Two self-hosted faces plus one gap-filler, all subset here, none remote.
+
+   Gazetteer Mono is IBM Plex Mono (OFL 1.1, fonts/IBMPlexMono-OFL.txt) cut to
+   Latin, punctuation, arrows, box drawing, blocks, geometric shapes and
+   miscellaneous symbols. Its advance is exactly 0.6em, which is the number the
+   plate rule below divides by.
+
+   Gazetteer Kaomoji is a second face cut from unifont-mono, claiming only the
+   two dozen codepoints the cast's faces are built from. No programming mono
+   carries them, so without this face every kaomoji falls to a system font at
+   an unknown advance and drags its table off the grid. Unifont's advance is
+   0.5em, so size-adjust: 120% restores it to 0.6em and one kaomoji character
+   occupies exactly one cell.
+
+   Gazetteer Geometry is the same trick for the handful of shape and arrow
+   codepoints the plates use that Plex does not carry. It is declared after
+   Gazetteer Mono, so it is only ever reached for a character Plex lacks.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Gazetteer Mono";
+  src: url("fonts/gazetteer-mono-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Gazetteer Mono";
+  src: url("fonts/gazetteer-mono-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Gazetteer Kaomoji";
+  src: url("fonts/kaomoji.woff2") format("woff2");
+  size-adjust: 120%;
+  font-display: block;
+  unicode-range: U+00B4, U+06DD, U+0EB6, U+0F0E, U+0F3C-0F3D, U+141F-1422,
+                 U+15D2, U+15D5, U+15E3, U+203F, U+208D-208E, U+2307,
+                 U+25D5, U+2686, U+3064, U+30C4, U+A788, U+FF3C, U+FF61;
+}
+@font-face {
+  font-family: "Gazetteer Geometry";
+  src: url("fonts/geometry.woff2") format("woff2");
+  size-adjust: 120%;
+  font-display: block;
+  unicode-range: U+2000-206F, U+2190-21FF, U+2200-22FF, U+25A0-25FF, U+2600-26FF;
+}
+
+
+/* --------------------------------------------------------------------------
+   1  TOKENS
+   Every value already existed somewhere in the family. Nothing invented.
+   -------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: dark;   /* so the UA paints scrollbars and controls dark */
+
+  --ink:    #ffffff;   /* marks, headlines, plates */
+  --body:   #c9c9c9;   /* running text */
+  --lead:   #9a9a9a;   /* decks, kickers, folios      7.5:1 on black */
+  --small:  #8a8a8a;   /* small print, rule labels    6.1:1, passes AA at any size */
+  --hair:   #262626;   /* hairlines and rules */
+  --ground: #000000;   /* the page */
+
+  /* No accent token. The only colour on the site is inside beastie renders. */
+
+  /* Self-hosted first. The system faces are a courtesy, never the plan: the
+     generic monospace at the end of the stack does not carry U+2500-257F and
+     would shear every plate, which is exactly why the faces above exist. */
+  --mono: "Gazetteer Mono", "Gazetteer Kaomoji", "Gazetteer Geometry",
+          ui-monospace, Menlo, Consolas, monospace;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --cell:    1ch;      /* horizontal unit */
+  --measure: 66ch;     /* prose measure */
+
+  /* The page has no maximum width. It fills the monitor and gains columns
+     rather than growing a wider blog column. The only horizontal limit is
+     the page inset. */
+  --inset: clamp(1ch, 2vw, 6ch);
+
+  /* Fluid type between a 360px phone and a 3840px monitor, computed on the
+     Utopia method: 13px at 360, about 16.1px at 1440, 17.8px at 1920,
+     20.0px at 2560, 22px at 3840. */
+  --mono-base: clamp(13px, 0.35vw + 11px, 22px);
+  --step-small: calc(var(--mono-base) * 0.8125);
+  --step-tiny:  calc(var(--mono-base) * 0.75);
+  --step-deck:  calc(var(--mono-base) * 0.9375);
+  --step-title: calc(var(--mono-base) * 1.0625);
+
+  /* The headline is the one element that must carry the whole fold, so it is
+     sized off the viewport rather than the 16px root. Its line-height is 1.06
+     and its breathing space is set in --line multiples, never by leading. */
+  --step-head:  clamp(1.5rem, 2.6vw, 6rem);
+
+  /* Vertical rhythm scales with the type, so the baseline survives at 4K.
+     --line is also the vendor sheet's single vertical unit. */
+  --line: calc(var(--mono-base) * 1.72);
+  --line-height: var(--line);
+
+  --gutter: 2ch;
+
+  /* The feature row gains columns on a wide monitor. The generator will emit
+     floor(width / --feature-min) - 2 cards; the proto carries eight, which
+     fills the row to about 3400px. */
+  --feature-min: 28ch;
+}
+
+
+/* --------------------------------------------------------------------------
+   2  RESET AND PAGE GRID
+   -------------------------------------------------------------------------- */
+
+* { box-sizing: border-box; }
+
+html { background: var(--ground); }
+
+body {
+  margin: 0;
+  padding-inline: var(--inset);
+  padding-block: 0 calc(var(--line) * 4);
+  background: var(--ground);
+  color: var(--body);
+  font-family: var(--mono);
+  font-size: var(--mono-base);
+  line-height: var(--line);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--ink); }
+
+/* Focus must be visible on black, and the blanket no-shadow rule below
+   forecloses a shadow ring, so it is an outline in --ink. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+/* Inside a plate an offset ring would sit on top of neighbouring cells. */
+pre a:focus-visible { outline-offset: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* No rounded corners and no shadows anywhere on this site. */
+* { border-radius: 0 !important; box-shadow: none !important; }
+
+h1, h2, h3 {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: var(--mono-base);
+  margin: 0;
+}
+
+hr { border: 0; border-top: 1px solid var(--hair); margin: var(--line) 0; }
+
+ul { margin: 0; padding-left: 2ch; list-style: none; }
+
+/* The 12-column page, with the front page's named areas.
+   No max-width: the grid fills the viewport and the page gains columns on a
+   wide monitor rather than growing a wider column of prose.
+   .page is itself an inline-size container, so a `ch` inside a container
+   query below resolves against the page's own font rather than the 16px root. */
+.page {
+  width: 100%;
+  container-type: inline-size;
+  container-name: page;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  row-gap: 0;
+  grid-template-areas:
+    "mast mast mast mast mast mast mast mast mast mast mast mast"
+    "idx  idx  idx  idx  idx  idx  idx  idx  idx  idx  idx  idx "
+    "sky  sky  sky  sky  sky  sky  sky  sky  sky  sky  sky  sky "
+    "hero hero hero hero hero hero hero hero hero hero hero hero"
+    "lead lead lead lead lead lead lead lead lead lead lead lead"
+    "feat feat feat feat feat feat feat feat feat feat feat feat"
+    "sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2 sec2"
+    "strp strp strp strp strp strp strp strp fore fore fore fore"
+    "plan plan plan plan plan plan unho unho unho unho unho unho"
+    "marg marg marg marg marg marg marg marg marg marg marg marg"
+    "colo colo colo colo colo colo colo colo colo colo colo colo"
+    "foli foli foli foli foli foli foli foli foli foli foli foli";
+}
+
+.a-mast { grid-area: mast; }
+.a-idx  { grid-area: idx;  }
+.a-sky  { grid-area: sky;  }
+.a-hero { grid-area: hero; }
+.a-lead { grid-area: lead; }
+.a-feat { grid-area: feat; }
+.a-sec2 { grid-area: sec2; }
+.a-strp { grid-area: strp; }
+.a-fore { grid-area: fore; }
+.a-plan { grid-area: plan; }
+.a-unho { grid-area: unho; }
+.a-marg { grid-area: marg; }
+.a-colo { grid-area: colo; }
+.a-foli { grid-area: foli; }
+
+/* A section front and an entry page use a simpler single track. */
+.page--flat {
+  grid-template-areas: none;
+  grid-template-columns: repeat(12, 1fr);
+}
+.span-12 { grid-column: 1 / -1; }
+.span-8  { grid-column: 1 / 9;  }
+.span-6  { grid-column: 1 / 7;  }
+.span-4  { grid-column: 9 / -1; }
+
+/* The feature row is the part that grows with the monitor. It gains columns
+   instead of stretching, and the page supplies enough cards to fill them.
+   auto-fit rather than auto-fill, so a row that runs out of cards closes up
+   instead of leaving empty tracks and a black band on the right. */
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--feature-min), 1fr));
+  column-gap: var(--gutter);
+}
+
+/* Shared band furniture: every section opens with an eyebrow and closes on a
+   rule (OP-24). */
+.band {
+  border-top: 1px solid var(--hair);
+  padding: var(--line) 0;
+}
+.eyebrow {
+  color: var(--lead);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-small);
+  margin-bottom: var(--line);
+}
+.small { color: var(--small); font-size: var(--step-small); }
+.dim   { color: var(--lead); }
+
+
+/* --------------------------------------------------------------------------
+   3  BREAKPOINTS
+   Stated in device pixels. The earlier draft wrote them in ch and claimed
+   they tracked the character grid; they did not, because a ch inside a media
+   query resolves against the initial 16px font and never against --mono-base.
+   The three thresholds are the character counts the design reasons in,
+   converted at a 16px root: 60ch, 100ch and 140ch.
+   phone / narrow window  < 960px    1 column
+   desktop                960-1599   12 columns
+   large                  1600-2239  12 columns, decks and notices double up
+   wide                   >= 2240    12 columns plus marginalia rails
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 959px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mast" "idx" "sky" "hero" "lead" "feat" "sec2"
+      "strp" "fore" "plan" "unho" "marg" "colo" "foli";
+  }
+  .span-12, .span-8, .span-6, .span-4 { grid-column: 1 / -1; }
+  .masthead { grid-template-columns: 1fr; }
+  .masthead .ear { text-align: left; }
+  .unhoused-table .rows { columns: 1; }
+  .notices .notice-cols { columns: 1; }
+  .marginalia { grid-template-columns: 1fr; }
+  .lead .deck, .lead .folio-slot { grid-column: 1 / -1; text-align: left; }
+  .lead-card { grid-template-columns: 1fr; }
+  .sec2 { grid-template-columns: 1fr; }
+  .sec2 .plate-slot, .sec2 .motion, .sec2 .stack { grid-column: 1 / -1; }
+  .sec2 .stack { columns: 1; }
+  .index-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1600px) {
+  .notices .notice-cols { columns: 2; }
+}
+
+@media (min-width: 2240px) {
+  /* wide: the marginalia row becomes four rails. */
+  .marginalia { grid-template-columns: repeat(4, 1fr); }
+  .unhoused-table .rows { columns: 6; }
+  .masthead .ear--right { columns: 2; column-gap: 3ch; }
+}
+
+
+/* --------------------------------------------------------------------------
+   4  PLATES - the integer rule (spec section 4)
+
+   A plate is never at a fractional scale and never at a transform. It carries
+   its true column count as --cols and takes the largest whole-pixel font size
+   whose product fits the container it stands in:
+
+       font-size: round(down, 100cqi / (cols * 0.6), 1px)
+
+   0.6em is Gazetteer Mono's advance, measured from the source face. Because
+   the size lands on a whole pixel, every character in the plate lands on the
+   same cell boundary as its neighbour at every viewport width, including
+   2560 and 3840 where the earlier fixed ladder ran out and left a black band.
+   -------------------------------------------------------------------------- */
+
+pre.plate,
+pre.worldmap {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.25;          /* the only line-height a pre is allowed */
+  white-space: pre;           /* never pre-wrap: it opens breaks in the grid */
+  letter-spacing: normal;     /* no tracking on a plate, ever */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* No mono face may merge two cells into one ligature. */
+  font-variant-ligatures: none;
+  font-feature-settings: "calt" 0;
+}
+
+/* Anchors inside a plate must not inherit pre-wrap, or the drawing shears.
+   This is the trap the Quartz preview hit. */
+pre.plate a,
+pre.worldmap a {
+  white-space: pre;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--small);
+}
+pre.plate a:hover,
+pre.worldmap a:hover { border-bottom-color: var(--ink); }
+
+/* Any frame around a plate is an inline-size container, so 100cqi below is
+   the frame's own width. */
+.frame,
+.masthead .nameplate,
+.stamp-frame {
+  container-type: inline-size;
+}
+.hero .frame, .plan .frame, .sec2 .frame { overflow-x: auto; }
+
+/* The rule. --cols is carried per plate in the markup. */
+@supports (font-size: round(down, 1px, 1px)) {
+  pre.autostep, .autostep {
+    font-size: round(down, calc(100cqi / (var(--cols) * 0.6)), 1px);
+  }
+}
+
+/* The fallback for engines without round(): the original class ladder, driven
+   by container-query thresholds at each plate's column count times 0.6em. */
+@supports not (font-size: round(down, 1px, 1px)) {
+  .step-10 { font-size: 10px; }
+  .step-12 { font-size: 12px; }
+  .step-14 { font-size: 14px; }
+  .step-16 { font-size: 16px; }
+  .step-18 { font-size: 18px; }
+  .step-20 { font-size: 20px; }
+
+  .hero .frame { container-name: heroframe; }
+  .plan .frame { container-name: planframe; }
+  .masthead .nameplate { container-name: nameplate; }
+
+  @container heroframe (min-width:  940px) { pre.autostep { font-size: 10px; } }
+  @container heroframe (min-width: 1130px) { pre.autostep { font-size: 12px; } }
+  @container heroframe (min-width: 1320px) { pre.autostep { font-size: 14px; } }
+  @container heroframe (min-width: 1500px) { pre.autostep { font-size: 16px; } }
+  @container heroframe (min-width: 1690px) { pre.autostep { font-size: 18px; } }
+  @container heroframe (min-width: 1880px) { pre.autostep { font-size: 20px; } }
+
+  @container planframe (min-width:  515px) { pre.autostep { font-size: 10px; } }
+  @container planframe (min-width:  615px) { pre.autostep { font-size: 12px; } }
+  @container planframe (min-width:  720px) { pre.autostep { font-size: 14px; } }
+  @container planframe (min-width:  820px) { pre.autostep { font-size: 16px; } }
+  @container planframe (min-width:  920px) { pre.autostep { font-size: 18px; } }
+  @container planframe (min-width: 1025px) { pre.autostep { font-size: 20px; } }
+
+  @container nameplate (min-width:  400px) { pre.autostep { font-size: 10px; } }
+  @container nameplate (min-width:  480px) { pre.autostep { font-size: 12px; } }
+  @container nameplate (min-width:  560px) { pre.autostep { font-size: 14px; } }
+  @container nameplate (min-width:  640px) { pre.autostep { font-size: 16px; } }
+  @container nameplate (min-width:  800px) { pre.autostep { font-size: 20px; } }
+  @container nameplate (min-width:  960px) { pre.autostep { font-size: 24px; } }
+  @container nameplate (min-width: 1120px) { pre.autostep { font-size: 28px; } }
+  @container nameplate (min-width: 1280px) { pre.autostep { font-size: 32px; } }
+  @container nameplate (min-width: 1600px) { pre.autostep { font-size: 40px; } }
+}
+
+/* Raster plate cells. */
+.plate-cell {
+  border: 1px solid var(--hair);
+  background: var(--ground);
+  overflow: hidden;
+}
+.plate-cell img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+/* The card sets are 2052 by 2832, which is 0.724; the cell matches the asset
+   so the art touches its frame instead of floating in a black band. */
+.plate-cell--3x4 { aspect-ratio: 2052 / 2832; }
+
+.figcap {
+  display: grid;
+  grid-template-columns: 8ch 1fr;
+  gap: 0 1ch;
+  max-width: 78ch;
+  color: var(--lead);
+  font-size: var(--step-small);
+  letter-spacing: .04em;
+  border-top: 1px solid var(--hair);
+  margin-top: calc(var(--line) / 2);
+  padding-top: calc(var(--line) / 2);
+}
+.figcap .fig { color: var(--ink); }
+.figcap .credit { grid-column: 2; color: var(--small); font-size: var(--step-tiny); }
+
+/* A small primer or kaomoji stamp standing in a card cell. */
+.stamp-frame {
+  aspect-ratio: 2052 / 2832;
+  border: 1px solid var(--hair);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: calc(var(--line) / 2);
+}
+.stamp-frame pre.plate { font-size: var(--step-small); color: var(--lead); }
+.stamp-frame pre.plate.kao {
+  font-size: calc(var(--mono-base) * 3);
+  line-height: 1;
+  color: var(--ink);
+}
+
+
+/* --------------------------------------------------------------------------
+   5  COMPONENTS
+   One block per component name in spec section 3.
+   -------------------------------------------------------------------------- */
+
+/* --- masthead (OP-01) ---------------------------------------------------- */
+.masthead {
+  display: grid;
+  /* The nameplate track must be determinate: an auto track sized by a plate
+     whose font-size is read back off that same track is circular. */
+  grid-template-columns: minmax(26ch, 1fr) minmax(0, 2fr) minmax(26ch, 1fr);
+  align-items: end;
+  gap: var(--gutter);
+  padding: calc(var(--line) * 2) 0 var(--line);
+  border-bottom: 3px double var(--hair);
+  view-transition-name: masthead;
+}
+/* Broadsheet ears are boxed and ruled, not two loose grey paragraphs pushed
+   to the extreme edges of a 2400px rule. */
+.masthead .ear {
+  color: var(--lead);
+  font-size: var(--step-small);
+  line-height: var(--line);
+  border: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 1ch;
+}
+.masthead .ear--right { text-align: right; }
+.masthead .ear b { color: var(--ink); font-weight: 400; }
+.masthead .nameplate { text-align: center; }
+.masthead .nameplate pre { display: inline-block; text-align: left; }
+.masthead .subline {
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .38em;
+  font-size: var(--step-small);
+  padding-top: calc(var(--line) / 2);
+}
+
+/* --- index strip (OP-14, teletext) --------------------------------------- */
+/* Every section carries a three-digit number, so the page can be navigated by
+   number the way a teletext index is. Four density treatments stand in for
+   teletext's four colours. */
+.index-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+  gap: 0 var(--gutter);
+  border-bottom: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 0;
+  font-size: var(--step-tiny);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.index-strip a {
+  display: grid;
+  grid-template-columns: 1fr 4ch;
+  text-decoration: none;
+  color: var(--body);
+  border-bottom: 1px solid var(--hair);
+  padding-right: 1ch;
+}
+.index-strip a .no { color: var(--small); text-align: right; }
+.index-strip a:hover { color: var(--ink); }
+.index-strip a.t-inverse { background: var(--ink); color: var(--ground); }
+.index-strip a.t-inverse .no { color: var(--ground); }
+.index-strip a.t-double { border-bottom: 3px double var(--small); }
+.index-strip a.t-rule   { border-bottom: 1px solid var(--small); }
+
+/* --- skybox (OP-02), a scroll-driven ticker ------------------------------ */
+.skybox {
+  height: calc(var(--line) * 3);
+  overflow: hidden;
+  border-bottom: 1px solid var(--hair);
+}
+.skybox .run {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+}
+.skybox .run > * {
+  padding: calc(var(--line) / 2) 1ch;
+  font-size: var(--step-small);
+}
+.skybox .run > * + * { border-left: 1px solid var(--hair); }
+.skybox .label {
+  display: block;
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.skybox .hook { color: var(--body); }
+/* The duplicate run only exists for the marquee; static, it would be a second
+   copy of the same four cells stacked under the first. */
+.skybox .run + .run { display: none; }
+
+/* --- hero (OP-10, full bleed, one numbered caption) ---------------------- */
+.hero {
+  padding: var(--line) 0;
+  border-bottom: 1px solid var(--hair);
+}
+
+/* --- lead (OP-03) -------------------------------------------------------- */
+.lead {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  padding: var(--line) 0;
+  border-bottom: 2px solid var(--hair);
+}
+.lead .kicker {
+  grid-column: 1 / 4;
+  background: var(--ink);
+  color: var(--ground);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-small);
+  padding: 0 1ch;
+  align-self: start;
+}
+.lead .headline {
+  grid-column: 1 / -1;
+  color: var(--ink);
+  font-size: var(--step-head);
+  line-height: 1.06;
+  letter-spacing: .02em;
+  text-wrap: balance;
+  padding-block: calc(var(--line) / 2) var(--line);
+}
+/* The deck is the one sans element on the page. It spans cols 4-9 and takes
+   its measure from that cell alone: the old max-width fought the span and
+   left a third of a 1200px band empty, which was the page's loudest wrong
+   note. At large widths it doubles into two ruled columns (OP-04). */
+.lead .deck {
+  grid-column: 4 / 10;
+  font-family: var(--sans);
+  font-size: var(--step-deck);
+  color: var(--body);
+}
+@container page (min-width: 1600px) {
+  .lead .deck {
+    columns: 2;
+    column-gap: 4ch;
+    column-rule: 1px solid var(--hair);
+  }
+}
+.lead .folio-slot {
+  grid-column: 10 / -1;
+  color: var(--lead);
+  font-size: var(--step-small);
+  text-align: right;
+}
+
+/* --- card (OP-06 / OP-25) ------------------------------------------------ */
+/* A card restyles from its OWN width, not the viewport, so the same card
+   works in a four-up feature row, a nine-up row on a large monitor, and a
+   single column on a phone. */
+.card {
+  container-type: inline-size;
+  container-name: card;
+  border: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 1ch var(--line);
+}
+
+/* OP-12, cut-and-paste: alternate cards drop one whole line and shift one
+   whole cell, so the row reads as pasted-up fragments. The offset is
+   quantised to the cell, so nothing leaves the grid. */
+.feature-row > .card:nth-child(even) {
+  margin-top: var(--line);
+  margin-left: 1ch;
+}
+
+/* Narrow card: drop the standfirst line and tighten the title. */
+@container card (max-width: 24ch) {
+  .card .line { display: none; }
+  .card .title { font-size: var(--mono-base); }
+}
+
+/* Roomy card: the title takes a step up. */
+@container card (min-width: 40ch) {
+  .card .title { font-size: calc(var(--mono-base) * 1.375); }
+}
+.card .kicker {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-tiny);
+}
+.card .title {
+  color: var(--ink);
+  font-size: var(--step-title);
+  font-weight: 400;
+  padding: calc(var(--line) / 4) 0;
+}
+.card .line { color: var(--body); font-size: var(--step-small); }
+.card .folio { color: var(--small); font-size: var(--step-tiny); padding-top: calc(var(--line) / 2); }
+.card .plate-cell { margin-bottom: calc(var(--line) / 2); }
+
+/* --- notices (OP-19, London Gazette) ------------------------------------- */
+/* Lifted out of the card track: a notices column is a ruled rail at a smaller
+   measure and a smaller type voice, not a card with no picture. */
+.notices {
+  grid-column: span 2;
+  border-left: 1px solid var(--hair);
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  padding: calc(var(--line) / 2) 2ch;
+  font-size: var(--step-tiny);
+}
+.notices .notice-cols { columns: 1; column-gap: 4ch; column-rule: 1px solid var(--hair); }
+.notices .notice {
+  break-inside: avoid;
+  padding-bottom: calc(var(--line) / 2);
+}
+.notices .docket { color: var(--small); letter-spacing: .06em; }
+.notices .subject { color: var(--ink); }
+.notices .sep { color: var(--hair); letter-spacing: 0; }
+.notices .given { color: var(--lead); padding-top: var(--line); }
+
+/* --- second lead (OP-04), below the fold --------------------------------- */
+/* Half the weight of the first lead: a double rule above, a smaller headline,
+   no deck, and the prose in three hairline-ruled columns. */
+.sec2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  border-top: 2px double var(--hair);
+  padding: var(--line) 0;
+}
+.sec2 .plate-slot { grid-column: 1 / 7; }
+.sec2 .motion     { grid-column: 7 / 9; margin: 0; }
+.sec2 .head-slot  { grid-column: 9 / -1; }
+.sec2 .stack {
+  grid-column: 9 / -1;
+  columns: 3;
+  column-gap: 3ch;
+  column-rule: 1px solid var(--hair);
+  font-size: var(--step-small);
+}
+.sec2 .stack p { margin: 0 0 var(--line); break-inside: avoid; }
+.sec2 .headline2 {
+  color: var(--ink);
+  font-size: calc(var(--step-head) * 0.55);
+  line-height: 1.06;
+  font-weight: 400;
+  padding-block: 0 var(--line);
+  text-wrap: balance;
+}
+
+/* --- motion cell --------------------------------------------------------- */
+.motion { margin: 0; }
+.motion video, .motion img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  image-rendering: pixelated;
+  border: 1px solid var(--hair);
+}
+.motion .transport {
+  display: flex;
+  justify-content: space-between;
+  color: var(--small);
+  font-size: var(--step-tiny);
+  letter-spacing: .06em;
+  padding-top: calc(var(--line) / 4);
+}
+/* Under a reduced-motion preference the poster replaces the video outright
+   rather than merely pausing it. */
+.motion .poster { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .motion video  { display: none; }
+  .motion .poster { display: block; }
+}
+
+/* --- OP-07, the one measure violation ------------------------------------ */
+/* Exactly one element per page starts off the page's column 1 and sets its own
+   odd measure. Everything around it holds, which is what makes it read as
+   intent. The seams block is the candidate because a seam is conceptually a
+   join that does not line up. No rotation and no transform: the violation is
+   a measure, per the terminal-bound rule. */
+/* Written at a specificity that beats .sec2 .stack, which places the block
+   normally; without that the violation would silently lose the cascade and
+   the page would look exactly as it did before. */
+.sec2 .stack.violates {
+  grid-column: 10 / -1;
+  columns: auto;
+  column-width: 43ch;
+  border-left: 1px solid var(--small);
+  padding-left: 2ch;
+}
+
+/* --- OP-08, the one overlap ---------------------------------------------- */
+/* A plate and a section title occupy the same grid cell at different depths.
+   Both layers sit on the same character grid, so nothing moves off a cell;
+   the plate is the only thing that loses opacity, and body prose never
+   overlaps anything. */
+.divider {
+  display: grid;
+  grid-template-areas: "stack";
+  align-items: center;
+  border-top: 1px solid var(--hair);
+  padding: var(--line) 0;
+  overflow: hidden;
+}
+.divider > * { grid-area: stack; }
+.divider .under {
+  z-index: 0;
+  opacity: .3;
+  justify-self: stretch;
+  pointer-events: none;
+}
+.divider .over {
+  z-index: 1;
+  color: var(--ink);
+  font-size: calc(var(--mono-base) * 2);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  justify-self: center;
+  background: none;
+}
+
+/* --- strip, as panels (OP-14 / OP-16) ------------------------------------ */
+.strip { border-top: 1px solid var(--hair); padding: var(--line) 0; }
+.strip-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38ch, 1fr));
+  gap: var(--line) var(--gutter);
+  margin-bottom: var(--line);
+}
+.panel { border: 1px solid var(--hair); }
+.panel .set-bar {
+  background: var(--ink);
+  color: var(--ground);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-tiny);
+  padding: 0 1ch;
+  display: flex;
+  justify-content: space-between;
+}
+.panel .face {
+  display: grid;
+  place-items: center;
+  padding: var(--line) 1ch;
+  border-bottom: 1px solid var(--hair);
+}
+.panel .face pre.plate {
+  font-size: calc(var(--mono-base) * 1.75);
+  line-height: 1;
+  white-space: pre;
+}
+.panel .body { padding: calc(var(--line) / 2) 1ch; font-size: var(--step-small); }
+.panel .body .who { color: var(--ink); }
+.panel .body .mood { color: var(--body); }
+
+.cast { width: 100%; font-size: var(--step-small); }
+.cast th {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 400;
+  border-bottom: 1px solid var(--hair);
+  padding: 0 1ch calc(var(--line) / 4) 0;
+}
+.cast td {
+  padding: calc(var(--line) / 4) 1ch calc(var(--line) / 4) 0;
+  border-bottom: 1px solid var(--hair);
+}
+.cast td.who { color: var(--ink); white-space: nowrap; }
+.cast td.mood { color: var(--body); }
+/* The kaomoji column takes exactly the width its content needs. The old fixed
+   6ch cell was narrower than Gary's face and pushed it into the WHO column. */
+.cast td.face, .cast th.face {
+  width: max-content;
+  white-space: nowrap;
+  color: var(--ink);
+  padding-right: 2ch;
+}
+
+.sets { font-size: var(--step-small); padding-top: var(--line); }
+.sets li { padding: 0; }
+.garden-report {
+  border: 1px solid var(--hair);
+  margin-top: var(--line);
+  font-size: var(--step-small);
+}
+.garden-report .label {
+  display: block;
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom: 1px solid var(--hair);
+  padding: 0 1ch;
+}
+.garden-report .beat {
+  display: grid;
+  grid-template-columns: 14ch 1fr;
+  border-bottom: 1px solid var(--hair);
+  padding: 0 1ch;
+}
+.garden-report .beat:last-child { border-bottom: 0; }
+.garden-report .beat .d { color: var(--small); }
+.garden-report .value { color: var(--ink); }
+.garden-report .beat--empty .d,
+.garden-report .beat--empty span { color: var(--hair); }
+
+/* --- forecast (OP-21, Shipping Forecast) --------------------------------- */
+.forecast { border-top: 1px solid var(--hair); padding: var(--line) 0; }
+/* 24ch holds NORTHERN MOUNTAINS on one line; the third track stays empty on
+   purpose, which is what a printed forecast page actually looks like. */
+.forecast .rows {
+  display: grid;
+  grid-template-columns: 24ch minmax(0, 60ch) 1fr;
+  font-size: var(--step-small);
+}
+.forecast .area {
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: calc(var(--line) / 4) 1ch calc(var(--line) / 4) 0;
+  border-bottom: 1px solid var(--hair);
+}
+.forecast .fields {
+  color: var(--body);
+  padding: calc(var(--line) / 4) 0;
+  border-bottom: 1px solid var(--hair);
+}
+.forecast .margin-cell { border-bottom: 1px solid var(--hair); }
+
+/* --- plan (the map crop) ------------------------------------------------- */
+.plan { border-top: 1px solid var(--hair); padding: var(--line) 0; }
+.plan .plain-list {
+  columns: 3;
+  column-gap: 3ch;
+  font-size: var(--step-tiny);
+  padding-top: var(--line);
+}
+.plan .plain-list li { break-inside: avoid; }
+
+/* --- gazetteer-table (OP-18, Ordnance Survey index) ---------------------- */
+.gazetteer-table { border-top: 1px solid var(--hair); padding: var(--line) 0; }
+.running-head {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--hair);
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-tiny);
+  padding-bottom: calc(var(--line) / 4);
+  margin-bottom: calc(var(--line) / 2);
+}
+/* A real four-column table: name, type, coordinate, sheet. space-between put
+   the type tag in the middle of the first line whenever a name wrapped. */
+.unhoused-table .rows {
+  columns: 4;
+  column-gap: 3ch;
+  column-rule: 1px solid var(--hair);
+  font-size: var(--step-small);
+}
+.unhoused-table .row {
+  display: grid;
+  grid-template-columns: 1fr 5ch 8ch 5ch;
+  align-items: baseline;
+  gap: 0 1ch;
+  break-inside: avoid;
+}
+.unhoused-table .nm  { color: var(--body); }
+.unhoused-table .ty  { color: var(--small); }
+/* The coordinate column is deliberately empty and stays visible. */
+.unhoused-table .co  {
+  color: var(--small);
+  text-align: right;
+  border-bottom: 1px dotted var(--hair);
+}
+.unhoused-table .sh { color: var(--small); text-align: right; }
+.unhoused-table .rows-head {
+  display: grid;
+  grid-template-columns: 1fr 5ch 8ch 5ch;
+  gap: 0 1ch;
+  color: var(--small);
+  font-size: var(--step-tiny);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom: 1px solid var(--hair);
+  margin-bottom: calc(var(--line) / 4);
+}
+/* The count is set at 3x when the unhoused list crosses its threshold. */
+.alarm { font-size: 3em; line-height: 1; color: var(--ink); }
+
+/* --- marginalia (OP-17, Almanac) ----------------------------------------- */
+.marginalia {
+  border-top: 1px solid var(--hair);
+  padding: var(--line) 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--gutter);
+  font-size: var(--step-small);
+}
+.marginalia > div { padding-right: 2ch; }
+.marginalia h3 {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-tiny);
+  margin-bottom: calc(var(--line) / 2);
+}
+.marginalia .scramble-line { color: var(--body); }
+.marginalia .kao { color: var(--ink); }
+/* OP-12: the gutter stamp. A primer pasted between two rows, bleeding one
+   whole cell into the gutter. One cell, never a fraction of one. */
+.gutter-stamp {
+  margin-left: -1ch;
+  border-left: 1px solid var(--hair);
+  padding-left: 1ch;
+  color: var(--lead);
+}
+.gutter-stamp pre.plate { color: var(--lead); font-size: var(--step-small); }
+
+/* --- colophon (OP-13, NFO anatomy) --------------------------------------- */
+/* Logo, then a ruled info box of dot-leader pairs, then a greetz block in
+   three narrow columns, then the contact footer. 78 columns, the whole of it,
+   per OP-16. The signature lives here and nowhere else on the page. */
+.colophon {
+  border-top: 1px solid var(--hair);
+  padding: var(--line) 0;
+}
+/* No inline-size containment here: it would make a max-content width
+   collapse to nothing. The colophon plate is at a fixed step, not autostep. */
+.colophon .frame { container-type: normal; width: max-content; max-width: 100%; }
+.colophon pre.plate {
+  font-size: var(--step-small);
+  color: var(--lead);
+}
+.colophon pre.plate b { color: var(--ink); font-weight: 400; }
+
+/* --- folio (OP-05) ------------------------------------------------------- */
+.folio {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--hair);
+  padding-top: calc(var(--line) / 2);
+  color: var(--lead);
+  font-size: var(--step-small);
+  letter-spacing: .04em;
+}
+
+/* --- status-line (OP-15, BBS status bar) --------------------------------- */
+.status-line {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 2ch;
+  background: var(--ground);
+  border-top: 2px solid var(--hair);
+  /* shares the page inset, so it lines up with the page content */
+  padding: calc(var(--line) / 4) var(--inset);
+  font-size: var(--step-small);
+  color: var(--lead);
+}
+.status-line form { display: flex; gap: 1ch; margin: 0; align-items: center; }
+.status-line input {
+  background: var(--ground);
+  color: var(--ink);
+  border: 1px solid var(--hair);
+  font-family: var(--mono);
+  font-size: var(--step-small);
+  padding: 0 1ch;
+  width: 24ch;
+}
+.status-line .spacer { margin-left: auto; }
+
+/* On a phone the bar collapses to one row: the search field shrinks to the
+   width it needs and the two date-ish cells drop, so the bar never overflows
+   the viewport or eats a line above the software keyboard. */
+@media (max-width: 959px) {
+  .status-line { gap: 1ch; font-size: var(--step-tiny); }
+  .status-line input { width: 12ch; }
+  .status-line label { display: none; }
+  .status-line .drop-narrow { display: none; }
+}
+
+/* --- section front ------------------------------------------------------- */
+.section-masthead {
+  text-align: center;
+  padding: calc(var(--line) * 2) 0 var(--line);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
+  gap: var(--line) var(--gutter);
+}
+.lead-card {
+  display: grid;
+  grid-template-columns: 24ch 1fr;
+  gap: var(--gutter);
+  border-top: 2px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  padding: var(--line) 0;
+}
+.lead-card .title {
+  color: var(--ink);
+  font-size: calc(var(--step-head) * 0.5);
+  line-height: 1.06;
+  font-weight: 400;
+  padding-block: calc(var(--line) / 4);
+}
+.lead-card .deck {
+  font-family: var(--sans);
+  font-size: var(--step-deck);
+  max-width: var(--measure);
+}
+.centred { text-align: center; }
+
+/* --- entry (a gazetteer entry page) -------------------------------------- */
+.entry { border-top: 2px solid var(--hair); padding-top: var(--line); }
+.entry .title {
+  color: var(--ink);
+  font-size: var(--step-head);
+  line-height: 1.06;
+  padding-block: calc(var(--line) / 2) var(--line);
+}
+.entry .standfirst { font-family: var(--sans); color: var(--body); max-width: var(--measure); }
+.record-fields {
+  display: grid;
+  grid-template-columns: 16ch 1fr;
+  font-size: var(--step-small);
+  margin: var(--line) 0;
+}
+.record-fields dt {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-bottom: 1px solid var(--hair);
+  padding: calc(var(--line) / 4) 1ch calc(var(--line) / 4) 0;
+}
+.record-fields dd {
+  margin: 0;
+  color: var(--ink);
+  border-bottom: 1px solid var(--hair);
+  padding: calc(var(--line) / 4) 0;
+}
+.entry-block { border-top: 1px solid var(--hair); padding: var(--line) 0; }
+.entry-block h2 {
+  color: var(--small);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: var(--step-tiny);
+  margin-bottom: calc(var(--line) / 2);
+}
+.backlinks li { font-size: var(--step-small); }
+.plate-aside { padding-top: var(--line); }
+
+
+/* --------------------------------------------------------------------------
+   6  MOTION
+   Everything here is progressive enhancement and every animation is opacity
+   or a whole-cell translate. A card carrying a plate is never transformed by
+   a fraction of a cell: a fractional translate resamples the character grid
+   mid-animation, which is the one thing the grid rule forbids.
+   -------------------------------------------------------------------------- */
+
+/* Cross-document morph between the front, a section and an entry. */
+@view-transition { navigation: auto; }
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* The ticker responds to the reader rather than to a clock: it advances
+     with the scroll position of the page and stops when the reader stops. */
+  @supports (animation-timeline: scroll()) {
+    @keyframes sky-run {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-100%); }
+    }
+    .skybox {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 100%;
+    }
+    .skybox .run + .run { display: grid; }
+    .skybox .run {
+      animation: sky-run linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 100%;
+    }
+  }
+
+  /* Cards fade up as they enter. Opacity only. */
+  @supports (animation-timeline: view()) {
+    @keyframes card-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .card, .panel, .notices {
+      animation: card-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  @view-transition { navigation: none; }
+}

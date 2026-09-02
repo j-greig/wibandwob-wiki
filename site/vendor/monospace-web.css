@@ -1,0 +1,75 @@
+/* ==========================================================================
+   The Monospace Web - grid mechanics only
+   Source: https://github.com/owickstrom/the-monospace-web  src/index.css
+   By Oskar Wickstrom. Licensed under the MIT License:
+   https://github.com/owickstrom/the-monospace-web/blob/main/LICENSE.md
+
+   Vendored 2026-09-02 and edited. What was kept, and what was removed and why:
+
+     KEPT     --line-height as the single vertical unit
+     KEPT     round(down, 100%, 1ch) on tables, rules and figures, so a
+              container edge always lands on a whole character cell
+     KEPT     pre / img / video basics and the scrollbar height
+     REMOVED  the @import of JetBrains Mono from a CDN. The site self-hosts
+              its own faces and makes no remote font request.
+     REMOVED  max-width: calc(min(80ch, ...)) on body. The 80ch cap is the one
+              thing about this stylesheet that is wrong for a broadsheet; the
+              round(down, 100%, 1ch) half of the same declaration is kept below
+              as .cellwidth.
+     REMOVED  every colour token (--text-color, --background-color and the
+              prefers-color-scheme block). Colour is set by wiki.css alone.
+     REMOVED  the * + * { margin-top } rule, which fights a grid layout.
+     REMOVED  form-control, list, details and heading styling, which is chrome
+              this site draws for itself.
+
+   Cascade order is vendor first, wiki.css second. Nothing here sets a colour,
+   so nothing here can win a colour argument with the sheet that follows it.
+   ========================================================================== */
+
+:root {
+  --line-height: 1.2rem;
+  --border-thickness: 1px;
+}
+
+/* Snap a box's width to a whole number of character cells. Applied by wiki.css
+   to plate frames, tables and rules rather than to the page. */
+@supports (width: round(down, 100%, 1ch)) {
+  .cellwidth,
+  table,
+  figure > pre {
+    width: round(down, 100%, 1ch);
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  line-height: var(--line-height);
+  vertical-align: top;
+  text-align: left;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+figure > pre {
+  margin: 0;
+}
+
+img, video {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* A horizontal scrollbar on a plate frame is one line tall, so a plate that
+   overflows still occupies a whole number of lines. */
+::-webkit-scrollbar {
+  height: var(--line-height);
+}
