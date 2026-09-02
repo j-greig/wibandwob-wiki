@@ -1040,6 +1040,26 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
 }
 .status-line .spacer { margin-left: auto; }
 
+/* The results box hangs above the bar. It is empty and display:none until the
+   search puts rows in it, so the bar looks exactly as it did before typing. */
+.status-line .results {
+  position: absolute;
+  bottom: 100%;
+  left: var(--inset);
+  right: var(--inset);
+  display: none;
+  max-height: 40vh;
+  overflow-y: auto;
+  background: var(--ground);
+  border: 1px solid var(--hair);
+  padding: calc(var(--line) / 4) 1ch;
+}
+.status-line .results.open { display: block; }
+.status-line .results a { display: block; color: var(--body); }
+.status-line .results a:hover { color: var(--ink); }
+.status-line .results .kick { color: var(--small); }
+.status-line .results .none { color: var(--small); }
+
 /* On a phone the bar collapses to one row: the search field shrinks to the
    width it needs and the two date-ish cells drop, so the bar never overflows
    the viewport or eats a line above the software keyboard. */
@@ -1176,4 +1196,37 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
     scroll-behavior: auto !important;
   }
   @view-transition { navigation: none; }
+}
+
+/* --------------------------------------------------------------------------
+   SURPRISE, ONCE PER PAGE (spec section 5c)
+
+   Nine bands at one rhythm read as a template, so each front page carries
+   exactly one measure change and one overlap. Which band gets which is chosen
+   from the date seed, so they move between surveys. Neither is a rotation and
+   neither resamples a plate.
+   -------------------------------------------------------------------------- */
+.measure-change {
+  column-count: 2;
+  column-gap: 4ch;
+  column-rule: 1px solid var(--hair);
+}
+.measure-change > * { break-inside: avoid; }
+.measure-change .rows,
+.measure-change .notice-cols { columns: 1; }
+
+.overlap { position: relative; }
+.overlap > .eyebrow,
+.overlap > .running-head {
+  position: relative;
+  z-index: 2;
+  opacity: .82;
+  margin-bottom: calc(var(--line) * -1);
+}
+.overlap > .rows,
+.overlap > .frame { position: relative; z-index: 1; }
+
+@media (max-width: 959px) {
+  .measure-change { column-count: 1; }
+  .overlap > .eyebrow, .overlap > .running-head { margin-bottom: 0; }
 }

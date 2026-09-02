@@ -14,11 +14,12 @@
   // that was from the reader's own clock, rather than letting a stale date
   // pass as current.
   var el = document.getElementById("staleness");
-  if (el) {
-    var setDown = new Date("2026-09-02T00:00:00");
+  var stamp = document.documentElement.getAttribute("data-date");
+  if (el && stamp) {
+    var setDown = new Date(stamp + "T00:00:00");
     var days = Math.floor((new Date() - setDown) / 86400000);
     var when = days <= 0 ? "today" : days === 1 ? "1 day ago" : days + " days ago";
-    el.textContent = "as of 2026-09-02, " + when;
+    el.textContent = "as of " + stamp + ", " + when;
   }
 
   // --- 2  search ------------------------------------------------------------

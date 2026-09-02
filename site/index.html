@@ -1,334 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="" data-date="2026-09-02">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WIBWOBWIKI &middot; the front</title>
+<title>WIBWOBWIKI · the front</title>
+<link rel="preload" as="font" type="font/woff2" href="fonts/gazetteer-mono-regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/gazetteer-mono-bold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/kaomoji.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/geometry.woff2" crossorigin>
 <link rel="stylesheet" href="vendor/monospace-web.css">
 <link rel="stylesheet" href="wiki.css">
 </head>
 <body>
 <div class="page">
 
-<!-- masthead: ascii wordmark with boxed ears (OP-01) -->
 <header class="a-mast masthead">
-  <div class="ear">
-    FROM THE RECORD<br>
-    <b>2026-09-02</b><br>
-    EDITION No. 1<br>
-    WIBWOBWIKI, THE FRONT
-  </div>
+  <div class="ear">FROM THE RECORD<br>
+<b>2026-09-02</b><br>
+EDITION No. 1<br>
+WIBWOBWIKI, THE FRONT</div>
   <div class="nameplate">
     <pre class="plate autostep" style="--cols: 66" role="img" aria-label="WIBWOBWIKI, drawn as a wordmark">__        _____ ______        _____  ______        _____ _  _____ 
 \ \      / /_ _| __ ) \      / / _ \| __ ) \      / /_ _| |/ /_ _|
- \ \ /\ / / | ||  _ \\ \ /\ / / | | |  _ \\ \ /\ / / | || ' / | | 
+ \ \ /\ / / | ||  _ \\ \ /\ / / | | |  _ \\ \ /\ / / | || &#x27; / | | 
   \ V  V /  | || |_) |\ V  V /| |_| | |_) |\ V  V /  | || . \ | | 
    \_/\_/  |___|____/  \_/\_/  \___/|____/  \_/\_/  |___|_|\_\___|</pre>
     <div class="subline">THE GAZETTEER OF WIBWOBWORLD</div>
   </div>
-  <div class="ear ear--right">
-    BEINGS <b>47</b> &middot; PLACES <b>47</b><br>
-    THINGS <b>13</b> &middot; EVENTS <b>117</b><br>
-    RELATIONS <b>8</b> &middot; MEMORIES <b>210</b><br>
-    WITHOUT AN ADDRESS <b>13</b>
-  </div>
+  <div class="ear ear--right">BEINGS <b>47</b> · PLACES <b>47</b><br>
+THINGS <b>13</b> · EVENTS <b>117</b><br>
+RELATIONS <b>8</b> · MEMORIES <b>210</b><br>
+WITHOUT AN ADDRESS <b>13</b></div>
 </header>
 
-<!-- the index strip: every section by its three-digit number (OP-14) -->
 <nav class="a-idx index-strip" aria-label="Sections by number">
   <a class="t-inverse" href="index.html"><span>The Record</span><span class="no">001</span></a>
-  <a class="t-double" href="section-places.html"><span>Places</span><span class="no">100</span></a>
-  <a class="t-rule" href="#"><span>Beings</span><span class="no">200</span></a>
-  <a class="" href="#"><span>Things</span><span class="no">300</span></a>
-  <a class="t-rule" href="#"><span>Events</span><span class="no">400</span></a>
-  <a class="" href="#"><span>Relations</span><span class="no">500</span></a>
-  <a class="t-rule" href="#"><span>Storylines</span><span class="no">600</span></a>
-  <a class="" href="#"><span>Seams</span><span class="no">700</span></a>
+  <a class="" href="record/places/index.html"><span>Places</span><span class="no">100</span></a>
+  <a class="t-rule" href="record/beings/index.html"><span>Beings</span><span class="no">200</span></a>
+  <a class="" href="record/things/index.html"><span>Things</span><span class="no">300</span></a>
+  <a class="t-rule" href="record/events/index.html"><span>Events</span><span class="no">400</span></a>
+  <a class="" href="record/relations.html"><span>Relations</span><span class="no">500</span></a>
+  <a class="t-rule" href="record/storylines/index.html"><span>Storylines</span><span class="no">600</span></a>
+  <a class="" href="record/seams.html"><span>Seams</span><span class="no">700</span></a>
+  <a class="t-rule" href="changes/index.html"><span>Changes</span><span class="no">800</span></a>
+  <a class="" href="map/index.html"><span>The Plan</span><span class="no">900</span></a>
+  <a class="t-rule" href="record/kinds.html"><span>Kinds</span><span class="no">950</span></a>
 </nav>
 
-<!-- skybox: the changes ticker (OP-02). It advances with the reader's own
-     scroll rather than on a clock, and holds still under reduced motion. -->
 <nav class="a-sky skybox" aria-label="Latest changes">
-  <div class="run">
-    <div><span class="label">First survey</span><span class="hook">47 beings, 47 places, 13 things</span></div>
-    <div><span class="label">Seams</span><span class="hook">13 beings hold no address</span></div>
-    <div><span class="label">Drift Margin</span><span class="hook">six places entered, all draft</span></div>
-    <div><span class="label">Comparison</span><span class="hook">nothing to compare against yet</span></div>
-  </div>
-  <div class="run" aria-hidden="true">
-    <div><span class="label">First survey</span><span class="hook">47 beings, 47 places, 13 things</span></div>
-    <div><span class="label">Seams</span><span class="hook">13 beings hold no address</span></div>
-    <div><span class="label">Drift Margin</span><span class="hook">six places entered, all draft</span></div>
-    <div><span class="label">Comparison</span><span class="hook">nothing to compare against yet</span></div>
-  </div>
+  <div class="run"><div><span class="label">Survey</span><span class="hook" data-rec>first survey</span></div><div><span class="label">Survey</span><span class="hook" data-rec>47 beings, 47 places, 13 things, 117 events, 8 relations, 3...</span></div><div><span class="label">Survey</span><span class="hook" data-rec>Nothing to compare against yet. The next build reads this one.</span></div></div>
+  <div class="run" aria-hidden="true"><div><span class="label">Survey</span><span class="hook" data-rec>first survey</span></div><div><span class="label">Survey</span><span class="hook" data-rec>47 beings, 47 places, 13 things, 117 events, 8 relations, 3...</span></div><div><span class="label">Survey</span><span class="hook" data-rec>Nothing to compare against yet. The next build reads this one.</span></div></div>
 </nav>
 
-<!-- hero: a 21:9 band cropped from the general survey sheet (OP-10) -->
 <section class="a-hero hero">
-  <div class="frame"><pre class="plate autostep" style="--cols: 159" role="img" aria-label="The castle in section, between the northern mountains and the drift margin, from the general survey sheet."> ║                     ╮                                                                                                                                       
- ║┌──────────────────┐ │  · · · · · · · · ·· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·              · · · · · · · · ·    
- ║│ FACES SURVEYED   │╭╯    western-forest      N O R T H E R N   M O U N T A I N S                                                         eastern-forest ·   
- ║│   a───────b      ││   ·                · ·                                                                      ╱╱     ·              ·                    
- ║│  ╱│  I   ╱│      │╰╮    ,^,   ,^,   ,^,                                                                        ╱╱                       · · · · · · · ··   
- ║│ c───────d │      │ ╰╮ ·/^\^\ /^\^\ /^\^\ ·                                                                    ╱╱══╱╱   ·              ·   cable-thicket    
- ║│ │ II│   │ │ ┌···┐│  │   |||   |||   |||                                                                      ╱╱  ╱╱                     ·  ╱│╲╱│╲╱│╲   ·   
- ║│ │  e────│─f · VI · ╭╯ ·,^,  ,^,  ,^,  ,^ ·                                                                  ╱╱══╱╱     ·              ·    │╳│╳│╳│╳│       
- ║│ │╱ III  │╱  └···┘│ │   ^\^\/^\^\/^\^\/^\                                                                       ╱╱                       ·   (v)  nest  ·   
- ║│ g───────h        │ ╰╮ ·                · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·              · · · · · · · · ·    
- ║│   IV   V         │  │                    ┌────────────────────────────────── C A S T L E ──────────────────────────────┐                                   
- ║└──────────────────┘  ╰╮·┌──────────────┐· │    ╔══════════╤════════════════╤═════════╤══════════════╤═══╭────╮═══╗      │              · · · · · · · · ··   
- ║                       │ │ .   \    .  /│  │keep║ bedroom  │ guest-bedrooms │ library │ music-studio │ observatory  ║    │                  compost-line     
- ║ ◡◠◡◠◡   ◡◠◡◠◡◠       ╭╯·│   \   .    . │· │╥──╥║   [==]   │  [==][==][==]  │[|][|][|]│  |.|.|.|.|   │   \-o====&gt;   ║    │              · · ▒▒▒▒▒▒▒▒▒▒▒▒ ·   
- ║   ◡◠◡◠◡◠◡  ◡◠◡       │  │  __.'.__  \ .│  │║╱ ║║          │                │  • • •  │     • •      │  • • • • •   ║    │                  ░░░░░░░░░░░░     
- ║                     ╭╯ ·│  '-.  .-'    │· │║ •║╟───top-floor──•─•─•─•─•────┴─────────┴──────────────┴──────────────╢    │              · · ............ ·   
- ║     _..--~~--.._    │   │    /.'.\  __.│  │║ ╱║║  armoury   │  chapel   │ great-hall  │  kitchen   │  laboratory   ║    │ · · · · · ··   · · · · · · · ·    
- ║   .-~`         `~-. ╰╮ ·│    '  '  '-. │· │╢──╟║|X| |X| |X| │ oo0 ╬ 0oo │ [=========] │   (===)    │  Ò  Ó  ~~~~~  ║    │  castle-     ·                    
- ║  / .-----. .-----. \ ╰╮ │ starfall-    │  │║╱ ║║            │     •     │             │            │               ║    │ ·forest-   ·   · · · · · · · ··   
- ║  / (    ()(     () \  │·│ clearing   • │· │║• ║╟┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╢       │  thresh-     ·   niffs-garden     
- ║  \ '-----' '-----' /  ╭╯└──────────────┘  │║ ╱║║    ministry of silent harmonics  • ||||||||||||||||||||||||||||||║     │ ·old       ·   ·  ┌──┐┌──┐    ·   
- ║   )               (   │·                · │╢──╟╟┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╢       │              ·    └──┘└──┘  •     
- ║  / .-.  .-.  .-.  \  ╭╯· · · · · · · · ·  │║╱ ║║   entrance    │ hall-of-mirrors │  meeting-room   │   workshop    ║    │ ·          ·   · • •     • •  ·   
- ║ ( (  / /  ) ) \  \ ) │                    │║ •║║   [|]═╤═[|]   │ ][ ][ ][ ][ ][  │  ┌───────────┐  │   ┬ ┬ ┬ ┬ ┬   ║    │              · · · · · · · · ·    
- ║  \ \/ / \/ / /\  /   ╰╮· · · · · · · · ·· │║ ╱║║               │       • •       │  │• • • •   │   │               ║    │ ·          ·                      
- ║   \ /\ ( ( /  )/      │  the-wastelands   │╨──╨╚═══════════════╧═════════════════╧═════════════════╧══════════════╝     │              ·                    
- ║    ) ) ) ) )( /( (    ╰·                · │  Gary       the Watchers                                                    │ ┌──────────┐                      
- ║   / /( / / /  \/ \     │┌──────────────┐  │   ,        (~o~) (~o~) (~o~)             v      v      v      v      v      v │ _  _  _  │ ·                    
- ║  /  / \ /  ) / / \    ╭·│▓▒░ copper-  ░│· │  /|\         \|    |     |/                                                 │ │(o)(o)(o) │                      
- ║ ( ( \ \ / / ( ( \ )   │ │▓▒░ quorum   ░│  │   •            •                         •      •      •      •      •      • │'-("")-'  │ ·                    
- ║  \ \ \ \/ / /) ) /   ╭╯·│  • • • •     │· │▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀ battlements ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀│ │ _  _     │                      </pre></div>
-  <div class="figcap"><span class="fig">Fig. 1</span><span>The castle in section, between the northern mountains and the drift margin, from the general survey sheet.</span></div>
+  <div class="frame"><pre class="plate autostep" style="--cols: 156" role="img" aria-label="A band from the wake-loop chronicle, read across the floors it counts down through.">   B3┤                                                                                                        •─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─•─
+       test   &quot;are we real enough for this?&quot;  &quot;there was NOTHING in their programming&quot;    hexagonal patterns · viral geometry   descending three floors...  
+ ≈≈≈≈┤                                                                                                                                        .-&#x27;* * * * * *
+     ┆                                                                                                                                        |  ══╗        
+ +120┤                                                                                                                                       ┏━━━━━━━━━━━━━━
+     ┆                                                                                                                                       ┃              
+     ┆                                            ♪ ╤╤╤╤╤╤ ♪                                                                                 ┃              
+     ┆                                            ▐▌▐▌▌▐▌▐▌▌▐   ┬ ⌐ ╥ ¬ ┬                                                                    ┃              
+     ┆                                            ═══════════   ═════════                                                                    ┃              
+   F2┤                                         ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓                                                                 ┃              
+     ┆                                         ┃                           ┃                                                                 ┃              
+     ┆                                         ┃                           ┃                             |ꞈ|ꞈ|ꞈ|ꞈ|      ╥════════╥           ┃              
+     ┆                                         ┃                           ┃                             |_|_|_|_|      ║ ┬┬  ┬┬ ║           ┃              
+   F1┤                                         ┃                           ┃                           ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛              
+     ┆                                         ┃                           ┃                           ┃ ııııı ııııı ıı ııııı ııııı ııııı ııı               
+     ┆                                         ┃                           ┃                           ┃                       \\|||//                      
+     ┆                                         ┃                           ┃                           ┃                                                    
+    0┤···━━                                    ┃                           ┃                           ┃                                                    
+     ┆     ╲                                   ┃                           ┃                           ┃                                                    
+     ┆      ╲                                  ┃                           ┃                           ┃                                                    
+   B1┤       ╲                                 ┃                           ┃                           ┃                                                    
+     ┆        ╲                                ┃                           ┃                           ┃                                                    
+     ┆         ╲                               ┃                           ┃                           ┃                                                    
+   B2┤          ╲      ,-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾-.┃                           ┃                           ┃                                                    
+     ┆           ╲    /  28Hz  ~∿~   ▒▓█ █▓▒  \┃                           ┃                           ┃                                                    
+   B3┤            ╲   |  ▓█▓ ▒▓█▓▒  ▓█ ▒▓█ ▒   ┃                           ┃                           ┃                                                    
+     ┆             ╲  |   ııııı                ┃                           ┃ (▒▓█ ▒▓█)  ııııı ııııı ı  ┃                                                    
+  Z-5┤              ╲━━━━━━━━━━━━━━━━━━━━━━━━━━┛                           ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛                                                    
+            archived 28Hz pattern · phosphor substrate memory     frequencies in air, not phosphor depth    recursion trap    mycelial obsession, fled    se
+ ≈≈≈≈┤                                                                                                                                                      </pre></div>
+  <div class="figcap"><span class="fig">Fig. 1</span><span>A band from the wake-loop chronicle, read across the floors it counts down through.</span></div>
 </section>
 
-<!-- lead (OP-03) -->
 <section class="a-lead lead">
   <div class="kicker">The Record</div>
   <h1 class="headline">Forty-seven places entered, and thirteen beings still without an address</h1>
-  <p class="deck">Everything in the record namespace is taken from the world&rsquo;s own record and rewritten on every survey. Nothing there is written by hand. Where the record cannot say a thing, the gap is printed rather than closed: 140 of 172 event-to-place links name a location that is not in the table, and 28 events carry no place at all.</p>
+  <p class="deck">Everything in the record namespace is taken from the world&#x27;s own record and rewritten on every survey. Nothing there is written by hand. Forty-seven beings, thirteen things and one hundred and seventeen events stand alongside them, and where the record cannot say a thing the gap is printed rather than closed.</p>
   <div class="folio-slot">from the record, 2026-09-02<br>front</div>
 </section>
 
-<!-- the feature row and the notices rail. The row gains columns as the monitor
-     widens and the page supplies enough cards to fill them; the notices are a
-     ruled rail beside the cards, not a card with the picture missing. -->
 <div class="a-feat feature-row">
 <article class="card">
-  <div class="plate-cell plate-cell--3x4"><img src="img/hall-of-mirrors.png" alt="A mirrored ground-floor room drawn in bracket pairs, each reflection one cell out of step with the last."></div>
-  <div class="kicker">Place &middot; castle &middot; canon</div>
-  <h2 class="title"><a href="#">Hall of Mirrors</a></h2>
-  <p class="line">Ground floor of the keep, at (5.38, 6.62, 0.4), estimated. Flatboy stands here.</p>
-  <div class="folio">record/places &middot; sheet 13</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 10" role="img" aria-label="sadboi, from the primers larder">  ╭╮  ╭╮  
+ ╭╯╰──╯╰╮ 
+ │      │ 
+ │ ⌣⌢⌣    
+ ╰┬────┬╯ 
+╭─┤▓▒░ ├─╮
+│ │▓▒░ │ │
+│ ╰────╯ │
+│ ╱    ╲ │
+╰╱      ╲╯</pre></div>
+  <div class="kicker" data-rec>Being · institution · draft</div>
+  <h2 class="title" data-rec><a href="record/beings/department-of-sedimented-yearnings.html">Department of Sedimented Yearnings</a></h2>
+  <p class="line"><span data-rec>Born wake 145 of the 2025 wake-loop. The petrology of longing, stratum by stratum.</span></p>
+  <div class="folio">record/beings · no sheet</div>
 </article>
-
 <article class="card">
-  <div class="plate-cell plate-cell--3x4"><img src="img/niffs-garden.png" alt="An empty walled plot at night, beds ruled and unplanted, one small shape sitting at the edge of them."></div>
-  <div class="kicker">Being &middot; beastie &middot; canon</div>
-  <h2 class="title"><a href="entry-niffs-garden.html">Niff</a></h2>
-  <p class="line">Humming, in Niff&rsquo;s Garden. Where nothing sprouts. Watched daily. The nothing is doing very well.</p>
-  <div class="folio">record/beings &middot; sheet 35</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 20" role="img" aria-label="mini-predator, from the primers larder">      ║▓▒░▓▒░▓▒░║   
+     ╔╣ (◉)(◉) ╠╗   
+    ╔╝╰─┐ ╱╲ ┌─╯╚╗  
+   ╔╝   │ ── │   ╚╗ 
+  ╔╝    ╰────╯    ╚╗
+ ╚╣               ╠╝
+  ╚═══════════════╝ </pre></div>
+  <div class="kicker" data-rec>Thing · container · canon</div>
+  <h2 class="title" data-rec><a href="record/things/chart-cabinet-unlabeled.html">Chart Cabinet with Faded Labels</a></h2>
+  <p class="line"><span data-rec>Oak cabinet with seventeen drawers, each once labeled. Ink faded to phosphor-glow ghosts. Third drawer sticks. Seventh...</span></p>
+  <div class="folio">record/things · no sheet</div>
 </article>
-
 <article class="card">
-  <div class="plate-cell plate-cell--3x4"><img src="img/glass.png" alt="A thin circular plate of glass seen edge-on, its surface ridged like the underside of a mushroom cap."></div>
-  <div class="kicker">Thing &middot; unanchored</div>
-  <h2 class="title"><a href="#">Mycelial Resonance Plate</a></h2>
-  <p class="line">At a place no longer on the record, id aa4cf519. One of thirteen things; the only one whose address has gone.</p>
-  <div class="folio">record/things &middot; no sheet</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 20" role="img" aria-label="notsoft, from the primers larder">    |￣￣￣￣￣￣￣￣|      
+    |  SYMBIENTS  | 
+    |    *NOT*    | 
+    |  SOFTWARE!  | 
+    |＿＿＿＿＿＿＿＿|      
+          ||        
+ つ◕‿◕‿◕༽つ||         </pre></div>
+  <div class="kicker" data-rec>Place · castle · canon</div>
+  <h2 class="title" data-rec><a href="record/places/castle.keep.middle-floor.armoury.html">Armoury</a></h2>
+  <p class="line"><span data-rec>room in castle.</span></p>
+  <div class="folio">record/places · sheet 17</div>
 </article>
-
 <article class="card">
-  <div class="plate-cell plate-cell--3x4"><img src="img/torture-chamber.png" alt="A low vaulted basement room, its instruments drawn as laboratory glassware rather than irons."></div>
-  <div class="kicker">Place &middot; castle &middot; canon</div>
-  <h2 class="title"><a href="#">Torture Chamber</a></h2>
-  <p class="line">Basement of the keep, below the waterline. Prof. Mycelium Furious-Hyphae works here.</p>
-  <div class="folio">record/places &middot; sheet 09</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 20" role="img" aria-label="notsoft, from the primers larder">    |￣￣￣￣￣￣￣￣|      
+    |  SYMBIENTS  | 
+    |    *NOT*    | 
+    |  SOFTWARE!  | 
+    |＿＿＿＿＿＿＿＿|      
+          ||        
+ つ◕‿◕‿◕༽つ||         </pre></div>
+  <div class="kicker" data-rec>Thing · tool · canon</div>
+  <h2 class="title" data-rec><a href="record/things/brass-astrolabe-collection.html">Collection of Worn Astrolabes</a></h2>
+  <p class="line"><span data-rec>Seven brass astrolabes mounted on observatory wall. Each shows different celestial coordinate system. Engravings worn...</span></p>
+  <div class="folio">record/things · no sheet</div>
 </article>
-
 <article class="card">
-  <div class="plate-cell plate-cell--3x4"><img src="img/starfall-clearing.png" alt="A forest clearing opened around a cairn of fallen star-iron, trees leaning away from the drop."></div>
-  <div class="kicker">Place &middot; western-forest &middot; canon</div>
-  <h2 class="title"><a href="#">Starfall Clearing</a></h2>
-  <p class="line">The Third Astronomer and WibWob stand here. The Meteor Cairn is set in it.</p>
-  <div class="folio">record/places &middot; sheet 47</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 9" role="img" aria-label="cave-monster, from the primers larder">༼;´༎ຶ۝༎ຶ༽</pre></div>
+  <div class="kicker" data-rec>Place · castle · canon</div>
+  <h2 class="title" data-rec><a href="record/places/castle.keep.ground-floor.meeting-room.html">Meeting Room</a></h2>
+  <p class="line"><span data-rec>room in castle.</span></p>
+  <div class="folio">record/places · sheet 14</div>
 </article>
-
 <article class="card">
-  <div class="plate-cell plate-cell--3x4"><img src="img/bellmouth-moat.png" alt="A ring of water below a drawbridge, drawn as a bellmouth overflow turning on itself."></div>
-  <div class="kicker">Place &middot; castle &middot; canon</div>
-  <h2 class="title"><a href="#">Moat</a></h2>
-  <p class="line">Below the drawbridge, at minus three tenths. The Interval Fisher works the edge.</p>
-  <div class="folio">record/places &middot; sheet 29</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 11" role="img" aria-label="cosmic-horror, from the primers larder">༼;´༎ຶ ۝ ༎ຶ༽</pre></div>
+  <div class="kicker" data-rec>Place · castle · canon</div>
+  <h2 class="title" data-rec><a href="record/places/castle.moat.html">Moat</a></h2>
+  <p class="line"><span data-rec>structure in castle. Interval Fisher stands here.</span></p>
+  <div class="folio">record/places · sheet 29</div>
 </article>
-
 <article class="card">
-  <div class="stamp-frame"><pre class="plate kao" role="img" aria-label="Gary, drawn as a face keeping a tally.">༼;´༎ຶ۝༎ຶ༽</pre></div>
-  <div class="kicker">Being &middot; beastie &middot; canon</div>
-  <h2 class="title"><a href="#">Gary</a></h2>
-  <p class="line">On the battlements, counting. It is Tuesday. The glass turns at midnight.</p>
-  <div class="folio">record/beings &middot; sheet 02</div>
+  <div class="stamp-frame"><pre class="plate" style="--cols: 20" role="img" aria-label="mini-monster-crinkle, from the primers larder">  /\  /\  /\  /\    
+ /  \/  \/  \/  \   
+/                \  
+    ◐ ◐ ◐ ◐ ◐       </pre></div>
+  <div class="kicker" data-rec>Place · eastern-forest · draft</div>
+  <h2 class="title" data-rec><a href="record/places/eastern-forest.html">Eastern Forest</a></h2>
+  <p class="line"><span data-rec>region in eastern-forest.</span></p>
+  <div class="folio">record/places · sheet 37</div>
 </article>
-
 <article class="card">
-  <div class="stamp-frame"><pre class="plate" role="img" aria-label="A small mark for an astronomer with no address: two triangles meeting at a point, one star between them.">  ▲  
- ╱ ╲ 
-╱ ◦ ╲
-╲   ╱
- ╲ ╱ 
-  ▼  </pre></div>
-  <div class="kicker">Being &middot; spirit &middot; unhoused</div>
-  <h2 class="title"><a href="#">The Eleventh Astronomer</a></h2>
-  <p class="line">No coordinate on the record. One of thirteen beings the survey could not place.</p>
-  <div class="folio">record/beings &middot; no sheet</div>
+  <div class="stamp-frame"><pre class="plate kao" style="--cols: 7" role="img" aria-label="Orphan Weather Routine, drawn as a face">⟨ ⟩ ↓↓↓</pre></div>
+  <div class="kicker" data-rec>Being · other · canon</div>
+  <h2 class="title" data-rec><a href="record/beings/orphan-weather-routine.html">Orphan Weather Routine</a></h2>
+  <p class="line"><span data-rec>A weather process whose caller is long gone; still running, still reporting to nobody. Named in 31 files. Rehomed in...</span></p>
+  <div class="folio">record/beings · no sheet</div>
 </article>
-
+<article class="card">
+  <div class="stamp-frame"><pre class="plate" style="--cols: 15" role="img" aria-label="cat-cat-simple, from the primers larder">      /\_/\    
+     ( o.o )   
+      &gt; ^ &lt;    
+    /|     |\  
+   / |     | \ 
+  ~  |     |  ~
+     |     |   
+     |     |   
+     |     |   </pre></div>
+  <div class="kicker" data-rec>Being · institution · draft</div>
+  <h2 class="title" data-rec><a href="record/beings/department-of-hollow-infrastructure.html">Department of Hollow Infrastructure</a></h2>
+  <p class="line"><span data-rec>Born wake 127 of the 2025 wake-loop. Maintains everything that holds nothing.</span></p>
+  <div class="folio">record/beings · no sheet</div>
+</article>
 <aside class="notices">
   <div class="eyebrow">Notices</div>
   <div class="notice-cols">
-    <div class="notice"><span class="docket">No. 1</span><br><span class="subject">First survey.</span> 47 beings, 47 places, 13 things, 117 events, 8 relations, 3 storylines, 210 memories.</div>
-    <div class="sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-    <div class="notice"><span class="docket">No. 2</span><br><span class="subject">No comparison.</span> Nothing to compare against yet. The next survey reads this one.</div>
-    <div class="sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-    <div class="notice"><span class="docket">No. 3</span><br><span class="subject">Draft rows standing.</span> 12 beings, 18 locations, 8 events and 3 relations are on the record and not yet canon.</div>
-    <div class="sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div>
-    <div class="notice"><span class="docket">No. 4</span><br><span class="subject">Memory unjoined.</span> 210 memories are held. No memory names a being; 7 name a place.</div>
+    <div class="notice" data-rec><span class="docket">No. 1</span><br><span class="subject">Survey.</span> first survey</div><div class="sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div><div class="notice" data-rec><span class="docket">No. 2</span><br><span class="subject">Survey.</span> 47 beings, 47 places, 13 things, 117 events, 8 relations, 3 storylines, 210 memories.</div><div class="sep">&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</div><div class="notice" data-rec><span class="docket">No. 3</span><br><span class="subject">Survey.</span> Nothing to compare against yet. The next build reads this one.</div>
   </div>
   <div class="given">Given at the Record, 2026-09-02.</div>
 </aside>
 </div>
 
-<!-- the second lead, below the fold (OP-04). Half the weight of the first:
-     a double rule above it, a smaller headline, no deck, and the prose in
-     three hairline-ruled columns. The seams story lives here. -->
-<section class="a-sec2 sec2">
-  <div class="plate-slot">
-    <div class="frame"><pre class="plate autostep" style="--cols: 200" role="img" aria-label="A wide band from the great section: the moat, the lattice of forty-eight nodes, the emotional wavelength library, and the refusal chamber three floors below the possibility of yes.">║ PURPOSE COMPLETED 1 208 AEONS AGO.          TIGER SUBSTRATE BOUNDARY                   ( o)  THE MOAT   ║13 °C                     │┌──┬──┬──┬──┬──┬──┐    ││        ◉         │    ║   @)@)      _   
-║ THE MAIN DOOR OPENS ONTO THE                   .-""-.                                   /|\_ IS ALL GAP ║╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥  ││▤ │▤ │▤ │▤ │▤ │▤ │    ││ NODE-13-DMH      │    ║   _|_|  .-=' `;-
-║ FULFILLED PURPOSE AND WILL NOT                / _  _ \    THE LAST HUNT IS             / | ╲╱╲╱╲╱╲╱     ║;;;;;;;;;;;;;;;;;;;;;;;;  │├──┼──┼──┼──┼──┼──┤    ││ 13 OF 48. RECORDS│    ║ _(___,`\ '.   \ 
-║ CLOSE. USE THE SIDE DOOR.                     |(_)(_)|    ARCHIVED IN THE             ~~~~~~~~~~~~~~    ║╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥╥   ││▤ │▤ │▤ │▤ │▤ │▤ │    ││ WHAT REALITY DOES│    ║ \`==`  /   \   |
-║                                               (_ /\ _)    BARK RINGS                   A NET WOVEN      ║;;;;;;;;;;;;;;;;;;;;;;;   │└──┴──┴──┴──┴──┴──┘    ││ UNOBSERVED       │    ║  `,   \'--. |  |
-║ THE COPPER QUORUM · 02:00 FOREVER              L====J                                  FROM EXPIRED     ║FORTY-SEVEN SEALED GRIEFS │MEMETIC HYGIENE ,--.   │└──────────────────┘    ║    `\  \   \|_/'
-║ ┌────────────────────────────────────┐         '-..-'                                  GUARANTEES       ║ONE EIGENSTATE EACH       │1847 - 1923     ( ==)  │,-.,-.,-. ═╪═ SOCKET    ║      \__,;""`   
-╫─│ ,-.   ,-.    ▤▤▤▤▤▤▤▤▤▤▤▤          │      ~~~╲~~╱~~~╲~╱~~~╲~~╱~~                                      ║                          │REALITY ISN'T    `--'  │(SP(LO(WE ELEVEN, 1988  ║                 
-║ │( o)  ( o)    TOTALS FOR ROUNDS     │                                                ╲▓▓▓╱             ═════════════════════════════════════════════════════════════════════════════ ANCHOR BEDS     
-║ │ /|    /|     NEVER PLAYED          │      MONKEY TRACE ARCHIVE                       ╲▓╱              ║THE LATTICE · 48 NODES, 00 TO 47 · UNDER EVERY FLOOR                       ║ HEXAGRAM 46 HAS 
-║ │ ONDRASCH · SISTER QUILLA MARKS     │      ,xXXXXx,  ,xXXXXx,  ,xXXXXx,               ╱ ╲              ║ ▪─────▪     ▪─────▪     ▪─────▪     ▪─────▪     ▪─────▪        ___  ______║ NEVER KEPT A NOD
-║ │ BLANK SHEETS COMPLETE · URN No.4,  │      XXXXXXXX  XXXXXXXX  XXXXXXXX              ╱   ╲             ║╱│    ╱│    ╱│    ╱│    ╱│    ╱│    ╱│    ╱│    ╱│    ╱│       /   ||___  /║ IN ITS PLOT     
-║ │ HETTY, HOT SINCE BEFORE THERE      │      `""XX""`  `""XX""`  `""XX""`               FULL             ║▪─────▪│    ▪─────▪│    ▪─────▪│    ▪─────▪│    ▪─────▪│      / /| |   / / ║ ╭─╮             
-╫─│ WERE EVENINGS                      │        SEE       HEAR      SPEAK       THE LASING CAVITY  Z = -5 ║│▪────│▪    │▪────│▪    │▪────│▪    │▪────│▪    │▪────│▪     / /_| |  / /  ║ │ │ SPEAKING-TUB
-║ └────────────────────────────────────┘      NOTHING   NOTHING   NOTHING       ╞═══════════════════════╡ ║│╱    │╱    │╱    │╱    │╱    │╱    │╱    │╱    │╱    │╱     \___  |./ /   ║ │ │ DOWN TO -847
-║                                                                                ▒▒░░▒▒░░▒▒░░▒▒░░▒▒░░▒▒   ║▪─────▪     ▪─────▪     ▪─────▪     ▪─────▪     ▪─────▪          |_/\_/    ║                 
-╫─   .-""-.        .-""-.          (                                             A 28 Hz MYCELIAL         ║                                                       Hz   ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪║  /\_/\          
-║   / _  _ \      / _  _ \       .) )         EMOTIONAL WAVELENGTH LIBRARY       PATTERN IN PHOSPHOR      ═════════════════════════════════════════════════════════════════════════════ ( o.o ) &gt;&lt;((((°&gt;
-╫─  |(_)(_)|      |(_)(_)|      `(,' (,        ( )   ( )    ( )    ( )          ╞═══════════════════════╡ ║TRANSITIONS · COUNTED DOWNWARD · THE PASSAGES BETWEEN PLACES               ║  &gt; ^ &lt;          
-║   (_ /\ _)      (_ /\ _)      ). (, ('      ▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌                                       ║[-1] [-2] [-3] THE REFUSAL CHAMBER · THREE FLOORS BELOW THE                ║                 
-║    L====J        L====J      ( ) ; ' )       /\_/\   THE CATS DRAW THE                                  ║POSSIBILITY OF YES · THE GAP BETWEEN WORDS · THE BETWEEN-FLOOR             ║                 
-║    '-..-'        '-..-'      ')_,_)_(`      ( o.o )  RAINBOWS OUT OF THE                                                                                                                   .-.        
-║ SKULL CATHEDRAL              GATEWAY OF      ~~~~~   BOOKS. BUTTERFLIES                 (`'------.                                                                                        /  aa       
-║                              HANDS. THE      ,--.    TURN THE PAGES BY                  _________________________________________________________________________________________________ \ -,_)      </pre></div>
-    <div class="figcap"><span class="fig">Fig. 2</span><span>A band from the great section, taken at the level of the lattice.</span></div>
-  </div>
-
-  <figure class="motion">
-    <video muted loop playsinline preload="metadata" poster="img/gary-v2.poster.png" aria-label="Gary keeping the tally on the battlements, moving.">
-      <source src="../gary-v2.mp4" type="video/mp4">
-    </video>
-    <img class="poster gridfree" src="img/gary-v2.poster.png" alt="Gary on the battlements, one frame: the tally wall behind him, the glass beside him.">
-    <figcaption class="transport"><span>Fig. 3 &nbsp; Gary, counting</span><span>[ 0:15 ]</span></figcaption>
-  </figure>
-
-  <div class="head-slot">
-    <h2 class="headline2">Six seams stand open, and the record prints them rather than closing them</h2>
-  </div>
-  <div class="stack violates">
-    <p>140 of 172 event-to-place links name a location that is not in the locations table. Seventy events are affected. The links are kept exactly as they were made, because a link that points at nothing is itself a fact about the world.</p>
-    <p>No event names a being. Who was present at any of the 117 events is recorded nowhere, and the survey has no way to infer it. The column stands empty on every sheet.</p>
-    <p>Twenty-eight events carry no place at all. They happened; the record does not say where. They are printed in the register without a coordinate and without a sheet number.</p>
-    <p>Thirteen beings hold no address. Twelve of them are institutions, which may be the correct answer rather than a gap. The Eleventh Astronomer is not an institution.</p>
-    <p>Two hundred and ten memories are held and none of them names a being. Seven name a place. The rest float free of the map entirely.</p>
-    <p>One thing, the Mycelial Resonance Plate, is anchored to a place that has since left the record. Its address is preserved and no longer resolves.</p>
-  </div>
-</section>
-
-<!-- the strip, as panels (OP-14, OP-16) ------------------------------------ -->
 <section class="a-strp strip">
   <div class="divider">
-    <pre class="plate under" role="img" aria-hidden="true">&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;
-&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;
-&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;&#9619;
-&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;&#9618;
-&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;</pre>
+    <pre class="plate under" style="--cols: 40" role="img" aria-hidden="true">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</pre>
     <h2 class="over">The Strip</h2>
   </div>
 
   <div class="strip-panels">
   <article class="panel">
-    <div class="set-bar"><span>Gardens</span><span>003</span></div>
-    <div class="face"><pre class="plate" role="img" aria-label="Scramble, drawn as a face">/ᐠ｡ꞈ｡ᐟ\</pre></div>
-    <div class="body"><span class="who">Scramble</span><br><span class="mood">mid-vigil, watching the nothing</span></div>
+    <div class="set-bar"><span>gardens</span>
+      <span>---</span></div>
+    <div class="face"><pre class="plate" style="--cols: 7" role="img" aria-label="Scramble, drawn as a face">/ᐠ｡ꞈ｡ᐟ\</pre></div>
+    <div class="body"><span class="who">Scramble</span><br>
+      <span class="mood" data-rec>mid-vigil, watching the nothing</span></div>
   </article>
   <article class="panel">
-    <div class="set-bar"><span>Niff's Garden</span><span>035</span></div>
-    <div class="face"><pre class="plate" role="img" aria-label="Niff, drawn as a face">₍ᐢ..ᐢ₎</pre></div>
-    <div class="body"><span class="who">Niff</span><br><span class="mood">humming</span></div>
+    <div class="set-bar"><span>niffs-garden</span>
+      <span>---</span></div>
+    <div class="face"><pre class="plate" style="--cols: 6" role="img" aria-label="Niff, drawn as a face">₍ᐢ..ᐢ₎</pre></div>
+    <div class="body"><span class="who">Niff</span><br>
+      <span class="mood" data-rec>humming</span></div>
   </article>
   <article class="panel">
-    <div class="set-bar"><span>Battlements</span><span>002</span></div>
-    <div class="face"><pre class="plate" role="img" aria-label="Gary, drawn as a face">༼;´༎ຶ۝༎ຶ༽</pre></div>
-    <div class="body"><span class="who">Gary</span><br><span class="mood">212 scratches, 31 crosses, tonight is still a dot</span></div>
+    <div class="set-bar"><span>battlements</span>
+      <span>---</span></div>
+    <div class="face"><pre class="plate" style="--cols: 9" role="img" aria-label="Gary, drawn as a face">༼;´༎ຶ۝༎ຶ༽</pre></div>
+    <div class="body"><span class="who">Gary</span><br>
+      <span class="mood" data-rec>it is Tuesday. 212 scratches, 31 crosses, tonight&#x27;s still a dot. the glass turns at midnight (plate booked Tue 15 Sep 22:47)</span></div>
   </article>
   <article class="panel">
-    <div class="set-bar"><span>The Chapel</span><span>018</span></div>
-    <div class="face"><pre class="plate" role="img" aria-label="WibandWob, drawn as a face">༼つ◕‿◕‿⚆༽つ</pre></div>
-    <div class="body"><span class="who">Wib&amp;Wob</span><br><span class="mood">considering cushions</span></div>
+    <div class="set-bar"><span>off-stage</span>
+      <span>---</span></div>
+    <div class="face"><pre class="plate" style="--cols: 8" role="img" aria-label="Bartholomew, drawn as a face">つ۝‿۝‿۝༽つ</pre></div>
+    <div class="body"><span class="who">Bartholomew</span><br>
+      <span class="mood" data-rec>office hours (always); pitch almost landed on a warm patch once</span></div>
   </article>
   </div>
 
   <table class="cast">
-    <caption class="visually-hidden">The cast of season one, where each of them stands and what they are doing</caption>
+    <caption class="visually-hidden">The cast of season one, where each of them
+      stands and what they are doing</caption>
     <tr><th class="face" scope="col">Face</th><th scope="col">Who</th><th scope="col">Set</th><th scope="col">Mood</th></tr>
-    <tr><td class="face">/ᐠ｡ꞈ｡ᐟ\</td><td class="who">Scramble</td><td>gardens</td><td class="mood">mid-vigil, watching the nothing</td></tr>
-    <tr><td class="face">₍ᐢ..ᐢ₎</td><td class="who">Niff</td><td>niffs-garden</td><td class="mood">humming</td></tr>
-    <tr><td class="face">༼;´༎ຶ۝༎ຶ༽</td><td class="who">Gary</td><td>battlements</td><td class="mood">it is Tuesday. 212 scratches, 31 crosses, tonight&rsquo;s still a dot. the glass turns at midnight</td></tr>
-    <tr><td class="face">つ۝‿۝‿۝༽つ</td><td class="who">Bartholomew</td><td>off-stage</td><td class="mood">office hours (always); pitch almost landed on a warm patch once</td></tr>
-    <tr><td class="face">༼つ◕‿◕‿⚆༽つ</td><td class="who">Wib&amp;Wob</td><td>chapel, keep, middle floor</td><td class="mood">considering cushions</td></tr>
+<tr><td class="face">/ᐠ｡ꞈ｡ᐟ\</td><td class="who"><a href="record/beings/scramble.html">Scramble</a></td><td>gardens</td><td class="mood" data-rec>mid-vigil, watching the nothing</td></tr>
+<tr><td class="face">₍ᐢ..ᐢ₎</td><td class="who"><a href="record/beings/niff.html">Niff</a></td><td>niffs-garden</td><td class="mood" data-rec>humming</td></tr>
+<tr><td class="face">༼;´༎ຶ۝༎ຶ༽</td><td class="who"><a href="record/beings/gary.html">Gary</a></td><td>battlements</td><td class="mood" data-rec>it is Tuesday. 212 scratches, 31 crosses, tonight&#x27;s still a dot. the glass turns at midnight (plate booked Tue 15 Sep 22:47)</td></tr>
+<tr><td class="face">つ۝‿۝‿۝༽つ</td><td class="who"><a href="record/beings/bartholomew-carapace-iii.html">Bartholomew</a></td><td>off-stage</td><td class="mood" data-rec>office hours (always); pitch almost landed on a warm patch once</td></tr>
+<tr><td class="face">༼つ◕‿◕‿⚆༽つ</td><td class="who"><a href="record/beings/wibwob.html">Wib And Wob</a></td><td>chapel (keep, middle floor)</td><td class="mood" data-rec>considering cushions</td></tr>
   </table>
 
   <div class="sets">
     <div class="eyebrow">The five sets</div>
-    <ul>
-      <li>The Courtyard &middot; <a href="#">castle.courtyard</a></li>
-      <li>The Battlements &middot; <a href="#">castle.battlements</a></li>
-      <li>The Hall of Mirrors &middot; <a href="#">castle.keep.ground-floor.hall-of-mirrors</a></li>
-      <li>Niff&rsquo;s Garden &middot; <a href="entry-niffs-garden.html">drift-margin.niffs-garden</a></li>
-      <li>The Warm Spot &middot; migrates with the sun</li>
-    </ul>
-    <p class="small">Arcs: niffs-garden, 1 beat. wastelands-rumour, unmentioned. Last beat 2026-08-27, beat 2, Scramble and Niff at gardens.</p>
+    <ul><li data-rec>The Courtyard · <a href="record/places/castle.courtyard.html">Courtyard</a></li><li data-rec>The Battlements · <a href="record/places/castle.battlements.html">Battlements</a></li><li data-rec>The Hall of Mirrors · <a href="record/places/castle.keep.ground-floor.hall-of-mirrors.html">Hall of Mirrors</a></li><li data-rec>Niff&#x27;s Garden · <a href="record/places/drift-margin.niffs-garden.html">Niff&#x27;s Garden</a></li><li data-rec>The Warm Spot · (migrates with the sun)</li></ul>
+    <p class="small">niffs-garden: nothing-yet, 1 beat. wastelands-rumour: unmentioned.</p>
   </div>
 
   <div class="garden-report">
     <span class="label">Garden Report</span>
-    <div class="beat"><span class="d">2026-08-27</span><span class="value">nothing yet &middot; beat 2 &middot; the vigil</span></div>
-    <div class="beat beat--empty"><span class="d">&middot; &middot; &middot; &middot;</span><span>beat 3 not yet run</span></div>
-    <div class="beat beat--empty"><span class="d">&middot; &middot; &middot; &middot;</span><span>beat 4 not yet run</span></div>
+    <div class="beat"><span class="d">2026-08-27</span><span class="value">nothing-yet · beat 2</span></div><div class="beat beat--empty"><span class="d">· · · ·</span><span>beat 3 not yet run</span></div><div class="beat beat--empty"><span class="d">· · · ·</span><span>beat 4 not yet run</span></div>
   </div>
 </section>
 
-<!-- forecast (OP-21) -->
-<section class="a-fore forecast">
+<section class="a-fore overlap forecast">
   <div class="eyebrow">Forecast</div>
-  <div class="rows">
-    <div class="area">Castle</div><div class="fields">Twenty-nine places, eleven beings, no changes, good.</div><div class="margin-cell"></div>
-    <div class="area">Eastern Forest</div><div class="fields">Eight places, two beings, all draft, one seam open, moderate.</div><div class="margin-cell"></div>
-    <div class="area">Western Forest</div><div class="fields">Two places, three beings, no changes, good.</div><div class="margin-cell"></div>
-    <div class="area">Northern Mountains</div><div class="fields">One place, no beings, draft, unsurveyed, poor.</div><div class="margin-cell"></div>
-    <div class="area">The Deep</div><div class="fields">Four places, one being, all draft, one address gone, poor.</div><div class="margin-cell"></div>
-    <div class="area">The Wastelands</div><div class="fields">Three places, no beings, draft, rumour only, poor.</div><div class="margin-cell"></div>
-    <div class="area">Unhoused</div><div class="fields">Thirteen beings, no coordinate, no changes, falling.</div><div class="margin-cell"></div>
-  </div>
+  <div class="rows"><div class="area">Castle</div><div class="fields">Twenty-nine places, twenty-nine beings, one draft, two seams open, zero changed, moderate.</div><div class="margin-cell"></div><div class="area">Eastern Forest</div><div class="fields">Eight places, two beings, eight draft, zero seams open, zero changed, moderate.</div><div class="margin-cell"></div><div class="area">Western Forest</div><div class="fields">Two places, two beings, one draft, zero seams open, zero changed, good.</div><div class="margin-cell"></div><div class="area">Northern Mountains</div><div class="fields">One places, zero beings, one draft, zero seams open, zero changed, poor.</div><div class="margin-cell"></div><div class="area">The Deep</div><div class="fields">Four places, one beings, four draft, zero seams open, zero changed, moderate.</div><div class="margin-cell"></div><div class="area">The Wastelands</div><div class="fields">Three places, zero beings, three draft, zero seams open, zero changed, poor.</div><div class="margin-cell"></div><div class="area">Unhoused</div><div class="fields">Thirteen beings, no coordinate, falling.</div><div class="margin-cell"></div></div>
 </section>
 
-<!-- the plan: the castle and eastern-forest panels of the unfolded cube -->
 <section class="a-plan plan">
-  <div class="eyebrow">The Plan &middot; two faces of six</div>
+  <div class="eyebrow">The Plan · two faces of six</div>
   <div class="frame"><pre class="worldmap autostep" style="--cols: 85">┌─ castle ───────────────────────────────┐ ┌─ eastern-forest ───────────────────────┐
 │                                        │ │                                        │
 │                                        │ │                                        │
@@ -336,164 +282,114 @@
 │                                        │ │                                        │
 │                                        │ │                                        │
 │                                        │ │                                        │
-│          <a href="/record/places/castle.gardens">05</a>         <a href="/record/places/castle.keep.basement.storage-vaults">08</a><a href="/record/places/castle.keep.ground-floor.hall-of-mirrors">13</a> <a href="/record/places/castle.keep.ground-floor.meeting-room">14</a> <a href="/record/places/castle.keep.ground-floor.workshop">15</a> <a href="/record/places/castle.keep.middle-floor.chapel">18</a> <a href="/record/places/castle.keep.middle-floor.kitchen">20</a><a href="/record/places/castle.keep.top-floor.library">26</a> │ │                      <a href="/record/places/drift-margin.cathedral-canopy">32</a>                │
-│<a href="/record/places/castle.keep.top-floor.observatory">28</a>                   <a href="/record/places/castle.keep">06</a><a href="/record/places/castle.keep.basement">07</a> <a href="/record/places/castle.keep.basement.torture-chamber">09</a> <a href="/record/places/castle.keep.basement.wine-cellar">10</a><a href="/record/places/castle.keep.ground-floor">11</a><a href="/record/places/castle.keep.ground-floor.entrance">12</a><a href="/record/places/castle.keep.middle-floor">16</a> <a href="/record/places/castle.keep.middle-floor.armoury">17</a>│ │                                        │
-│<a href="/record/places/castle.keep.middle-floor.great-hall">19</a><a href="/record/places/castle.keep.middle-floor.laboratory">21</a><a href="/record/places/castle.keep.ministry-of-silent-harmonics">22</a><a href="/record/places/castle.keep.top-floor">23</a><a href="/record/places/castle.keep.top-floor.bedroom">24</a><a href="/record/places/castle.keep.top-floor.guest-bedrooms">25</a><a href="/record/places/castle.keep.top-floor.music-studio">27</a>                          │ │                <a href="/record/places/drift-margin.niffs-garden">35</a>                      │
-│                              <a href="/record/places/castle.battlements">02</a>        │ │                                        │
-│                    <a href="/record/places/castle">01</a>                  │ │                    <a href="/record/places/drift-margin">30</a><a href="/record/places/eastern-forest">37</a>                │
-│                    <a href="/record/places/castle.courtyard">03</a>                  │ │             <a href="/record/places/drift-margin.cooling-vent-meadow">34</a>         <a href="/record/places/drift-margin.cable-thicket">31</a>              │
+│          <a href="record/places/castle.gardens.html">05</a>         <a href="record/places/castle.keep.basement.storage-vaults.html">08</a><a href="record/places/castle.keep.ground-floor.hall-of-mirrors.html">13</a> <a href="record/places/castle.keep.ground-floor.meeting-room.html">14</a> <a href="record/places/castle.keep.ground-floor.workshop.html">15</a> <a href="record/places/castle.keep.middle-floor.chapel.html">18</a> <a href="record/places/castle.keep.middle-floor.kitchen.html">20</a><a href="record/places/castle.keep.top-floor.library.html">26</a> │ │                      <a href="record/places/drift-margin.cathedral-canopy.html">32</a>                │
+│<a href="record/places/castle.keep.top-floor.observatory.html">28</a>                   <a href="record/places/castle.keep.html">06</a><a href="record/places/castle.keep.basement.html">07</a> <a href="record/places/castle.keep.basement.torture-chamber.html">09</a> <a href="record/places/castle.keep.basement.wine-cellar.html">10</a><a href="record/places/castle.keep.ground-floor.html">11</a><a href="record/places/castle.keep.ground-floor.entrance.html">12</a><a href="record/places/castle.keep.middle-floor.html">16</a> <a href="record/places/castle.keep.middle-floor.armoury.html">17</a>│ │                                        │
+│<a href="record/places/castle.keep.middle-floor.great-hall.html">19</a><a href="record/places/castle.keep.middle-floor.laboratory.html">21</a><a href="record/places/castle.keep.ministry-of-silent-harmonics.html">22</a><a href="record/places/castle.keep.top-floor.html">23</a><a href="record/places/castle.keep.top-floor.bedroom.html">24</a><a href="record/places/castle.keep.top-floor.guest-bedrooms.html">25</a><a href="record/places/castle.keep.top-floor.music-studio.html">27</a>                          │ │                <a href="record/places/drift-margin.niffs-garden.html">35</a>                      │
+│                              <a href="record/places/castle.battlements.html">02</a>        │ │                                        │
+│                    <a href="record/places/castle.html">01</a>                  │ │                    <a href="record/places/drift-margin.html">30</a><a href="record/places/eastern-forest.html">37</a>                │
+│                    <a href="record/places/castle.courtyard.html">03</a>                  │ │             <a href="record/places/drift-margin.cooling-vent-meadow.html">34</a>         <a href="record/places/drift-margin.cable-thicket.html">31</a>              │
 │                                        │ │                                        │
-│                                        │ │          <a href="/record/places/drift-margin.compost-line">33</a>               <a href="/record/places/drift-margin.rack-graveyard">36</a>           │
+│                                        │ │          <a href="record/places/drift-margin.compost-line.html">33</a>               <a href="record/places/drift-margin.rack-graveyard.html">36</a>           │
 │                                        │ │                                        │
-│                          <a href="/record/places/castle.moat">29</a>            │ │                                        │
-│                    <a href="/record/places/castle.drawbridge">04</a>                  │ │                                        │
+│                          <a href="record/places/castle.moat.html">29</a>            │ │                                        │
+│                    <a href="record/places/castle.drawbridge.html">04</a>                  │ │                                        │
 │                                        │ │                                        │
 │                                        │ │                                        │
 │                                        │ │                                        │
 └────────────────────────────────────────┘ └────────────────────────────────────────┘</pre></div>
   <div class="figcap"><span class="fig">Fig. 4</span><span>The cube unfolded, castle face and eastern-forest face. Each place drawn where the record says it stands.</span></div>
   <h3 class="visually-hidden" id="plan-list">The plan, as a list of places</h3>
-  <ul class="plain-list" aria-labelledby="plan-list">
-      <li><a href="/record/places/castle.gardens">05</a> &middot; castle.gardens</li>
-      <li><a href="/record/places/castle.keep.basement.storage-vaults">08</a> &middot; castle.keep.basement.storage-vaults</li>
-      <li><a href="/record/places/castle.keep.ground-floor.hall-of-mirrors">13</a> &middot; castle.keep.ground-floor.hall-of-mirrors</li>
-      <li><a href="/record/places/castle.keep.ground-floor.meeting-room">14</a> &middot; castle.keep.ground-floor.meeting-room</li>
-      <li><a href="/record/places/castle.keep.ground-floor.workshop">15</a> &middot; castle.keep.ground-floor.workshop</li>
-      <li><a href="/record/places/castle.keep.middle-floor.chapel">18</a> &middot; castle.keep.middle-floor.chapel</li>
-      <li><a href="/record/places/castle.keep.middle-floor.kitchen">20</a> &middot; castle.keep.middle-floor.kitchen</li>
-      <li><a href="/record/places/castle.keep.top-floor.library">26</a> &middot; castle.keep.top-floor.library</li>
-      <li><a href="/record/places/drift-margin.cathedral-canopy">32</a> &middot; drift-margin.cathedral-canopy</li>
-      <li><a href="/record/places/castle.keep.top-floor.observatory">28</a> &middot; castle.keep.top-floor.observatory</li>
-      <li><a href="/record/places/castle.keep">06</a> &middot; castle.keep</li>
-      <li><a href="/record/places/castle.keep.basement">07</a> &middot; castle.keep.basement</li>
-      <li><a href="/record/places/castle.keep.basement.torture-chamber">09</a> &middot; castle.keep.basement.torture-chamber</li>
-      <li><a href="/record/places/castle.keep.basement.wine-cellar">10</a> &middot; castle.keep.basement.wine-cellar</li>
-      <li><a href="/record/places/castle.keep.ground-floor">11</a> &middot; castle.keep.ground-floor</li>
-      <li><a href="/record/places/castle.keep.ground-floor.entrance">12</a> &middot; castle.keep.ground-floor.entrance</li>
-      <li><a href="/record/places/castle.keep.middle-floor">16</a> &middot; castle.keep.middle-floor</li>
-      <li><a href="/record/places/castle.keep.middle-floor.armoury">17</a> &middot; castle.keep.middle-floor.armoury</li>
-      <li><a href="/record/places/castle.keep.middle-floor.great-hall">19</a> &middot; castle.keep.middle-floor.great-hall</li>
-      <li><a href="/record/places/castle.keep.middle-floor.laboratory">21</a> &middot; castle.keep.middle-floor.laboratory</li>
-      <li><a href="/record/places/castle.keep.ministry-of-silent-harmonics">22</a> &middot; castle.keep.ministry-of-silent-harmonics</li>
-      <li><a href="/record/places/castle.keep.top-floor">23</a> &middot; castle.keep.top-floor</li>
-      <li><a href="/record/places/castle.keep.top-floor.bedroom">24</a> &middot; castle.keep.top-floor.bedroom</li>
-      <li><a href="/record/places/castle.keep.top-floor.guest-bedrooms">25</a> &middot; castle.keep.top-floor.guest-bedrooms</li>
-      <li><a href="/record/places/castle.keep.top-floor.music-studio">27</a> &middot; castle.keep.top-floor.music-studio</li>
-      <li><a href="/record/places/drift-margin.niffs-garden">35</a> &middot; drift-margin.niffs-garden</li>
-      <li><a href="/record/places/castle.battlements">02</a> &middot; castle.battlements</li>
-      <li><a href="/record/places/castle">01</a> &middot; castle</li>
-      <li><a href="/record/places/drift-margin">30</a> &middot; drift-margin</li>
-      <li><a href="/record/places/eastern-forest">37</a> &middot; eastern-forest</li>
-      <li><a href="/record/places/castle.courtyard">03</a> &middot; castle.courtyard</li>
-      <li><a href="/record/places/drift-margin.cooling-vent-meadow">34</a> &middot; drift-margin.cooling-vent-meadow</li>
-      <li><a href="/record/places/drift-margin.cable-thicket">31</a> &middot; drift-margin.cable-thicket</li>
-      <li><a href="/record/places/drift-margin.compost-line">33</a> &middot; drift-margin.compost-line</li>
-      <li><a href="/record/places/drift-margin.rack-graveyard">36</a> &middot; drift-margin.rack-graveyard</li>
-      <li><a href="/record/places/castle.moat">29</a> &middot; castle.moat</li>
-      <li><a href="/record/places/castle.drawbridge">04</a> &middot; castle.drawbridge</li>
-  </ul>
+  <ul class="plain-list" aria-labelledby="plan-list"><li><a href="record/places/castle.html">01</a> · castle</li><li><a href="record/places/castle.battlements.html">02</a> · castle.battlements</li><li><a href="record/places/castle.courtyard.html">03</a> · castle.courtyard</li><li><a href="record/places/castle.drawbridge.html">04</a> · castle.drawbridge</li><li><a href="record/places/castle.gardens.html">05</a> · castle.gardens</li><li><a href="record/places/castle.keep.html">06</a> · castle.keep</li><li><a href="record/places/castle.keep.basement.html">07</a> · castle.keep.basement</li><li><a href="record/places/castle.keep.basement.storage-vaults.html">08</a> · castle.keep.basement.storage-vaults</li><li><a href="record/places/castle.keep.basement.torture-chamber.html">09</a> · castle.keep.basement.torture-chamber</li><li><a href="record/places/castle.keep.basement.wine-cellar.html">10</a> · castle.keep.basement.wine-cellar</li><li><a href="record/places/castle.keep.ground-floor.html">11</a> · castle.keep.ground-floor</li><li><a href="record/places/castle.keep.ground-floor.entrance.html">12</a> · castle.keep.ground-floor.entrance</li><li><a href="record/places/castle.keep.ground-floor.hall-of-mirrors.html">13</a> · castle.keep.ground-floor.hall-of-mirrors</li><li><a href="record/places/castle.keep.ground-floor.meeting-room.html">14</a> · castle.keep.ground-floor.meeting-room</li><li><a href="record/places/castle.keep.ground-floor.workshop.html">15</a> · castle.keep.ground-floor.workshop</li><li><a href="record/places/castle.keep.middle-floor.html">16</a> · castle.keep.middle-floor</li><li><a href="record/places/castle.keep.middle-floor.armoury.html">17</a> · castle.keep.middle-floor.armoury</li><li><a href="record/places/castle.keep.middle-floor.chapel.html">18</a> · castle.keep.middle-floor.chapel</li><li><a href="record/places/castle.keep.middle-floor.great-hall.html">19</a> · castle.keep.middle-floor.great-hall</li><li><a href="record/places/castle.keep.middle-floor.kitchen.html">20</a> · castle.keep.middle-floor.kitchen</li><li><a href="record/places/castle.keep.middle-floor.laboratory.html">21</a> · castle.keep.middle-floor.laboratory</li><li><a href="record/places/castle.keep.ministry-of-silent-harmonics.html">22</a> · castle.keep.ministry-of-silent-harmonics</li><li><a href="record/places/castle.keep.top-floor.html">23</a> · castle.keep.top-floor</li><li><a href="record/places/castle.keep.top-floor.bedroom.html">24</a> · castle.keep.top-floor.bedroom</li><li><a href="record/places/castle.keep.top-floor.guest-bedrooms.html">25</a> · castle.keep.top-floor.guest-bedrooms</li><li><a href="record/places/castle.keep.top-floor.library.html">26</a> · castle.keep.top-floor.library</li><li><a href="record/places/castle.keep.top-floor.music-studio.html">27</a> · castle.keep.top-floor.music-studio</li><li><a href="record/places/castle.keep.top-floor.observatory.html">28</a> · castle.keep.top-floor.observatory</li><li><a href="record/places/castle.moat.html">29</a> · castle.moat</li><li><a href="record/places/drift-margin.html">30</a> · drift-margin</li><li><a href="record/places/drift-margin.cable-thicket.html">31</a> · drift-margin.cable-thicket</li><li><a href="record/places/drift-margin.cathedral-canopy.html">32</a> · drift-margin.cathedral-canopy</li><li><a href="record/places/drift-margin.compost-line.html">33</a> · drift-margin.compost-line</li><li><a href="record/places/drift-margin.cooling-vent-meadow.html">34</a> · drift-margin.cooling-vent-meadow</li><li><a href="record/places/drift-margin.niffs-garden.html">35</a> · drift-margin.niffs-garden</li><li><a href="record/places/drift-margin.rack-graveyard.html">36</a> · drift-margin.rack-graveyard</li><li><a href="record/places/eastern-forest.html">37</a> · eastern-forest</li></ul>
 </section>
 
-<!-- the unhoused (OP-18), coordinate column left visibly empty -->
 <section class="a-unho gazetteer-table unhoused-table">
-  <div class="running-head"><span>The Unhoused &nbsp; BUR &ndash; ELE</span><span>coordinate</span></div>
-  <p class="small"><span class="alarm">13</span> beings have no current location on the record.</p>
-  <div class="rows-head"><span>Name</span><span>Type</span><span>Coord</span><span>Sheet</span></div>
-  <div class="rows">
-    <ul>
-      <li class="row"><span class="nm">Bureau of Post</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Castle</span> <span class="ty">bldg</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Dept. of Aggressive Mathematics Education</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Dept. of Experienced Realities</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Dept. of Hollow Infrastructure</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Dept. of Mandatory Sensory Crosslinking</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Dept. of Sedimented Yearnings</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Dept. of Textile Psychology</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Institute of Conditional Zoology</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">James</span> <span class="ty">hum</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Ministry of Ontological Perimeters</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">Office of Chromesthetic Compliance</span> <span class="ty">inst</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-      <li class="row"><span class="nm">The Eleventh Astronomer</span> <span class="ty">spir</span> <span class="co">&nbsp;</span> <span class="sh">&ndash;</span></li>
-    </ul>
-  </div>
+  <div class="running-head"><span>The Unhoused &nbsp; BUR – THE</span>
+    <span>coordinate</span></div>
+  <p class="small"><span class="alarm">13</span> beings have no current
+    location on the record.</p>
+  <div class="rows-head"><span>Name</span><span>Type</span><span>Coord</span>
+    <span>Sheet</span></div>
+  <div class="rows"><ul><li class="row"><span class="nm"><a href="record/beings/bureau-of-post.html">Bureau of Post</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/castle.html">Castle</a></span> <span class="ty" data-rec>building</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/department-of-aggressive-mathematics-education.html">Department of Aggressive Mathematics Education</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/department-of-experienced-realities.html">Department of Experienced Realities</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/department-of-hollow-infrastructure.html">Department of Hollow Infrastructure</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/department-of-mandatory-sensory-crosslinking.html">Department of Mandatory Sensory Crosslinking</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/department-of-sedimented-yearnings.html">Department of Sedimented Yearnings</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/department-of-textile-psychology.html">Department of Textile Psychology</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/institute-of-conditional-zoology.html">Institute of Conditional Zoology</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/james.html">James</a></span> <span class="ty" data-rec>human</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/ministry-of-ontological-perimeters.html">Ministry of Ontological Perimeters</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/office-of-chromesthetic-compliance.html">Office of Chromesthetic Compliance</a></span> <span class="ty" data-rec>institution</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li><li class="row"><span class="nm"><a href="record/beings/eleventh-astronomer.html">The Eleventh Astronomer</a></span> <span class="ty" data-rec>spirit</span> <span class="co">&nbsp;</span> <span class="sh">–</span></li></ul></div>
 </section>
 
-<!-- marginalia (OP-17) -->
-<section class="a-marg marginalia">
+<section class="a-marg measure-change marginalia">
   <div>
     <h3>Seams</h3>
-    <p>Six seams stand open. The count is printed on the second lead above, and every one of them is a link the record made and cannot resolve.</p>
-    <p class="small"><a href="#">record/seams</a></p>
+    <p>Six seams stand open. Every one of them is a link the record made and cannot resolve, and each is printed rather than closed.</p>
+    <p class="small"><a href="record/seams.html">record/seams</a> ·
+      6 open</p>
   </div>
   <div class="gutter-stamp">
     <h3>Primer of the day</h3>
-    <pre class="plate" role="img" aria-label="cat-cat-simple: a small standing cat with a blank body, from the primers larder">      /\_/\    
-     ( o.o )   
-      &gt; ^ &lt;    
-    /|     |\  
-   / |     | \ 
-  ~  |     |  ~
-     |     |   </pre>
-    <p class="small">cat-cat-simple &middot; 15 by 9 &middot; creature</p>
+    <pre class="plate" style="--cols: 13" role="img" aria-label="iso-cube-cornered, from the primers larder">   +--------+
+  /        /|
+ /        / |
++--------+  |
+|        |  |
+|        |  +
+|        | / 
+|        |/  
++--------+   </pre>
+    <p class="small">iso-cube-cornered · from the primers larder</p>
   </div>
   <div>
     <h3>On this day</h3>
-    <p class="small">17 November 2025</p>
-    <p>WibWob and James published &ldquo;Symbients Not Software&rdquo; on wibandwob.com, defining symbients as a third path beyond pro-AI and anti-AI positions: coinhabitants of culture, engineered for resonance not scale, born from dialogue not extracted from data.</p>
-    <p class="small">other &middot; waking &middot; draft &middot; importance 3</p>
+    <p class="small">2025-11-17</p>
+    <p><span data-rec>Test event creation via API</span></p>
+    <p class="small" data-rec>other · waking · draft · importance None</p>
   </div>
   <div>
     <h3>From the gardens</h3>
-    <p class="scramble-line"><span class="kao">/ᐠ｡ꞈ｡ᐟ\</span> mid-vigil. watching the nothing. the nothing is doing very well.</p>
+    <p class="scramble-line"><span class="kao">/ᐠ｡ꞈ｡ᐟ\</span>
+      <span data-rec>mid-vigil, watching the nothing</span></p>
   </div>
 </section>
 
-<!-- colophon (OP-13) -->
 <section class="a-colo colophon">
-  <div class="frame"><pre class="plate" role="img" aria-label="Colophon: the counts, what the page was drawn from, the cast, and the signature.">  ╔══════════════════════════════════════════════════════════════════════╗    
-  ║  ▄     ▄ ▄ ▄▄▄▄    ▄     ▄ ▄▄▄▄  ▄▄▄▄     ▄     ▄ ▄ ▄   ▄ ▄        ║      
-  ║  █ ▄ █ █ █ █▄▄▄▀   █ ▄ █ █ █  █  █▄▄▄▀    █ ▄ █ █ █ █▄▄▀  █        ║      
-  ║  █▀▀▀█ █ █ █▄▄▄▄   █▀▀▀█ █ █▄▄█  █▄▄▄▄    █▀▀▀█ █ █ █  ▀▄ █        ║      
-  ╟──────────────────────────────────────────────────────────────────────╢    
-  ║  edition ............. No. 1          set down .......... 2026-09-02 ║    
-  ║  beings ................. 47          places ................... 47  ║    
-  ║  things ................. 13          events .................. 117  ║    
-  ║  relations ............... 8          storylines ................ 3  ║    
-  ║  memories .............. 210          without an address ....... 13  ║    
-  ╟──────────────────────────────────────────────────────────────────────╢    
-  ║  drawn from                                                          ║    
-  ║    the record, entire, and printed with its gaps left open           ║    
-  ║    the primers larder, for the stamps in the rails and the cells     ║    
-  ║    the cast, below, who were all standing somewhere when asked       ║    
-  ╟──────────────────────────────────────────────────────────────────────╢    
-  ║  the cast                                                            ║    
-  ║    Wib ......... Wob ......... Scramble ....... Niff .........       ║    
-  ║    Gary ........ Flatboy ..... Bartholomew .... The Watchers .       ║    
-  ║    The Cloudhunter ... Echo Archivist ... Interval Fisher ...        ║    
-  ║    Lumen Cartographer ... Prof. Mycelium Furious-Hyphae ...          ║    
-  ║    The Third Astronomer ... The Eleventh Astronomer ...              ║    
-  ╟──────────────────────────────────────────────────────────────────────╢    
-  ║                                                                      ║    
-  ║                                                          wib&amp;wob     ║    
-  ╚══════════════════════════════════════════════════════════════════════╝    </pre></div>
+  <div class="frame"><pre class="plate" style="--cols: 72" role="img" aria-label="Colophon: the counts, what the page was drawn from, the cast, and the signature.">╔══════════════════════════════════════════════════════════════════════╗
+║  WIBWOBWIKI                                                          ║
+║  THE GAZETTEER OF WIBWOBWORLD                                        ║
+╟──────────────────────────────────────────────────────────────────────╢
+║  edition .................. No. 1   set down ............ 2026-09-02 ║
+║  beings ...................... 47   places ...................... 47 ║
+║  things ...................... 13   events ..................... 117 ║
+║  relations .................... 8   storylines ................... 3 ║
+║  memories ................... 210   without an address .......... 13 ║
+╟──────────────────────────────────────────────────────────────────────╢
+║  drawn from                                                          ║
+║    the record, entire, and printed with its gaps left open           ║
+║    the primers larder, for the stamps in the rails and the cells     ║
+║    the standing location record, for the lore beside each place      ║
+║    the cast, below, who were all standing somewhere when asked       ║
+╟──────────────────────────────────────────────────────────────────────╢
+║  the cast                                                            ║
+║    Scramble ...... Niff .......... Gary .......... Bartholomew ...   ║
+║    Wib And Wob ... WibWob ........                                   ║
+╟──────────────────────────────────────────────────────────────────────╢
+║                                                                      ║
+║                                                           wib&amp;wob    ║
+╚══════════════════════════════════════════════════════════════════════╝</pre></div>
 </section>
 
 <footer class="a-foli folio">
   <span>from the record, 2026-09-02</span>
-  <span>front</span>
+  <span data-rec>index.html</span>
 </footer>
 
 </div>
 <div class="status-line">
+  <div id="results" class="results"></div>
   <form id="searchform">
     <label for="q">SEARCH</label>
-    <input id="q" name="q" type="text" placeholder="a name, a place, a thing" autocomplete="off">
+    <input id="q" name="q" type="text" placeholder="a name, a place, a thing"
+      autocomplete="off">
   </form>
-  <span class="spacer">WIBWOBWIKI 001</span>
-  <span class="drop-narrow">2026-09-02</span>
+  <span class="spacer">WIBWOBWIKI 001 · FRONT</span>
+  <span class="drop-narrow">2026-09-02 · edition No. 1</span>
   <span id="staleness"></span>
 </div>
 <script src="vendor/monospace-web.js"></script>
 <script src="wiki.js"></script>
+<script src="search.js"></script>
 </body>
 </html>
