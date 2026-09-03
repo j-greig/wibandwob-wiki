@@ -294,6 +294,14 @@ ul { margin: 0; padding-left: 2ch; list-style: none; }
   font-size: var(--step-small);
   margin-bottom: var(--line);
 }
+/* A small-type link still needs a thumb's worth of hit area: the padding
+   grows the target to 24px without moving the line. */
+.eyebrow a, .figcap a, .folio a, .small a, .band-meta a, .kicker a,
+.taxo-body h3 a {
+  display: inline-block;
+  padding-block: 6px;
+  margin-block: -6px;
+}
 .small { color: var(--small); font-size: var(--step-small); }
 .dim   { color: var(--lead); }
 
@@ -641,12 +649,9 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
   font-size: var(--step-small);
   min-width: 0;
 }
-.skybox .hook {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+/* A hook is a sentence; it wraps. An ellipsis here cut the count line to
+   "8 relation…" on every width up to 1440. */
+.skybox .hook { display: block; }
 .skybox .run > * + * { border-left: 1px solid var(--hair); }
 .skybox .label {
   display: block;
