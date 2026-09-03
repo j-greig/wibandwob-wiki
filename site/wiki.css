@@ -526,12 +526,17 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
 .figcap .credit { grid-column: 2; color: var(--small); font-size: var(--step-tiny); }
 
 /* A small primer or kaomoji stamp standing in a card cell. */
+/* The frame takes the height of the drawing plus a margin, never a fixed
+   portrait ratio: a ratio tied to the cell's width made a full-width card on
+   a phone a 500px black box around a one-line stamp. Rasters keep their
+   ratio in .plate-cell because the asset fills it; text does not. */
 .stamp-frame {
-  aspect-ratio: 2052 / 2832;
   border: 1px solid var(--hair);
   display: grid;
   place-items: center;
   overflow: hidden;
+  padding: var(--line) 1ch;
+  min-height: calc(var(--line) * 4);
   margin-bottom: calc(var(--line) / 2);
 }
 .stamp-frame pre.plate { font-size: var(--step-small); color: var(--lead); }
@@ -1651,7 +1656,13 @@ body:has(#canon-only:checked) .card[data-status="draft"] { display: none; }
 
 /* A gallery cell holds a drawing, not a thumbnail, so it clips at the frame
    instead of scrolling: the card is a sample and the entry is the whole. */
-.card-grid .stamp-frame { overflow: hidden; }
+.card-grid .stamp-frame {
+  overflow: hidden;
+  /* a tall drawing shows its top and stops; the frame never outgrows a
+     phone screen */
+  max-height: min(60vh, calc(var(--line) * 22));
+  align-items: start;
+}
 .card-grid .stamp-frame pre.plate { line-height: 1.05; }
 
 /* The wordmark is a door and must not pick up the link underline that would
