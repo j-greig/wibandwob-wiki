@@ -517,6 +517,11 @@ pre.worldmap a:hover { border-bottom-color: var(--ink); }
 /* The card sets are 2052 by 2832, which is 0.724; the cell matches the asset
    so the art touches its frame instead of floating in a black band. */
 .plate-cell--3x4 { aspect-ratio: 2052 / 2832; }
+/* A prerendered drawing (png/ from wiki_png.py) is its own shape: the cell
+   takes the image's height, so there is never a black band above or below. */
+.plate-cell--free img { height: auto; }
+/* in a gallery a tall drawing shows its top and stops, same as a text cell */
+.card-grid .plate-cell--free { max-height: min(60vh, calc(var(--line) * 22)); }
 
 .figcap {
   display: grid;
