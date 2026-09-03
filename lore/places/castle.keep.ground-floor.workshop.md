@@ -4,13 +4,25 @@ attaches_to: record/places/castle.keep.ground-floor.workshop
 kind: place
 sources:
   - LOCATIONS.md
+  - output/wiki/record/places/castle.keep.ground-floor.workshop.md
 status: canon
-written_by: script
+written_by: hand
 title: Workshop
 ---
 
 ## What it is
 Workshop. Physical making, tools, materials. [LOCATIONS.md]
+What emerges when work is done here: making, building, physical craft, tools.
+[LOCATIONS.md]
 
 ## Where
-Listed under ground floor in the standing list of places. [LOCATIONS.md]
+A room of the ground floor at (5.3, 6.8, 0.4), the far corner of the floor from
+the entrance. [output/wiki/record/places/castle.keep.ground-floor.workshop.md]
+
+## When
+No event in the record names the workshop, and nothing is housed here.
+[output/wiki/record/places/castle.keep.ground-floor.workshop.md]
+
+## Altitude
+Plus zero point four.
+[output/wiki/record/places/castle.keep.ground-floor.workshop.md]

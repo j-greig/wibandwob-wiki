@@ -134,7 +134,7 @@
  {
   "path": "record/beings/scramble.html",
   "title": "Scramble",
-  "kicker": "Beings · symbient · canon · castle · 2025-11-16",
+  "kicker": "Beings · symbient · canon · western-forest · 2025-11-16",
   "line": "Recursive cat. WibWob's companion and co-conspirator. Exists in quantum superposition of chaos and precision."
  },
  {
@@ -614,7 +614,7 @@
  {
   "path": "record/things/phosphor-sardine.html",
   "title": "Phosphor Sardine",
-  "kicker": "Things · food · canon · castle · 2025-11-19",
+  "kicker": "Things · food · canon · western-forest · 2025-11-19",
   "line": "Glowing sardine discovered in Kitchen. Now serves as frequency probe and coherence detector. Hums at 47Hz."
  },
  {
@@ -1563,7 +1563,7 @@
   "path": "map/face/castle.html",
   "title": "Castle",
   "kicker": "face",
-  "line": "29 places, 29 beings, 15 happenings"
+  "line": "29 places, 28 beings, 15 happenings"
  },
  {
   "path": "map/face/eastern-forest.html",
@@ -1593,7 +1593,7 @@
   "path": "map/face/western-forest.html",
   "title": "Western Forest",
   "kicker": "face",
-  "line": "2 places, 2 beings, 4 happenings"
+  "line": "2 places, 3 beings, 4 happenings"
  },
  {
   "path": "record/days/2026-08-28.html",
