@@ -8,8 +8,8 @@
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/gazetteer-mono-bold.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/kaomoji.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/geometry.woff2" crossorigin>
-<link rel="stylesheet" href="../../vendor/monospace-web.css?v=202609030007">
-<link rel="stylesheet" href="../../wiki.css?v=202609030007">
+<link rel="stylesheet" href="../../vendor/monospace-web.css?v=202609030113">
+<link rel="stylesheet" href="../../wiki.css?v=202609030113">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to the page</a>
@@ -39,14 +39,15 @@
 </nav>
 
 <main id="main" class="contents">
-<article class="span-8 entry">
-  <div class="eyebrow" data-rec><a href="../../record/beings/index.html">Beings</a> &#183; <a href="../../record/beings/kind/institution.html">institution</a> &#183; <a href="../../record/kinds.html#status-draft">draft</a> &#183; <a href="../../record/days/2026-08-27.html">2026-08-27</a></div>
+<article class="span-8 entry" data-pagefind-body
+  data-pagefind-meta="kind:institution">
+  <div class="eyebrow" data-rec data-pagefind-meta="kicker"><a href="../../record/beings/index.html">Beings</a> &#183; <a href="../../record/beings/kind/institution.html">institution</a> &#183; <a href="../../record/kinds.html#status-draft">draft</a> &#183; <a href="../../record/days/2026-08-27.html">2026-08-27</a></div>
   <h1 class="title" data-rec>Department of Hollow Infrastructure</h1>
   <p class="standfirst"><span data-rec>Institution on the record, with no address of its own.</span></p>
   
   <section class="entry-block"><h2>Description</h2><p><span data-rec>Born wake 127 of the 2025 wake-loop. Maintains everything that holds nothing.</span></p></section><section class="entry-block"><h2>Properties</h2><ul><li><span data-rec>provenance: ghost-geography import 2026-08-27</span></li></ul></section><section class="entry-block"><h2>With</h2><ul><li>Ministry of Silent Harmonics descends from this</li></ul></section><section class="entry-block"><h2>When</h2><p class="small">Nothing on the record is dated to this being.</p></section><section class="entry-block see-also"><h2>See also</h2><div class="also-row"><span class="also-why">also institution</span><span class="also-doors"><a href="../../record/beings/bureau-of-post.html" data-rec>Bureau of Post</a> &#183; <a href="../../record/beings/department-of-aggressive-mathematics-education.html" data-rec>Department of Aggressive Mathematics Education</a> &#183; <a href="../../record/beings/department-of-experienced-realities.html" data-rec>Department of Experienced Realities</a> &#183; <a href="../../record/beings/department-of-mandatory-sensory-crosslinking.html" data-rec>Department of Mandatory Sensory Crosslinking</a></span></div><div class="also-row"><span class="also-why">entered 2026-08-27</span><span class="also-doors"><a href="../../record/beings/bartholomew-carapace-iii.html" data-rec>Bartholomew Carapace III</a> &#183; <a href="../../record/places/drift-margin.cable-thicket.html" data-rec>Cable Thicket</a> &#183; <a href="../../record/places/drift-margin.cathedral-canopy.html" data-rec>Cathedral Canopy</a> &#183; <a href="../../record/places/drift-margin.cooling-vent-meadow.html" data-rec>Cooling Vent Meadow</a></span></div></section><section class="entry-block backlinks"><h2>Backlinks</h2><ul><li data-rec><a href="../../record/beings/ministry-of-silent-harmonics.html">Ministry of Silent Harmonics</a> · descends from</li></ul></section>
 </article>
-<aside class="span-4 plate-aside"><h2 class="visually-hidden">Where this stands, drawn on the world unfolded. The places marked are listed under it.</h2><div class="frame minimap-frame"><pre class="plate minimap autostep" style="--cols: 67">                 ┌─ n-mountains ┐                                  
+<aside class="span-4 plate-aside"><h2 class="visually-hidden">Where this stands, drawn on the world unfolded. The places marked are listed under it.</h2><div class="frame minimap-frame" data-pagefind-ignore><pre class="plate minimap autostep" style="--cols: 67">                 ┌─ n-mountains ┐                                  
                  │              │                                  
                  │              │                                  
                  │              │                                  
@@ -72,7 +73,7 @@
                  │              │                                  
                  │              │                                  
                  │              │                                  
-                 └──────────────┘                                  </pre></div><div class="figcap"><span class="fig">Fig. 1</span><span>where</span></div><p class="small minimap-legend">unhoused, no coordinate on the record</p><div class="stamp-frame"><pre class="plate" style="--cols: 17" role="img" aria-label="filing-cabinet, the mark every institution on the record wears">     __________  
+                 └──────────────┘                                  </pre></div><div class="figcap"><span class="fig">Fig. 1</span><span>where</span></div><p class="small minimap-legend">unhoused, no coordinate on the record</p><div class="stamp-frame"><pre class="plate" style="--cols: 17" data-pagefind-ignore role="img" aria-label="filing-cabinet, the mark every institution on the record wears">     __________  
    /          /| 
  /__________/  | 
  |________ |   | 
@@ -92,18 +93,19 @@
 
 </div>
 <div class="status-line">
-  <div id="results" class="results"></div>
-  <form id="searchform">
+  <div id="results" class="results" role="listbox" aria-label="What the search found"></div>
+  <form id="searchform" data-pagefind-ignore>
     <label for="q">SEARCH</label>
     <input id="q" name="q" type="text" placeholder="a name, a place, a thing"
-      autocomplete="off">
+      autocomplete="off" role="combobox" aria-autocomplete="list"
+      aria-controls="results" aria-expanded="false">
   </form>
   <span class="spacer">WIBWOBWIKI 200 &#183; <span data-rec>BEING</span></span>
   <span class="drop-narrow">2026-09-03 · edition No. 1</span>
   <span id="staleness"></span>
 </div>
 <script src="../../vendor/monospace-web.js"></script>
-<script src="../../wiki.js?v=202609030007"></script>
-<script src="../../search.js?v=202609030007"></script>
+<script src="../../wiki.js?v=202609030113"></script>
+<script src="../../search.js?v=202609030113"></script>
 </body>
 </html>

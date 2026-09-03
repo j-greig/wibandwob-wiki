@@ -1217,10 +1217,28 @@ a.plate-link .stamp-frame, a.plate-link .plate-cell { transition: border-color .
   padding: calc(var(--line) / 4) 1ch;
 }
 .status-line .results.open { display: block; }
-.status-line .results a { display: block; color: var(--body); }
+.status-line .results a { display: block; color: var(--body); padding: 0 0.5ch; }
 .status-line .results a:hover { color: var(--ink); }
-.status-line .results .kick { color: var(--small); }
+.status-line .results a.on { color: var(--ink); background: var(--hair); }
+.status-line .results .hit-title { color: var(--ink); }
+.status-line .results .kick { color: var(--small); margin-left: 1ch; }
+.status-line .results .hit-kind { color: var(--lead); margin-left: 1ch; }
+.status-line .results .hit-kind::before { content: "· "; }
 .status-line .results .none { color: var(--small); }
+
+/* A line of the page around the words that matched, so a hit deep in a body
+   of text says why it is a hit. */
+.status-line .results .hit-excerpt {
+  display: block;
+  color: var(--small);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.status-line .results .hit-excerpt mark {
+  background: none;
+  color: var(--ink);
+}
 
 /* On a phone the bar collapses to one row: the search field shrinks to the
    width it needs and the two date-ish cells drop, so the bar never overflows

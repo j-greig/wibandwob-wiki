@@ -8,8 +8,8 @@
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/gazetteer-mono-bold.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/kaomoji.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/geometry.woff2" crossorigin>
-<link rel="stylesheet" href="../../vendor/monospace-web.css?v=202609030007">
-<link rel="stylesheet" href="../../wiki.css?v=202609030007">
+<link rel="stylesheet" href="../../vendor/monospace-web.css?v=202609030113">
+<link rel="stylesheet" href="../../wiki.css?v=202609030113">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to the page</a>
@@ -39,14 +39,15 @@
 </nav>
 
 <main id="main" class="contents">
-<header class="span-12">
+<header class="span-12" data-pagefind-body
+  data-pagefind-meta="kind:section">
   <div class="section-masthead" data-rec>
     <h1 class="visually-hidden">The Wastelands</h1>
-    <pre class="plate" style="--cols: 37" role="img" aria-label="The Wastelands, drawn as a section wordmark">┌───────────────────────────────────┐
+    <pre class="plate" style="--cols: 37" data-pagefind-ignore role="img" aria-label="The Wastelands, drawn as a section wordmark">┌───────────────────────────────────┐
 │    T H E   W A S T E L A N D S    │
 └───────────────────────────────────┘</pre>
   </div>
-  <p class="small centred">One face of the cube: what stands on it, who lives there, and everything that has happened on it.</p>
+  <p class="small centred" data-pagefind-meta="kicker">One face of the cube: what stands on it, who lives there, and everything that has happened on it.</p>
   <p class="small centred">3 entered &#183; <span data-rec>map/face/the-wastelands</span></p>
   <div class="canon-toggle"><input type="checkbox" id="canon-only"><label for="canon-only">canon only, hide the drafts</label></div>
 </header>
@@ -84,7 +85,7 @@
 </section>
 
 <section class="span-12 band" id="band-regions-and-places">
-  <div class="band-head" data-rec><pre class="plate band-plate" style="--cols: 45" role="img" aria-label="regions and places, 3 entered, drawn as a band header">╭───────────────────────────────────────────╮
+  <div class="band-head" data-rec><pre class="plate band-plate" style="--cols: 45" data-pagefind-ignore role="img" aria-label="regions and places, 3 entered, drawn as a band header">╭───────────────────────────────────────────╮
 │ ◇  R E G I O N S   A N D   P L A C E S  3 │
 ╰───────────────────────────────────────────╯</pre><div class="band-meta"><span>3 entered</span><span><a href="../../record/places/index.html">regions and places</a></span></div></div>
 <ul class="tree">
@@ -103,18 +104,19 @@
 
 </div>
 <div class="status-line">
-  <div id="results" class="results"></div>
-  <form id="searchform">
+  <div id="results" class="results" role="listbox" aria-label="What the search found"></div>
+  <form id="searchform" data-pagefind-ignore>
     <label for="q">SEARCH</label>
     <input id="q" name="q" type="text" placeholder="a name, a place, a thing"
-      autocomplete="off">
+      autocomplete="off" role="combobox" aria-autocomplete="list"
+      aria-controls="results" aria-expanded="false">
   </form>
   <span class="spacer">WIBWOBWIKI 900 &#183; <span data-rec>THE WASTELANDS</span></span>
   <span class="drop-narrow">2026-09-03 · edition No. 1</span>
   <span id="staleness"></span>
 </div>
 <script src="../../vendor/monospace-web.js"></script>
-<script src="../../wiki.js?v=202609030007"></script>
-<script src="../../search.js?v=202609030007"></script>
+<script src="../../wiki.js?v=202609030113"></script>
+<script src="../../search.js?v=202609030113"></script>
 </body>
 </html>

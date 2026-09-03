@@ -8,8 +8,8 @@
 <link rel="preload" as="font" type="font/woff2" href="../fonts/gazetteer-mono-bold.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../fonts/kaomoji.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../fonts/geometry.woff2" crossorigin>
-<link rel="stylesheet" href="../vendor/monospace-web.css?v=202609030007">
-<link rel="stylesheet" href="../wiki.css?v=202609030007">
+<link rel="stylesheet" href="../vendor/monospace-web.css?v=202609030113">
+<link rel="stylesheet" href="../wiki.css?v=202609030113">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to the page</a>
@@ -39,12 +39,13 @@
 </nav>
 
 <main id="main" class="contents">
-<article class="span-8 entry">
-  <div class="eyebrow" data-rec><a href="../primers/index.html">Primers</a> &#183; <a href="../primers/class/scene.html">scene</a> &#183; CC BY 4.0</div>
+<article class="span-8 entry" data-pagefind-body
+  data-pagefind-meta="kind:scene">
+  <div class="eyebrow" data-rec data-pagefind-meta="kicker"><a href="../primers/index.html">Primers</a> &#183; <a href="../primers/class/scene.html">scene</a> &#183; CC BY 4.0</div>
   <h1 class="title" data-rec>maze-3d</h1>
   <p class="standfirst"><span data-rec>FPS maze corridors + 8-bordered dungeon-view frame</span></p>
   
-  <section class="entry-block"><h2>The drawing</h2><div class="frame"><pre class="plate autostep" style="--cols: 46" role="img" aria-label="maze-3d, drawing 1" data-rec>     .----------.         .----------.        
+  <section class="entry-block"><h2>The drawing</h2><div class="frame"><pre class="plate autostep" style="--cols: 46" data-pagefind-ignore role="img" aria-label="maze-3d, drawing 1" data-rec>     .----------.         .----------.        
 \   (  ||    ||  )  / \   (   ||    || )     /
  \   ~-||====||-~  /   \   ~--||====||-~    / 
   \    ||    ||   /     \     ||    ||    /   
@@ -63,7 +64,7 @@
   |              |      |               |     
   /              \      /                \    
  /                \    /                   \  
-/                  \ /                       \</pre></div><div class="figcap"><span class="fig">Fig. 1</span><span>46 across, 20 down.</span></div><div class="frame"><pre class="plate autostep" style="--cols: 71" role="img" aria-label="maze-3d, drawing 2" data-rec>88888888888888888888888888888888888888888888888888888888888888888888888
+/                  \ /                       \</pre></div><div class="figcap"><span class="fig">Fig. 1</span><span>46 across, 20 down.</span></div><div class="frame"><pre class="plate autostep" style="--cols: 71" data-pagefind-ignore role="img" aria-label="maze-3d, drawing 2" data-rec>88888888888888888888888888888888888888888888888888888888888888888888888
 88.._|      | `-.  | `.  -_-_ _-_  _-  _- -_ -  .&#x27;|   |.&#x27;|     |  _..88
 88   `-.._  |    |`!  |`.  -_ -__ -_ _- _-_-  .&#x27;  |.;&#x27;   |   _.!-&#x27;|  88
 88      | `-!._  |  `;!  ;. _______________ ,&#x27;| .-&#x27; |   _!.i&#x27;     |  88
@@ -84,7 +85,7 @@
 88      |_.&#x27;|   .&#x27; | .&#x27; |/                   \  \ |  `.  | `._-Lee|  88
 88     .&#x27;   | .&#x27;   |/|  /                     \ |`!   |`.|    `.  |  88
 88  _.&#x27;     !&#x27;|   .&#x27; | /                       \|  `  |  `.    |`.|  88
-88 vanishing point 888888888888888888888888888888888888888888888(FL)888</pre></div><div class="figcap"><span class="fig">Fig. 2</span><span>71 across, 22 down.</span></div><div class="frame"><pre class="plate autostep" style="--cols: 33" role="img" aria-label="maze-3d, drawing 3" data-rec>\                           /    
+88 vanishing point 888888888888888888888888888888888888888888888(FL)888</pre></div><div class="figcap"><span class="fig">Fig. 2</span><span>71 across, 22 down.</span></div><div class="frame"><pre class="plate autostep" style="--cols: 33" data-pagefind-ignore role="img" aria-label="maze-3d, drawing 3" data-rec>\                           /    
  \                         /     
   \                       /      
    ]                     [    ,&#x27;|
@@ -118,18 +119,19 @@
 
 </div>
 <div class="status-line">
-  <div id="results" class="results"></div>
-  <form id="searchform">
+  <div id="results" class="results" role="listbox" aria-label="What the search found"></div>
+  <form id="searchform" data-pagefind-ignore>
     <label for="q">SEARCH</label>
     <input id="q" name="q" type="text" placeholder="a name, a place, a thing"
-      autocomplete="off">
+      autocomplete="off" role="combobox" aria-autocomplete="list"
+      aria-controls="results" aria-expanded="false">
   </form>
   <span class="spacer">WIBWOBWIKI 960 &#183; <span data-rec>PRIMERS</span></span>
   <span class="drop-narrow">2026-09-03 · edition No. 1</span>
   <span id="staleness"></span>
 </div>
 <script src="../vendor/monospace-web.js"></script>
-<script src="../wiki.js?v=202609030007"></script>
-<script src="../search.js?v=202609030007"></script>
+<script src="../wiki.js?v=202609030113"></script>
+<script src="../search.js?v=202609030113"></script>
 </body>
 </html>

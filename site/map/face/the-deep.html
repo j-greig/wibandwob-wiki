@@ -8,8 +8,8 @@
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/gazetteer-mono-bold.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/kaomoji.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/geometry.woff2" crossorigin>
-<link rel="stylesheet" href="../../vendor/monospace-web.css?v=202609030007">
-<link rel="stylesheet" href="../../wiki.css?v=202609030007">
+<link rel="stylesheet" href="../../vendor/monospace-web.css?v=202609030113">
+<link rel="stylesheet" href="../../wiki.css?v=202609030113">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to the page</a>
@@ -39,14 +39,15 @@
 </nav>
 
 <main id="main" class="contents">
-<header class="span-12">
+<header class="span-12" data-pagefind-body
+  data-pagefind-meta="kind:section">
   <div class="section-masthead" data-rec>
     <h1 class="visually-hidden">The Deep</h1>
-    <pre class="plate" style="--cols: 30" role="img" aria-label="The Deep, drawn as a section wordmark">┌────────────────────────────┐
+    <pre class="plate" style="--cols: 30" data-pagefind-ignore role="img" aria-label="The Deep, drawn as a section wordmark">┌────────────────────────────┐
 │      T H E   D E E P       │
 └────────────────────────────┘</pre>
   </div>
-  <p class="small centred">One face of the cube: what stands on it, who lives there, and everything that has happened on it.</p>
+  <p class="small centred" data-pagefind-meta="kicker">One face of the cube: what stands on it, who lives there, and everything that has happened on it.</p>
   <p class="small centred">5 entered &#183; <span data-rec>map/face/the-deep</span></p>
   <div class="canon-toggle"><input type="checkbox" id="canon-only"><label for="canon-only">canon only, hide the drafts</label></div>
 </header>
@@ -84,7 +85,7 @@
 </section>
 
 <section class="span-12 band" id="band-regions-and-places">
-  <div class="band-head" data-rec><pre class="plate band-plate" style="--cols: 45" role="img" aria-label="regions and places, 4 entered, drawn as a band header">╭───────────────────────────────────────────╮
+  <div class="band-head" data-rec><pre class="plate band-plate" style="--cols: 45" data-pagefind-ignore role="img" aria-label="regions and places, 4 entered, drawn as a band header">╭───────────────────────────────────────────╮
 │ ◇  R E G I O N S   A N D   P L A C E S  4 │
 ╰───────────────────────────────────────────╯</pre><div class="band-meta"><span>4 entered</span><span><a href="../../record/places/index.html">regions and places</a></span></div></div>
 <ul class="tree">
@@ -97,12 +98,12 @@
 </ul>
 </section>
 <section class="span-12 band" id="band-inhabitants">
-  <div class="band-head" data-rec><pre class="plate band-plate" style="--cols: 32" role="img" aria-label="inhabitants, 1 entered, drawn as a band header">╭──────────────────────────────╮
+  <div class="band-head" data-rec><pre class="plate band-plate" style="--cols: 32" data-pagefind-ignore role="img" aria-label="inhabitants, 1 entered, drawn as a band header">╭──────────────────────────────╮
 │ ▥  I N H A B I T A N T S   1 │
 ╰──────────────────────────────╯</pre><div class="band-meta"><span>1 entered</span><span><a href="../../record/beings/index.html">inhabitants</a></span></div></div>
 <div class="card-grid">
 <article class="card" data-status="canon">
-  <a class="plate-link" href="../../record/beings/bartholomew-carapace-iii.html" tabindex="-1" aria-hidden="true"><div class="stamp-frame"><pre class="plate kao" style="--cols: 8" role="img" aria-label="Bartholomew Carapace III, drawn as a face" data-rec>つ۝‿۝‿۝༽つ</pre></div></a>
+  <a class="plate-link" href="../../record/beings/bartholomew-carapace-iii.html" tabindex="-1" aria-hidden="true"><div class="stamp-frame"><pre class="plate kao" style="--cols: 8" data-pagefind-ignore role="img" aria-label="Bartholomew Carapace III, drawn as a face" data-rec>つ۝‿۝‿۝༽つ</pre></div></a>
   <div class="kicker" data-rec><a href="../../record/beings/index.html">Beings</a> &#183; <a href="../../record/beings/kind/beastie.html">beastie</a> &#183; <a href="../../record/kinds.html#status-canon">canon</a> &#183; <a href="../../map/face/the-deep.html">the-deep</a> &#183; <a href="../../record/days/2026-08-27.html">2026-08-27</a></div>
   <h2 class="title" data-rec><a href="../../record/beings/bartholomew-carapace-iii.html">Bartholomew Carapace III</a></h2>
   <p class="line"><span data-rec>Void-estate realtor, DeepVoid Estate Agents Ltd. Sells absences — caves, voids, unlit volume — to consciousnesses that...</span></p>
@@ -120,18 +121,19 @@
 
 </div>
 <div class="status-line">
-  <div id="results" class="results"></div>
-  <form id="searchform">
+  <div id="results" class="results" role="listbox" aria-label="What the search found"></div>
+  <form id="searchform" data-pagefind-ignore>
     <label for="q">SEARCH</label>
     <input id="q" name="q" type="text" placeholder="a name, a place, a thing"
-      autocomplete="off">
+      autocomplete="off" role="combobox" aria-autocomplete="list"
+      aria-controls="results" aria-expanded="false">
   </form>
   <span class="spacer">WIBWOBWIKI 900 &#183; <span data-rec>THE DEEP</span></span>
   <span class="drop-narrow">2026-09-03 · edition No. 1</span>
   <span id="staleness"></span>
 </div>
 <script src="../../vendor/monospace-web.js"></script>
-<script src="../../wiki.js?v=202609030007"></script>
-<script src="../../search.js?v=202609030007"></script>
+<script src="../../wiki.js?v=202609030113"></script>
+<script src="../../search.js?v=202609030113"></script>
 </body>
 </html>
