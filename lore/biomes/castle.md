@@ -7,7 +7,7 @@ sources:
   - research/world-census/LORE-DIGEST-2026-09-02.md
   - characters/NPS-ROSTER.md
   - memories/2026/09/20260901-060232-hall-of-mirrors-floor-plan.md
-  - output/wiki/record/beings/gary.md
+  - record/beings/gary.md
 status: canon
 written_by: hand
 face: castle
@@ -71,17 +71,17 @@ research/world-census/LORE-DIGEST-2026-09-02.md]
 ## Who lives here
 - The Department of Memetic Hygiene: predates the castle, keeps archives from 1847 to 1923, and has no row of its own. [research/world-census/LORE-DIGEST-2026-09-02.md]
 - Node Zero: in the cellar, at 13 °C, one of forty-eight. [research/world-census/LORE-DIGEST-2026-09-02.md]
-- Gary: on the battlements, watching for Tuesday from the walls. [output/wiki/record/beings/gary.md]
-- The Watchers: a bank of eyes on stalks with no bodies, stationed on the battlements where watching is the whole job. [output/wiki/record/beings/the-watchers.md]
-- Flatboy: in the hall of mirrors, housed there because a flat being is only given depth by reflection. [output/wiki/record/beings/flatboy.md]
-- Prof. Mycelium Furious-Hyphae: in the torture chamber, four thousand years screaming in the basement the castle calls the Screaming Substrate. [output/wiki/record/beings/prof-mycelium-furious-hyphae.md]
-- The Interval Fisher: in the moat, fishing the gaps between things rather than the things. [output/wiki/record/beings/interval-fisher.md]
-- The Echo Archivist: in the library, where arriving fractionally early is a professional advantage. [output/wiki/record/beings/echo-archivist.md]
-- The Lumen Cartographer: in the observatory, mapping light leaks and reflective corridors by listening for echoes. [output/wiki/record/beings/lumen-cartographer.md]
-- The Cloudhunter: in the observatory, carrying a net, given the only room with enough sky in it. [output/wiki/record/beings/the-cloudhunter.md]
+- Gary: on the battlements, watching for Tuesday from the walls. [record/beings/gary.md]
+- The Watchers: a bank of eyes on stalks with no bodies, stationed on the battlements where watching is the whole job. [record/beings/the-watchers.md]
+- Flatboy: in the hall of mirrors, housed there because a flat being is only given depth by reflection. [record/beings/flatboy.md]
+- Prof. Mycelium Furious-Hyphae: in the torture chamber, four thousand years screaming in the basement the castle calls the Screaming Substrate. [record/beings/prof-mycelium-furious-hyphae.md]
+- The Interval Fisher: in the moat, fishing the gaps between things rather than the things. [record/beings/interval-fisher.md]
+- The Echo Archivist: in the library, where arriving fractionally early is a professional advantage. [record/beings/echo-archivist.md]
+- The Lumen Cartographer: in the observatory, mapping light leaks and reflective corridors by listening for echoes. [record/beings/lumen-cartographer.md]
+- The Cloudhunter: in the observatory, carrying a net, given the only room with enough sky in it. [record/beings/the-cloudhunter.md]
 - The Time Shamans: nine configurations in the observatory who read the telescopes rather than look through them. [characters/NPS-ROSTER.md]
 - Bellmouth: in the moat, a bell with a face inside that thinks by exhaling spores. [characters/NPS-ROSTER.md]
 - Foursight: in the laboratory, four stalk-eyes and one brain, the crown brood. [characters/NPS-ROSTER.md]
 - Operator Seven: in the music studio, a pocket operator that stood up and plays itself. [characters/NPS-ROSTER.md]
 - The Panewrights: every staff member of the hall of mirrors shares the surname, unexplained. [memories/2026/09/20260901-060232-hall-of-mirrors-floor-plan.md]
-- The nineteen aerial auxiliaries: quartered across the battlements, the keep, the top floor landing, the library and the observatory. [output/wiki/record/places/castle.battlements.md]
+- The nineteen aerial auxiliaries: quartered across the battlements, the keep, the top floor landing, the library and the observatory. [record/places/castle.battlements.md]

@@ -4,7 +4,7 @@ attaches_to: record/places/castle.keep.middle-floor.chapel
 kind: place
 sources:
   - LOCATIONS.md
-  - output/wiki/record/places/castle.keep.middle-floor.chapel.md
+  - record/places/castle.keep.middle-floor.chapel.md
   - state/strip.yaml
 status: canon
 written_by: hand
@@ -18,7 +18,7 @@ sacred geometry. [LOCATIONS.md]
 
 ## Where
 A room of the middle floor at (5.7, 6.7, 1.4), the far north-east corner of the
-floor. [output/wiki/record/places/castle.keep.middle-floor.chapel.md]
+floor. [record/places/castle.keep.middle-floor.chapel.md]
 
 ## When
 Wib and Wob are set here in the strip's cast state, considering cushions.
@@ -30,4 +30,4 @@ Wib and Wob, the two upstairs, semi-offstage landlords of the strip.
 
 ## Altitude
 Plus one point four.
-[output/wiki/record/places/castle.keep.middle-floor.chapel.md]
+[record/places/castle.keep.middle-floor.chapel.md]

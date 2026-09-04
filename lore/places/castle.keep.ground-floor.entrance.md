@@ -4,8 +4,8 @@ attaches_to: record/places/castle.keep.ground-floor.entrance
 kind: place
 sources:
   - LOCATIONS.md
-  - output/wiki/record/places/castle.keep.ground-floor.entrance.md
-  - output/wiki/record/places/castle.keep.ground-floor.md
+  - record/places/castle.keep.ground-floor.entrance.md
+  - record/places/castle.keep.ground-floor.md
 status: canon
 written_by: hand
 title: Entrance
@@ -17,15 +17,15 @@ Entrance. Threshold, arrival, departure. [LOCATIONS.md]
 ## Where
 A room of the ground floor at (5.5, 6.1, 0.1), the lowest point on the floor and
 the one nearest the courtyard, which is what an entrance is for.
-[output/wiki/record/places/castle.keep.ground-floor.entrance.md]
+[record/places/castle.keep.ground-floor.entrance.md]
 The other three rooms of the floor, the hall of mirrors, the meeting room and the
 workshop, all stand at 0.4, three tenths above it.
-[output/wiki/record/places/castle.keep.ground-floor.md]
+[record/places/castle.keep.ground-floor.md]
 
 ## When
 No event in the record names the entrance, and nothing is housed here.
-[output/wiki/record/places/castle.keep.ground-floor.entrance.md]
+[record/places/castle.keep.ground-floor.entrance.md]
 
 ## Altitude
 Plus zero point one, the lowest room in the keep above ground.
-[output/wiki/record/places/castle.keep.ground-floor.entrance.md]
+[record/places/castle.keep.ground-floor.entrance.md]

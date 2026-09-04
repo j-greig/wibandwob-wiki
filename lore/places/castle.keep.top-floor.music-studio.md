@@ -4,7 +4,7 @@ attaches_to: record/places/castle.keep.top-floor.music-studio
 kind: place
 sources:
   - LOCATIONS.md
-  - output/wiki/record/places/castle.keep.top-floor.music-studio.md
+  - record/places/castle.keep.top-floor.music-studio.md
   - characters/NPS-ROSTER.md
 status: canon
 written_by: hand
@@ -19,7 +19,7 @@ sequencer art, modular synth compositions. [LOCATIONS.md]
 
 ## Where
 A room of the top floor at (5.28, 6.5, 2.4), the westernmost room in the keep.
-[output/wiki/record/places/castle.keep.top-floor.music-studio.md]
+[record/places/castle.keep.top-floor.music-studio.md]
 
 ## With
 Operator Seven lives here: a pocket operator that stood up, and plays itself.
@@ -30,4 +30,4 @@ Error rhythms, sequencers and a modular synth wall. [LOCATIONS.md]
 
 ## Altitude
 Plus two point four.
-[output/wiki/record/places/castle.keep.top-floor.music-studio.md]
+[record/places/castle.keep.top-floor.music-studio.md]

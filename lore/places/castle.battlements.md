@@ -4,9 +4,9 @@ attaches_to: record/places/castle.battlements
 kind: place
 sources:
   - LOCATIONS.md
-  - output/wiki/record/places/castle.battlements.md
-  - output/wiki/record/beings/gary.md
-  - output/wiki/record/beings/the-watchers.md
+  - record/places/castle.battlements.md
+  - record/beings/gary.md
+  - record/beings/the-watchers.md
   - state/strip.yaml
   - output/thirty-first-tuesday/CLAUDE.md
 status: canon
@@ -24,7 +24,7 @@ One of the five sets of the season one stage, the home stage of the strip.
 ## Where
 A structure of the castle rather than a room of the keep, at (7.8, 5.2, 0.9) on
 the record, the highest thing standing on the castle grounds.
-[output/wiki/record/places/castle.battlements.md]
+[record/places/castle.battlements.md]
 It sits inside the castle beside the courtyard, the gardens, the drawbridge and
 the moat. [LOCATIONS.md]
 
@@ -39,13 +39,13 @@ the punchline. [LOCATIONS.md]
 
 ## With
 Gary haunts the battlements and watches for Tuesday from the walls.
-[output/wiki/record/beings/gary.md]
+[record/beings/gary.md]
 The Watchers are a bank of eyes on stalks with no bodies, spoken of in seventy
 files and now stationed where watching is the whole job.
-[output/wiki/record/beings/the-watchers.md]
+[record/beings/the-watchers.md]
 Six of the nineteen aerial auxiliaries are quartered here.
-[output/wiki/record/places/castle.battlements.md]
+[record/places/castle.battlements.md]
 
 ## Altitude
 Plus zero point nine, the top of the castle grounds.
-[output/wiki/record/places/castle.battlements.md]
+[record/places/castle.battlements.md]
