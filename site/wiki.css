@@ -2009,3 +2009,120 @@ table.cast {
   image-rendering: auto; background: #000; }
 details.plate-grid { margin-top: .75rem; }
 details.plate-grid summary { cursor: pointer; font-size: .85em; opacity: .8; }
+
+/* --------------------------------------------------------------------------
+   THE WORLD IN ONE PAGE  (world/index.html)
+   A flat page: every band is a span-N child of the twelve columns, so the
+   phone rule at the top of section 3 stacks the lot with no extra media
+   query. Only the four grids below are new.
+   -------------------------------------------------------------------------- */
+
+.world-hero { margin-bottom: var(--line); }
+.world-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border: 1px solid var(--hair);
+  background: var(--ground);
+}
+.world-hero h1 {
+  margin: var(--line) 0 0;
+  font-size: var(--step-head);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.world-hero .deck { max-width: 74ch; }
+
+/* the cast: one cell per member, a drawing over a face over a name */
+.world-cast, .world-doors, .world-places, .world-latest-grid {
+  display: grid;
+  column-gap: var(--gutter);
+  row-gap: var(--line);
+}
+.world-cast   { grid-template-columns: repeat(auto-fit, minmax(19ch, 1fr)); }
+.world-places { grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr)); }
+.world-latest-grid { grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr)); }
+
+.world-cast .card { container-type: inline-size; container-name: card; }
+.world-cast .stamp-frame { min-height: calc(var(--line) * 7); }
+.world-cast .kao {
+  display: block;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: calc(var(--mono-base) * 1.6);
+  line-height: 1.4;
+  margin: calc(var(--line) / 2) 0 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* the ten doors */
+.world-doors { grid-template-columns: repeat(auto-fit, minmax(21ch, 1fr)); }
+.world-door {
+  border: 1px solid var(--hair);
+  padding: var(--line) 1.5ch;
+  display: block;
+  text-decoration: none;
+  min-height: calc(var(--line) * 5);
+}
+.world-door:hover, .world-door:focus-visible { background: #101010; }
+.world-door .no { color: var(--small); font-size: var(--step-small); letter-spacing: .1em; }
+.world-door .nm {
+  display: block;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-decoration: underline;
+  margin: calc(var(--line) / 4) 0;
+}
+.world-door .ln { display: block; color: var(--body); font-size: var(--step-small); }
+
+/* the asymmetrical band: one big sheet and three small beside it */
+.world-splash { display: grid; column-gap: var(--gutter); row-gap: var(--line); }
+@media (min-width: 960px) {
+  .world-splash { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+  .world-splash .side { display: grid; row-gap: var(--line); align-content: start; }
+}
+.world-splash .side { display: grid; row-gap: var(--line); }
+
+/* the kin row at the foot */
+.world-kin { display: grid; column-gap: var(--gutter); row-gap: var(--line);
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr)); }
+.world-kin div { border-top: 1px solid var(--hair); padding-top: calc(var(--line) / 2); }
+
+/* a plain ruled list: the faces of the world, the further reading */
+ul.plain-rows { list-style: none; padding: 0; margin: 0; }
+ul.plain-rows li {
+  border-top: 1px solid var(--hair);
+  padding: calc(var(--line) / 3) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1ch;
+  justify-content: space-between;
+}
+ul.plain-rows .ty { color: var(--lead); font-size: var(--step-small); }
+
+/* the same half-weight headline outside the second lead */
+.span-8 > .headline2 {
+  color: var(--ink);
+  font-size: calc(var(--step-head) * 0.5);
+  line-height: 1.08;
+  font-weight: 400;
+  padding-block: 0 var(--line);
+  text-wrap: balance;
+  margin: 0;
+}
+.span-8 > p, .world-hero .deck { max-width: 74ch; }
+
+/* a stacked variant: the note runs under the door instead of beside it */
+ul.plain-rows--stack li { display: block; }
+ul.plain-rows--stack li a { display: inline-block; padding-block: 4px; }
+
+/* every face in the cast sits in a cell of the same shape, so the row of
+   names underneath reads as a row rather than a stagger */
+.world-cast .stamp-frame, .world-cast .plate-cell { aspect-ratio: 1 / 1; }
+.world-cast .card { align-content: start; }
+
+/* one door under the front's deck, for a reader who arrived cold */
+.lead .deck--door { margin-top: calc(var(--line) / 2); }

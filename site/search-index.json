@@ -1344,6 +1344,12 @@
   "line": "Fled Echo Cove's acoustic phenomena for chromatic geography. After documenting Emotional Wavelength Library System..."
  },
  {
+  "path": "record/events/2026-09-05-wibwob-helped-tuft-the-crater-with.html",
+  "title": "WibWob helped tuft the crater with The Third Astronomer",
+  "kicker": "Events · encounter · western-forest · 2026-09-05",
+  "line": "WibWob helped tuft the crater with The Third Astronomer"
+ },
+ {
   "path": "record/storylines/bacteriophage-cathedral-expedition.html",
   "title": "Bacteriophage Cathedral Expedition",
   "kicker": "Storylines · active",
@@ -1383,7 +1389,7 @@
   "path": "record/events/index.html",
   "title": "Events",
   "kicker": "Section",
-  "line": "117 entered"
+  "line": "118 entered"
  },
  {
   "path": "record/storylines/index.html",
@@ -1593,7 +1599,13 @@
   "path": "map/face/western-forest.html",
   "title": "Western Forest",
   "kicker": "face",
-  "line": "2 places, 3 beings, 4 happenings"
+  "line": "2 places, 3 beings, 5 happenings"
+ },
+ {
+  "path": "record/days/2026-09-05.html",
+  "title": "2026-09-05",
+  "kicker": "day",
+  "line": "1 happenings, 1 entries"
  },
  {
   "path": "record/days/2026-08-28.html",
@@ -1671,7 +1683,7 @@
   "path": "record/events/type/encounter.html",
   "title": "Encounter events",
   "kicker": "type",
-  "line": "3 happenings over 2 dates"
+  "line": "4 happenings over 3 dates"
  },
  {
   "path": "record/events/type/neural-lace-sent.html",
@@ -14451,7 +14463,7 @@
   "path": "changes/2026-09-05.html",
   "title": "Edition No. 3",
   "kicker": "edition",
-  "line": "1 changes on 2026-09-05"
+  "line": "4 changes on 2026-09-05"
  },
  {
   "path": "changes/2026-09-04.html",
@@ -14668,5 +14680,11 @@
   "title": "the front",
   "kicker": "The Record",
   "line": "47 beings, 47 places, 13 things"
+ },
+ {
+  "path": "world/index.html",
+  "title": "The world",
+  "kicker": "The World",
+  "line": "47 beings, 47 places, 1936 drawings"
  }
 ]
