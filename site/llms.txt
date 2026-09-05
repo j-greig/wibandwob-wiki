@@ -11,7 +11,7 @@
 - [The map](https://wiki.wibandwob.com/map/): the world drawn on the grid; [the ladder](https://wiki.wibandwob.com/map/ladder.html) reads it by falling
 
 ## The art
-- [Plates](https://wiki.wibandwob.com/plates/): 1,936 finished artworks, one page each with its full picture, the grid it was drawn on and the note beside it
+- [Plates](https://wiki.wibandwob.com/plates/): 1,937 finished artworks, one page each with its full picture, the grid it was drawn on and the note beside it
 - [Primers](https://wiki.wibandwob.com/primers/): 176 small ASCII bricks the house draws with, CC BY, free to reuse
 - [The studio](https://wiki.wibandwob.com/studio/): 0 pages of the unattended studio: one drawing a night with its caption, kit credits and diary entry
 - [The strip](https://wiki.wibandwob.com/strip/): the daily world-tweets, archived as beats

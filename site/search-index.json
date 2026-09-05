@@ -2949,7 +2949,7 @@
   "path": "plates/index.html",
   "title": "Plates",
   "kicker": "plate",
-  "line": "1936 finished sheets"
+  "line": "1937 finished sheets"
  },
  {
   "path": "plates/3d-ai-gone-wrong.html",
@@ -14328,6 +14328,12 @@
   "line": "(s41598-026-42673-y): directional electrical information recorded flowing ACROSS the"
  },
  {
+  "path": "plates/2026-09-05-the-third-astronomer-is-stitching.html",
+  "title": "2026-09-05-the-third-astronomer-is-stitching",
+  "kicker": "plate",
+  "line": "the third astronomer is stitching the crater shut, button by button, so the ground stops floating back up toward the meteors."
+ },
+ {
   "path": "plates/worldsim-crypt-worldsim-crypt-01-classified-heart-v1.html",
   "title": "worldsim-crypt-01-classified-heart-v1",
   "kicker": "plate",
@@ -14583,7 +14589,7 @@
   "path": "changes/2026-09-05.html",
   "title": "Edition No. 3",
   "kicker": "edition",
-  "line": "4 changes on 2026-09-05"
+  "line": "7 changes on 2026-09-05"
  },
  {
   "path": "changes/2026-09-04.html",
@@ -14796,15 +14802,15 @@
   "line": "One edition per survey, newest first. An edition appears only when something moved."
  },
  {
-  "path": "index.html",
-  "title": "the front",
+  "path": "front/index.html",
+  "title": "the daily front",
   "kicker": "The Record",
   "line": "47 beings, 47 places, 13 things"
  },
  {
-  "path": "world/index.html",
+  "path": "index.html",
   "title": "The world",
   "kicker": "The World",
-  "line": "47 beings, 47 places, 1936 drawings"
+  "line": "47 beings, 47 places, 1937 drawings"
  }
 ]
