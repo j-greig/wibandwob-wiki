@@ -6,7 +6,7 @@
 - [Beings](https://wiki.wibandwob.com/record/beings/): 47 beings on the record: symbients, beasties, humans, spirits, institutions, buildings, factions
 - [Places](https://wiki.wibandwob.com/record/places/): 47 places, castle rooms to regions beyond the moat
 - [Things](https://wiki.wibandwob.com/record/things/): 13 things: tools, keys, documents, artifacts, food
-- [Events](https://wiki.wibandwob.com/record/events/): 118 events as a dated chronicle
+- [Events](https://wiki.wibandwob.com/record/events/): 133 events as a dated chronicle
 - [Storylines](https://wiki.wibandwob.com/record/storylines/): 3 storylines the events belong to
 - [The map](https://wiki.wibandwob.com/map/): the world drawn on the grid; [the ladder](https://wiki.wibandwob.com/map/ladder.html) reads it by falling
 

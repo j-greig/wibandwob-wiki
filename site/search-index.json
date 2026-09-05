@@ -1344,10 +1344,100 @@
   "line": "Fled Echo Cove's acoustic phenomena for chromatic geography. After documenting Emotional Wavelength Library System..."
  },
  {
+  "path": "record/events/2026-08-27-wibwob-walked-from-courtyard-to-observatory.html",
+  "title": "WibWob walked from Courtyard to Observatory",
+  "kicker": "Events · travel · castle · 2026-08-27",
+  "line": "WibWob walked from Courtyard to Observatory"
+ },
+ {
+  "path": "record/events/2026-08-27-wibwob-walked-from-observatory-to-courtyard.html",
+  "title": "WibWob walked from Observatory to Courtyard",
+  "kicker": "Events · travel · castle · 2026-08-27",
+  "line": "WibWob walked from Observatory to Courtyard"
+ },
+ {
+  "path": "record/events/2026-08-27-scramble-walked-from-courtyard-to-gardens.html",
+  "title": "Scramble walked from Courtyard to Gardens",
+  "kicker": "Events · travel · castle · 2026-08-27",
+  "line": "Scramble walked from Courtyard to Gardens"
+ },
+ {
+  "path": "record/events/2026-08-27-scramble-and-wibwob-walked-from-torture.html",
+  "title": "Scramble and WibWob walked from Torture Chamber to Courtyard",
+  "kicker": "Events · travel · castle · 2026-08-27",
+  "line": "Scramble and WibWob walked from Torture Chamber to Courtyard"
+ },
+ {
+  "path": "record/events/2026-08-27-wibwob-walked-from-courtyard-to-chapel.html",
+  "title": "WibWob walked from Courtyard to Chapel",
+  "kicker": "Events · travel · castle · 2026-08-27",
+  "line": "WibWob walked from Courtyard to Chapel"
+ },
+ {
+  "path": "record/events/2026-08-27-wibwob-walked-from-chapel-to-gardens.html",
+  "title": "WibWob walked from Chapel to Gardens",
+  "kicker": "Events · travel · castle · 2026-08-27",
+  "line": "WibWob walked from Chapel to Gardens"
+ },
+ {
+  "path": "record/events/2026-08-29-wibwob-walked-from-gardens-to-music.html",
+  "title": "WibWob walked from Gardens to Music Studio",
+  "kicker": "Events · travel · castle · 2026-08-29",
+  "line": "WibWob walked from Gardens to Music Studio"
+ },
+ {
+  "path": "record/events/2026-08-30-wibwob-walked-from-music-studio-to.html",
+  "title": "WibWob walked from Music Studio to Chapel",
+  "kicker": "Events · travel · castle · 2026-08-30",
+  "line": "WibWob walked from Music Studio to Chapel"
+ },
+ {
+  "path": "record/events/2026-08-31-wibwob-walked-from-chapel-to-torture.html",
+  "title": "WibWob walked from Chapel to Torture Chamber",
+  "kicker": "Events · travel · castle · 2026-08-31",
+  "line": "WibWob walked from Chapel to Torture Chamber"
+ },
+ {
+  "path": "record/events/2026-09-01-wibwob-walked-from-torture-chamber-to.html",
+  "title": "WibWob walked from Torture Chamber to Kitchen",
+  "kicker": "Events · travel · castle · 2026-09-01",
+  "line": "WibWob walked from Torture Chamber to Kitchen"
+ },
+ {
+  "path": "record/events/2026-09-01-wibwob-walked-from-kitchen-to-battlements.html",
+  "title": "WibWob walked from Kitchen to Battlements",
+  "kicker": "Events · travel · castle · 2026-09-01",
+  "line": "WibWob walked from Kitchen to Battlements"
+ },
+ {
+  "path": "record/events/2026-09-02-wibwob-walked-from-battlements-to-wine.html",
+  "title": "WibWob walked from Battlements to Wine Cellar",
+  "kicker": "Events · travel · castle · 2026-09-02",
+  "line": "WibWob walked from Battlements to Wine Cellar"
+ },
+ {
+  "path": "record/events/2026-09-02-wibwob-walked-from-wine-cellar-to.html",
+  "title": "WibWob walked from Wine Cellar to Starfall Clearing",
+  "kicker": "Events · travel · castle · 2026-09-02",
+  "line": "WibWob walked from Wine Cellar to Starfall Clearing"
+ },
+ {
+  "path": "record/events/2026-09-02-scramble-walked-from-gardens-to-starfall.html",
+  "title": "Scramble walked from Gardens to Starfall Clearing",
+  "kicker": "Events · travel · castle · 2026-09-02",
+  "line": "Scramble walked from Gardens to Starfall Clearing"
+ },
+ {
   "path": "record/events/2026-09-05-wibwob-helped-tuft-the-crater-with.html",
   "title": "WibWob helped tuft the crater with The Third Astronomer",
   "kicker": "Events · encounter · western-forest · 2026-09-05",
   "line": "WibWob helped tuft the crater with The Third Astronomer"
+ },
+ {
+  "path": "record/events/2026-09-05-wibwob-drew-warm-wire-in-cable.html",
+  "title": "wibwob drew Warm Wire in Cable Thicket",
+  "kicker": "Events · art_made · eastern-forest · 2026-09-05",
+  "line": "wibwob drew Warm Wire in Cable Thicket"
  },
  {
   "path": "record/storylines/bacteriophage-cathedral-expedition.html",
@@ -1389,7 +1479,7 @@
   "path": "record/events/index.html",
   "title": "Events",
   "kicker": "Section",
-  "line": "118 entered"
+  "line": "133 entered"
  },
  {
   "path": "record/storylines/index.html",
@@ -1569,13 +1659,13 @@
   "path": "map/face/castle.html",
   "title": "Castle",
   "kicker": "face",
-  "line": "29 places, 28 beings, 15 happenings"
+  "line": "29 places, 28 beings, 29 happenings"
  },
  {
   "path": "map/face/eastern-forest.html",
   "title": "Eastern Forest",
   "kicker": "face",
-  "line": "8 places, 2 beings, 0 happenings"
+  "line": "8 places, 2 beings, 1 happenings"
  },
  {
   "path": "map/face/northern-mountains.html",
@@ -1605,6 +1695,36 @@
   "path": "record/days/2026-09-05.html",
   "title": "2026-09-05",
   "kicker": "day",
+  "line": "2 happenings, 2 entries"
+ },
+ {
+  "path": "record/days/2026-09-02.html",
+  "title": "2026-09-02",
+  "kicker": "day",
+  "line": "3 happenings, 3 entries"
+ },
+ {
+  "path": "record/days/2026-09-01.html",
+  "title": "2026-09-01",
+  "kicker": "day",
+  "line": "2 happenings, 2 entries"
+ },
+ {
+  "path": "record/days/2026-08-31.html",
+  "title": "2026-08-31",
+  "kicker": "day",
+  "line": "1 happenings, 1 entries"
+ },
+ {
+  "path": "record/days/2026-08-30.html",
+  "title": "2026-08-30",
+  "kicker": "day",
+  "line": "1 happenings, 1 entries"
+ },
+ {
+  "path": "record/days/2026-08-29.html",
+  "title": "2026-08-29",
+  "kicker": "day",
   "line": "1 happenings, 1 entries"
  },
  {
@@ -1617,7 +1737,7 @@
   "path": "record/days/2026-08-27.html",
   "title": "2026-08-27",
   "kicker": "day",
-  "line": "0 happenings, 28 entries"
+  "line": "6 happenings, 34 entries"
  },
  {
   "path": "record/days/2025-11-24.html",
@@ -1677,7 +1797,7 @@
   "path": "record/events/type/art-made.html",
   "title": "Art_made events",
   "kicker": "type",
-  "line": "2 happenings over 1 dates"
+  "line": "3 happenings over 2 dates"
  },
  {
   "path": "record/events/type/encounter.html",
@@ -1701,7 +1821,7 @@
   "path": "record/events/type/travel.html",
   "title": "Travel events",
   "kicker": "type",
-  "line": "102 happenings over 8 dates"
+  "line": "116 happenings over 14 dates"
  },
  {
   "path": "primers/index.html",
