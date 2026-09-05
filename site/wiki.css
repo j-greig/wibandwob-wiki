@@ -2000,3 +2000,12 @@ table.cast {
   max-width: 100%;
   overflow-x: auto;
 }
+
+
+/* A finished sheet's entry shows its picture, not its text: the retina copy
+   from the media host, scaled to the column on any screen. */
+.plate-photo { margin: 0; max-width: 100%; }
+.plate-photo img { display: block; width: 100%; height: auto; max-width: 100%;
+  image-rendering: auto; background: #000; }
+details.plate-grid { margin-top: .75rem; }
+details.plate-grid summary { cursor: pointer; font-size: .85em; opacity: .8; }
