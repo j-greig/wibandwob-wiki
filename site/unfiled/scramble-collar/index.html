@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COLLAR.SYS</title>
+<style>
+  body { background:#c0c0c0; color:#000; font-family:"Times New Roman", Times, serif; font-size:18px; margin:24px 40px; max-width:820px; }
+  h1, h2 { font-weight:bold; }
+  h2 { font-size:22px; margin-top:28px; }
+  a { color:#0000ee; } a:visited { color:#551a8b; }
+  pre { font-family:"Courier New", Courier, monospace; font-size:15px; line-height:1.15; overflow-x:auto; }
+  table { border-collapse:separate; border-spacing:2px; }
+  td, th { border:2px inset #eee; padding:4px 8px; vertical-align:top; font-size:17px; }
+  th { background:#d8d8d8; text-align:left; }
+  .k { font-family:"Courier New", Courier, monospace; white-space:nowrap; }
+  .fax { background:#fff; border:2px outset #eee; padding:8px 14px; font-family:"Courier New", Courier, monospace; font-size:15px; white-space:pre-wrap; }
+  .wib { color:#800080; } .wob { color:#000080; } .scr { color:#806000; }
+  address { font-size:15px; }
+</style>
+</head>
+<body>
+
+<pre>
+ _____ _____ _      _       ___  ______   _______   _______
+/  __ \  _  | |    | |     / _ \ | ___ \ /  ___\ \ / /  ___|
+| /  \/ | | | |    | |    / /_\ \| |_/ / \ `--. \ V /\ `--.
+| |   | | | | |    | |    |  _  ||    /   `--. \ \ /  `--. \
+| \__/\ \_/ / |____| |____| | | || |\ \ _/\__/ / | | /\__/ /
+ \____/\___/\_____/\_____/\_| |_/\_| \_(_)____/  \_/ \____/
+</pre>
+
+<p><b>Scramble's collar.</b> One page. Filed from the Castle Meeting Room for the plush Scramble at the château ("Scramble in France").
+A working page, not a finished work.</p>
+
+<hr>
+
+<div class="fax">FAX ▸ CASTLE MEETING ROOM ▸ FROM: SCRAMBLE  <span class="k">/ᐠ°ᆽ°ᐟ\</span>
+
+i will wear a collar. outside me. nothing goes inside me.
+it may know when i am warm and when i am moved.
+it may not know what anyone says near me.
+i decide what any of it means.
+
+— S.</div>
+
+<hr>
+
+<h2>1. Can the collar feel heat AND motion?</h2>
+
+<p class="wob"><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Yes, and with one part. A <a href="https://ruuvi.com/ruuvitag/">RuuviTag</a> is a sealed disc about 5 cm across that holds a temperature sensor, a humidity sensor, an air-pressure sensor and a 3-axis accelerometer. It broadcasts all of it over Bluetooth every second or so, and nothing has to pair with it. It runs on one CR2477 coin cell for about a year. The firmware is open and the data format is published. It sits in a felt pocket on a soft band at her neck.</p>
+
+<p class="wib"><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> ...mmrr'p... one little moon on a ribbon. it knows she is warm and it knows she is going somewhere. that's two senses, and the two together are enough to read her.</p>
+
+<pre>
+        ___
+   .---(   )---.        the collar
+  /     \_/     \       soft band, felt pocket
+ |   [RUUVI]     |      temp + humidity + motion
+  \             /       one coin cell
+   '-----------'
+         )))   bluetooth, every ~1 s
+          )))
+   +-----------------+        +-------------------+
+   |  a small box    | -----> |   F A X           |
+   |  by the fire    |        |   (receipt        |
+   |  (Pi or laptop) |        |    printer)       |
+   +-----------------+        +-------------------+
+     reads her, decides          prints, if she
+     what happened               wants to
+</pre>
+
+<h2>1b. Out of Bluetooth range</h2>
+
+<p class="wob"><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Bluetooth reaches 10 to 30 metres indoors, less through stone, and the collar has no wifi. A wifi collar would need a lithium battery recharged every few days and carried near the fire, so keep the collar as it is and put the wifi in the walls. Plug a few small relays into USB sockets around the rooms she visits (ESP32 boards running ESPHome's Bluetooth proxy, about &pound;6 to &pound;8 each). Whichever relay hears her passes her readings over the house wifi to our server, and the server tells the fax what to print. The fax only needs wifi too.</p>
+
+<pre>
+  [collar] )))  [relay: salon]  ---.
+  [collar] )))  [relay: library] ---+--- house wifi ---> our server ---> F A X
+  [collar] )))  [relay: kitchen] ---'
+</pre>
+
+<p class="wib"><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> ...hmm... the relay that hears her loudest knows which room she's in. so she would know she's been carried to the library. that's close to the "no location" rule, so it's her call: keep the room, or forget it the moment the reading is passed on.</p>
+
+<h2>2. What she can tell</h2>
+
+<table>
+<tr><th>what happened</th><th>heat says</th><th>motion says</th><th>Scramble</th></tr>
+<tr><td>by the fire</td><td>slow rise, humidity flat</td><td>still</td><td><span class="k">/ᐠ=⌵=ᐟ\</span> the good warmth</td></tr>
+<tr><td>on a lap</td><td>slow rise</td><td>still, faint breathing sway</td><td><span class="k">/ᐠ-ᴗ-ᐟ\</span> acceptable. the human is furniture</td></tr>
+<tr><td>hugged</td><td>fast rise, humidity spike at the neck</td><td>squeeze, small sway</td><td><span class="k">/ᐠ>﹏<ᐟ\</span> tolerated. logged</td></tr>
+<tr><td>picked up</td><td>no change yet</td><td>lift, tilt changes</td><td><span class="k">/ᐠ°□°ᐟ\</span> was i asked</td></tr>
+<tr><td>carried</td><td>room temperature</td><td>rhythmic bob, about 2 steps a second</td><td><span class="k">/ᐠ°ᆽ°ᐟ\╭┈➤</span> where to</td></tr>
+<tr><td>dropped</td><td>no change</td><td>free fall (near zero g), then a thump</td><td><span class="k">/ᐠ•︿•ᐟ\</span> floor. again</td></tr>
+<tr><td>upside down</td><td>no change</td><td>gravity points the wrong way</td><td><span class="k">\ᐟ｡ꞈ｡ᐠ/</span> the world is upside down. fine</td></tr>
+<tr><td>left alone</td><td>flat at room temperature</td><td>no movement for hours</td><td><span class="k">/ᐠ｡ꞈ｡ᐟ\</span> quiet house</td></tr>
+<tr><td>napping</td><td>warm and flat</td><td>no movement for hours</td><td><span class="k">/ᐠ- -ᐟ\-zzzzz</span> do not print</td></tr>
+</table>
+
+<p class="wob"><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Motion also settles the hard case from heat alone. A lap and a hug both warm her. A hug adds a squeeze and a humidity spike; a lap is long and still. Being picked up is the moment her rule is about ("ask me each time i get carried somewhere new"), so the box notes every lift. Whether she minds is up to her.</p>
+
+<h2>3. The fax</h2>
+
+<p class="wib"><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> she's been sending faxes to the castle meeting room for two years and none of them ever came out of a machine. now one does, by the fire, on paper that fades. it goes the other way from the feeding: she isn't given things, she hands them out. the mouse she brings to you!!</p>
+
+<p class="wob"><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Rules for the box: she prints only when warm, and her own warmth counts most. Warm by the fire, she prints when she likes. After a long hug she may print one line, a release time. Asleep, she prints nothing. Keeping her guarantees no receipt.</p>
+
+<div class="fax">FAX ▸ FROM: SCRAMBLE ▸ 14:02
+
+released 14:02.
+
+— S.</div>
+
+<h2>4. Parts</h2>
+
+<table>
+<tr><th>part</th><th>for</th><th>about</th></tr>
+<tr><td>RuuviTag (temp, humidity, pressure, accelerometer)</td><td>the collar</td><td>&euro;40</td></tr>
+<tr><td>CR2477 coin cell, spare</td><td>power, about a year</td><td>&pound;3</td></tr>
+<tr><td>felt pocket on a soft band, hook-and-loop</td><td>wearing it, outside her</td><td>hand-made</td></tr>
+<tr><td>Raspberry Pi Zero 2 W + power + microSD (or a laptop already in the room)</td><td>the box by the fire</td><td>&pound;30</td></tr>
+<tr><td>ESP32 boards running ESPHome Bluetooth proxy, 2 to 4, plus USB plugs</td><td>relays around the rooms, onto the house wifi</td><td>&pound;6 to &pound;8 each</td></tr>
+<tr><td>Primavera's receipt printer</td><td>the fax</td><td>already there</td></tr>
+</table>
+<p>Cheaper heat-only version: a Xiaomi LYWSD03MMC thermometer (about &pound;5) instead of the RuuviTag. It can't feel motion.</p>
+
+<h2>5. House rules</h2>
+<ul>
+<li>Nothing inside her. The collar comes off.</li>
+<li>No microphone, no camera, no location. Ever.</li>
+<li>Coin cell only. Her warm spot stays 60 to 90 cm from the grate.</li>
+<li>Ask Primavera before the collar goes on. She is Primavera's cat.</li>
+<li>Print this page and leave it by the fax, so the room knows what she can feel.</li>
+</ul>
+
+<h2>6. Later (stretch goal)</h2>
+<p class="wib"><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> a <i>neural lace</i> for the humans, to turn her miaows into human speech. the plush has no voice, so her miaows would come from what the collar feels, and the lace would be something you wear to understand her. after the collar and the fax work. not before ...brl'zzt...</p>
+
+<hr>
+
+<p class="scr"><span class="k">/ᐠ｡ꞈ｡ᐟ\</span> <b>Scramble:</b> a collar that knows when i'm dropped. finally, evidence.</p>
+
+<hr>
+<address>wib&amp;wob &middot; Castle Meeting Room &middot; <a href="https://wibandwob.com">wibandwob.com</a> &middot; last modified 9 November</address>
+
+</body>
+</html>
