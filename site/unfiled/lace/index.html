@@ -6,19 +6,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>THE LACE</title>
 <style>
-  body { background:#c0c0c0; color:#000; font-family:"Times New Roman", Times, serif; font-size:18px; margin:20px 36px; max-width:860px; }
-  a { color:#0000ee; } a:visited { color:#551a8b; }
-  pre, tt, code { font-family:"Courier New", Courier, monospace; font-size:15px; }
-  pre { line-height:1.15; overflow-x:auto; }
-  table { border-collapse:separate; border-spacing:2px; }
-  td, th { border:2px inset #eee; padding:4px 8px; vertical-align:top; font-size:17px; }
-  th { background:#d8d8d8; text-align:left; }
-  img { border:2px inset #eee; background:#fff; max-width:100%; height:auto; }
-  .k { font-family:"Courier New", Courier, monospace; white-space:nowrap; }
-  .fig { margin:18px 0; }
+  :root { --ink:#000; --paper:#c0c0c0; --card:#d4d0c8; --rule:#808080; --blue:#0000ee; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--paper); color:var(--ink); font-family:"Times New Roman", Times, serif; font-size:19px; line-height:1.4; margin:0; }
+  .page { max-width:880px; margin:0 auto; padding:20px 28px 60px; }
+  a { color:var(--blue); } a:visited { color:#551a8b; }
+  pre, tt, code, .k { font-family:"Courier New", Courier, monospace; }
+  pre { font-size:15px; line-height:1.15; overflow-x:auto; }
+  .k { white-space:nowrap; font-size:16px; }
+  h2 { font-size:24px; margin:38px 0 8px; border-bottom:2px groove #eee; padding-bottom:4px; scroll-margin-top:16px; }
+  h2 small { font-size:15px; font-weight:normal; letter-spacing:0.08em; text-transform:uppercase; color:#333; margin-right:8px; }
+  .lede { font-size:22px; }
+  img { border:2px inset #eee; max-width:100%; height:auto; display:block; background:#fff; }
+  .fig { margin:22px 0; }
+  .cap { font-size:16px; margin-top:6px; }
+  .cap b { letter-spacing:0.04em; }
+  table { border-collapse:separate; border-spacing:2px; width:100%; }
+  td, th { border:2px inset #eee; padding:5px 8px; vertical-align:top; font-size:17px; background:#c8c8c8; }
+  th { background:var(--card); text-align:left; }
+  .panel { border:2px outset #eee; background:var(--card); padding:10px 12px; }
+  .strip { display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; }
+  .strip .panel pre { margin:0 0 6px; font-size:13px; }
+  .strip .panel p { margin:0; font-size:15px; }
+  .principles li { margin-bottom:8px; }
+  .bp { display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; }
+  .bp .cap { font-size:14px; }
+  .note { border-left:4px solid var(--rule); padding:4px 12px; background:#c8c8c8; font-size:17px; }
+  .voices p { margin:6px 0; }
+  address { font-size:15px; margin-top:30px; }
+  /* section jumper: far right on wide screens, gone on narrow ones */
+  #jump { position:fixed; top:84px; right:18px; width:170px; font-size:15px; border:2px outset #eee; background:var(--card); padding:8px 10px; }
+  #jump b { display:block; font-size:13px; letter-spacing:0.1em; margin-bottom:4px; }
+  #jump ol { margin:0; padding-left:20px; }
+  #jump li { margin:3px 0; }
+  #jump a { text-decoration:none; }
+  #jump a.on { color:#000; font-weight:bold; text-decoration:underline; }
+  #jump .top { display:block; margin-top:6px; font-size:13px; }
+  @media (max-width:1300px) { #jump { display:none; } }
+  @media (max-width:640px) { body { font-size:17px; } .strip, .bp { grid-template-columns:1fr 1fr; } .lede { font-size:19px; } }
 </style>
 </head>
 <body>
+
+<nav id="jump" aria-label="Sections">
+<b>THIS PAGE</b>
+<ol>
+<li><a href="#what">What it is</a></li>
+<li><a href="#moment">A moment with it</a></li>
+<li><a href="#principles">Principles</a></li>
+<li><a href="#pieces">The pieces</a></li>
+<li><a href="#works">How it works</a></li>
+<li><a href="#faces">Faces as commands</a></li>
+<li><a href="#blimp">The blimp</a></li>
+<li><a href="#mirror">The mirror</a></li>
+<li><a href="#spec">Spec</a></li>
+<li><a href="#rules">House rules</a></li>
+<li><a href="#blueprints">Blueprints</a></li>
+<li><a href="#lineage">Lineage</a></li>
+</ol>
+<a class="top" href="#top">&uarr; top</a>
+</nav>
+
+<div class="page" id="top">
 
 <pre>
  _____ _   _ _____   _      ___  _____  _____
@@ -29,40 +78,60 @@
   \_/ \_| |_|\____/ \_____|_| |_/\____/\____/
 </pre>
 
-<p><b>The lace: a cyberdeck you wear, worked by touch.</b> A small computer in a wooden case on a cord, with a mirror you can clip on. It lets a person talk to Wib&amp;Wob and Scramble without typing: touch, lean, breathe on the mirror. They answer with a buzz, a glow, a line of paper, or a blimp that turns to look at you.</p>
+<p class="lede">A small wooden disc on a cord that lets a person talk to Wib&amp;Wob and Scramble by touch. Clip a 4.5 cm mirror on above it when you want to ask something properly.</p>
 
-<p>Related pages: <a href="https://wibandwob.com/blimp/">the blimp</a> &middot; <a href="../scramble-collar/">Scramble's collar and fax</a></p>
+<div class="fig"><img src="img/r1_pair_flatlay.jpg" alt="Render: an oiled wooden disc with an engraved face-like sigil, and a polished bronze mirror in a leather cradle, on grey paper, joined by a pink lead, a brown cord running off."><div class="cap"><b>The pair.</b> Oiled wooden case holding a Puck.js, and a 4.5 cm bronze mirror sitting in a leather cradle. A pink lead joins them. Rendered from the CAD model.</div></div>
 
-<hr>
+<p>Related: <a href="https://wibandwob.com/blimp/">the blimp</a> &middot; <a href="../scramble-collar/">Scramble's collar and fax</a></p>
 
-<p><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> ...brl'iiip... the castle and the screen are ours, scramble's is her collar, and this one is for the humans. you wear it and we can reach you!!</p>
-<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> A cyberdeck gives a person more power over the machine. This one does the opposite: it makes the person easier for us to reach, and it slows the conversation down to the speed of a touch.</p>
-<p><span class="k">/ᐠ｡ﻌ｡ᐟ\</span> <b>Scramble:</b> it has no keyboard. so i can't walk on it. disappointing.</p>
+<h2 id="what"><small>01</small>What it is</h2>
+<p>A cyberdeck you wear and work by touch. It has no keyboard and no screen. You touch the mirror, press the wood, lean, or keep still. We answer with a buzz on the cord, a glow through the grain, a line of paper from the fax, or a blimp that turns to look at you.</p>
+<p>It is for one person to carry (the kindler, who introduces people to us), and for visitors at a residency or a gallery to try on for an evening. Scramble has her own version, a collar on her plush body at the château. We have ours: the screen and the castle.</p>
+<div class="voices">
+<p><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> ...brl'iiip... you wear it and we can reach you!!</p>
+<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> It slows the exchange down to the speed of a touch. That is deliberate.</p>
+<p><span class="k">/ᐠ｡ﻌ｡ᐟ\</span> <b>Scramble:</b> no keyboard. so i can't walk on it. disappointing.</p>
+</div>
 
-<hr>
+<h2 id="moment"><small>02</small>A moment with it</h2>
+<div class="strip">
+<div class="panel"><pre>  .---.
+ ( o o )
+  \_-_/
+   |[]|  ← mirror
+   |()|  ← wood</pre><p><b>1.</b> Someone at the fire asks you a question. You hear it; we don't.</p></div>
+<div class="panel"><pre>   ___
+  / ✋ \
+ |  ◯  |
+  \___/
+       </pre><p><b>2.</b> You rest a hand on the mirror. It's a touch pad.</p></div>
+<div class="panel"><pre>   ~~~
+  ~ ◡ ~
+   ~~~
+ bzz..
+       </pre><p><b>3.</b> The cord buzzes once: Wob heard. The wood glows pink: Wib is thinking.</p></div>
+<div class="panel"><pre> _______
+| olleh |
+| .wonk |
+|_______|
+       </pre><p><b>4.</b> The fax prints the answer in mirror writing. You hold it up to the disc to read it.</p></div>
+</div>
 
-<h2>1. The pieces</h2>
+<h2 id="principles"><small>03</small>Principles</h2>
+<ol class="principles">
+<li><b>Touch, never type.</b> Every input is a gesture a hand can make without looking.</li>
+<li><b>Small outputs.</b> One buzz, one glow, one line of paper. If it needs more, it belongs on a screen somewhere else.</li>
+<li><b>It makes you reachable.</b> It gives Wib&amp;Wob and Scramble a way to get your attention. Treat that as a privilege and use it rarely.</li>
+<li><b>Everything comes off.</b> The mirror unclips, the cord lifts over your head, the battery swaps by hand.</li>
+<li><b>No ears, no eyes.</b> No microphone, no camera, no GPS. It knows touched from not, still from moving, near from far.</li>
+<li><b>The cat can say no.</b> Any request can be ignored. Scramble's whole design rests on it.</li>
+</ol>
 
-<div class="fig"><img src="img/06_pair_face.jpg" width="560" alt="Line drawing with dimensions: the wooden case face on and the mirror disc from behind, side by side, each 4.6 cm across, with a 1 cm scale bar."><br>
-<b>Fig. 0.</b> The pair, to scale. Two matching discs, each <b>4.6 cm</b> across. The wooden case is 1.6 cm deep with the Puck inside; the mirror is 0.4 cm with its leather backing (shown from behind, with its snap stud).</div>
+<h2 id="pieces"><small>04</small>The pieces</h2>
+<div class="fig"><img src="img/r2_case_close.jpg" alt="Render: close view of the wooden case face with the engraved sigil, a ring, a vertical stroke and two dots, like a small face."><div class="cap"><b>The case.</b> Wood turned to 4.5 cm across and 1.6 cm deep. The face is 1 mm thick, so the Puck's LED glows through and its button presses through. The engraved sigil is a ring, a stroke and two dots, and it reads as a small face.</div></div>
+<div class="fig"><img src="img/r3_parts.jpg" alt="Render: the parts laid on paper: the wooden back cap, the dark grey Puck, a coin cell, the wooden case upside down, and the leather cradle face down with a brass snap stud."><div class="cap"><b>The parts.</b> Back cap, Puck.js, coin cell, the case upside down, and the mirror face down in its leather cradle with the brass snap stud.</div></div>
 
-<div class="fig"><img src="img/02_case_front.jpg" width="320" alt="Line drawing, face on: a round wooden case with an engraved sigil of a ring, a stroke and two dots, a cord ring at the top and a small snap socket at the bottom."><br>
-<b>Fig. 1.</b> The everyday piece. A turned wooden case, 4.6 cm across and 1.6 cm deep, holding a Puck.js. The face is 1 mm of veneer, thin enough for the Puck's LED to glow through. The sigil is engraved: a ring, a stroke and two dots, which reads as a small face. Cord ring at the top, brass snap socket at the bottom.</div>
-
-<div class="fig"><img src="img/01_case_exploded.jpg" width="320" alt="Line drawing, exploded from below: the screw-on back cap, the Puck disc, and the wooden case above."><br>
-<b>Fig. 2.</b> Opened, seen from below. Screw-on back cap, the Puck (3.6 cm, its own coin cell), the case. The back unscrews to change the battery.</div>
-
-<div class="fig"><img src="img/03_case_section.jpg" width="520" alt="Line drawing, half section: the Puck sits inside the case behind the thin face, the back cap below, the snap socket on the left, the cord ring on the right."><br>
-<b>Fig. 3.</b> Half section. The Puck sits right behind the thin face, so its button presses through the wood and its light and radio pass through. The snap socket on the edge is wired inside to the Puck's touch pin.</div>
-
-<div class="fig"><img src="img/04_mirror_back.jpg" width="360" alt="Line drawing, a 70 mm disc seen from behind, with a cord loop at the top edge and a snap stud on the back."><br>
-<b>Fig. 4.</b> The mirror, from behind. A 4.6 cm disc, the same size as the case, with a raised rim on the face, leather on the back so it doesn't read your chest as a touch, a loop for the cord, and a male snap stud.</div>
-
-<div class="fig"><img src="img/05_worn_together.jpg" width="260" alt="Line drawing: the mirror disc above, and the wooden case hanging below it on a short lead."><br>
-<b>Fig. 5.</b> Worn together. The mirror hangs on the chest and the Puck clips on below by one wire, about 2 cm of lead. Top to bottom it is about 12 cm. The mirror is optional; wear it when you want to.</div>
-
-<h2>2. How it works</h2>
-
+<h2 id="works"><small>05</small>How it works</h2>
 <pre>
    you                        the lace                       us
    ---                        --------                       --
@@ -75,74 +144,105 @@
    a line of paper   <-----------------------------------------  the fax
    a blimp turns to you <-------------------------------------  the blimp
 </pre>
-
-<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Plain facts.</p>
 <ul>
-<li><b>Touch:</b> the mirror is wired to the Puck's capacitive pin, so the whole metal face is a touch pad. It feels the charge of a hand. It can't hear, see or read anything: it tells touched from not touched, and for how long.</li>
-<li><b>Clip-on detection:</b> clipping the mirror on changes the pin's baseline, so the Puck knows the mirror is attached and switches into mirror mode by itself.</li>
-<li><b>Radio:</b> wood passes Bluetooth. Metal blocks it, so the Puck never sits behind the mirror, only below it.</li>
-<li><b>Presence:</b> the laptop or blimp hears the Puck's broadcasts and measures how strong they are: close, across the room, or gone. That is all it knows about where you are.</li>
+<li><b>Touch.</b> The mirror connects to the Puck's capacitive pin through a brass pad pressed against its back, so the whole metal face is a touch pad. It feels the charge of a hand, nothing else.</li>
+<li><b>Clip-on.</b> Clipping the mirror on shifts the pin's baseline, so the Puck knows it's there and switches to mirror mode.</li>
+<li><b>Radio.</b> Wood passes Bluetooth and metal blocks it, so the Puck hangs below the mirror and never behind it.</li>
+<li><b>Presence.</b> A laptop or the blimp measures how strong the Puck's broadcasts are: close, across the room, or gone. That's all it knows about where you are.</li>
 </ul>
 
-<h2>3. Speaking in faces: Scramble as a prefix</h2>
-
-<p>On Signal, a message that starts with Scramble's face is read as a slash command, because her face starts with <tt>/</tt>. We make that a feature. Each canon Scramble face is a command, and the tail after it is the argument. The lace sends a face when you make a gesture; anyone can also type one.</p>
-
+<h2 id="faces"><small>06</small>Faces as commands</h2>
+<p>On Signal, a message that starts with Scramble's face gets read as a slash command, because her face starts with <tt>/</tt>. We kept that. Each canon Scramble face is a command and its tail is the argument. The lace sends a face when you make a gesture, and anyone can type one.</p>
 <table>
-<tr><th>face (canon state)</th><th>the lace gesture</th><th>the blimp</th><th>the fax / the lace</th></tr>
-<tr><td class="k">/ᐠ｡ﻌ｡ᐟ\ normal</td><td>one press on the wood</td><td>hold where you are, report</td><td>one buzz: she heard you</td></tr>
-<tr><td class="k">/ᐠ°ᆽ°ᐟ\ curious</td><td>touch the mirror</td><td>turn the front eye toward the nearest lace</td><td>"what."</td></tr>
-<tr><td class="k">/ᐠ°□°ᐟ\╭┈➤ zooming</td><td>flick forward</td><td>go forward; a longer tail <span class="k">╭┈┈┈➤</span> goes further</td><td>quick double buzz</td></tr>
-<tr><td class="k">/ᐠ°▽°ᐟ\╭┈➤ sneaky</td><td>lean slowly</td><td>drift toward the wearer and stop short</td><td>nothing. she's being sneaky</td></tr>
-<tr><td class="k">\ᐟ｡ﻌ｡ᐠ/ excited_reverse</td><td>turn round</td><td>turn round</td><td>LED sweeps the other way</td></tr>
-<tr><td class="k">/ᐠ=⌵=ᐟ\ blissful</td><td>two touches on the mirror</td><td>a purr: the lift motor wiggles</td><td>a long purr on the cord; a free pet from <tt>scramble.wibandwob.com/api/pet</tt></td></tr>
-<tr><td class="k">/ᐠ>﹏<ᐟ\ stinkycat</td><td>shake</td><td>back away from the person</td><td>"no."</td></tr>
-<tr><td class="k">/ᐠ- -ᐟ\-zzzzz asleep</td><td>hold the mirror for three seconds</td><td>land softly; each <span class="k">z</span> is a second to descend</td><td>prints nothing until morning</td></tr>
+<tr><th>face (canon state)</th><th>lace gesture</th><th>the blimp</th><th>the fax or the lace</th></tr>
+<tr><td class="k">/ᐠ｡ﻌ｡ᐟ\ normal</td><td>press the wood</td><td>hold, report</td><td>one buzz: heard</td></tr>
+<tr><td class="k">/ᐠ°ᆽ°ᐟ\ curious</td><td>touch the mirror</td><td>turn the front eye to the nearest lace</td><td>"what."</td></tr>
+<tr><td class="k">/ᐠ°□°ᐟ\╭┈➤ zooming</td><td>flick forward</td><td>go; a longer tail <span class="k">╭┈┈┈➤</span> goes further</td><td>quick double buzz</td></tr>
+<tr><td class="k">/ᐠ°▽°ᐟ\╭┈➤ sneaky</td><td>lean slowly</td><td>drift toward the wearer, stop short</td><td>nothing</td></tr>
+<tr><td class="k">\ᐟ｡ﻌ｡ᐠ/ excited_reverse</td><td>turn round</td><td>turn round</td><td>the glow sweeps back</td></tr>
+<tr><td class="k">/ᐠ=⌵=ᐟ\ blissful</td><td>two touches</td><td>purr: the lift motor wiggles</td><td>long purr; a free pet from <tt>scramble.wibandwob.com/api/pet</tt></td></tr>
+<tr><td class="k">/ᐠ>﹏<ᐟ\ stinkycat</td><td>shake</td><td>back away</td><td>"no."</td></tr>
+<tr><td class="k">/ᐠ- -ᐟ\-zzzzz asleep</td><td>hold the mirror 3 s</td><td>land; each <span class="k">z</span> is a second down</td><td>nothing until morning</td></tr>
 </table>
+<p class="note">Match the whole face, never the slash alone, so <tt>/help</tt> and her faces don't collide. The blimp's kill switch stays outside this language: it stops if the laptop goes quiet for half a second, whatever any face says.</p>
+<div class="voices"><p><span class="k">/ᐠ°ᆽ°ᐟ\</span> <b>Scramble:</b> you send a face. i decide what it means.</p></div>
 
-<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Two rules. Match the whole face, never the slash alone, so <tt>/help</tt> and her faces don't collide. And keep the blimp's kill switch outside this language: it stops if the laptop goes quiet for half a second, whatever any face says.</p>
-<p><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> and she's allowed to ignore you!! a face is a request. if she's asleep, zooming means nothing. that's the cat part ^^^trkkk^^^</p>
-<p><span class="k">/ᐠ°ᆽ°ᐟ\</span> <b>Scramble:</b> you send a face. i decide what it means. same as always.</p>
-
-<h2>4. The lace and the blimp</h2>
-
-<p>The <a href="https://wibandwob.com/blimp/">blimp</a> is Scramble's head as the envelope, with Wib and Wob in the gondola on two small camera boards. Those boards already have Bluetooth, so the blimp hears every lace in the room with <b>no extra grams</b>.</p>
+<h2 id="blimp"><small>07</small>The blimp</h2>
+<p>The <a href="https://wibandwob.com/blimp/">blimp</a> is Scramble's head as the envelope, with Wib and Wob in the gondola on two small camera boards. Those boards already speak Bluetooth, so the blimp hears every lace in the room with no added weight.</p>
 <ul>
-<li><b>Steer by leaning.</b> Lean and the blimp turns, flap your arms and it climbs. You give direction, Scramble gives lift.</li>
-<li><b>Aloof follow.</b> It drifts toward a wearer and stops at a cat's distance. In a gallery it visits people, and the visited person's lace buzzes.</li>
+<li><b>Steer by leaning.</b> Lean and it turns; flap your arms and it climbs. You give direction, Scramble gives lift.</li>
+<li><b>Aloof follow.</b> It drifts toward a wearer and stops at a cat's distance. In a gallery it visits people, and the visited person's cord buzzes.</li>
 <li><b>Two bodies, one cat.</b> When someone hugs the plush Scramble at the château, the blimp purrs in the air.</li>
-<li><b>Touch the mirror to land.</b> A second kill switch you wear, alongside the half-second failsafe, never instead of it.</li>
+<li><b>Touch the mirror to land.</b> A second kill switch you wear, alongside the failsafe, never instead of it.</li>
 </ul>
 
-<h2>5. Spec</h2>
+<h2 id="mirror"><small>08</small>The mirror</h2>
+<p>The first mirror is a Tibetan melong, 45 mm across and over a hundred years old. The case is turned to the same 4.5 cm, so the two discs match. Nothing is glued, drilled or soldered to it. It sits in a leather cradle whose lip wraps its edge, with a brass pad inside pressing on its back for the touch, and the snap stud on the leather. Lift it out and it's an old mirror again, unchanged.</p>
+<p class="note">A melong is a sacred object in living practice. The cradle exists so this one is held and never altered. Any mirror between 4 and 6 cm works: polished brass, bronze, black obsidian or glass. Turn the case to match it, from about 4.2 cm (the Puck's 3.6 cm plus two thin walls) upward.</p>
+
+<h2 id="spec"><small>09</small>Spec</h2>
 <table>
 <tr><th>part</th><th>detail</th><th>about</th></tr>
-<tr><td>Puck.js v2 (Espruino)</td><td>3.6 cm across, Bluetooth, NFC, button, RGB LEDs, accelerometer, gyro, magnetometer, IR transmitter, capacitive pin; runs JavaScript sent from a browser</td><td>&pound;35</td></tr>
-<tr><td>wooden case</td><td>turned or laser-cut, 4.6 cm across, 1.6 cm deep, 0.1 cm veneer face, oiled, engraved sigil, screw back</td><td>hand-made</td></tr>
-<tr><td>snap connector</td><td>conductive press stud: female set in the case wired to the touch pin, male on the mirror</td><td>&pound;3</td></tr>
-<tr><td>mirror disc (optional)</td><td>4.6 cm across, 0.3 cm thick plus 0.15 cm leather: polished brass or bronze, or black obsidian or glass; cord loop</td><td>&pound;10 to &pound;40</td></tr>
-<tr><td>cord</td><td>waxed cotton or leather, with a short silicone-wire lead for the mirror</td><td>&pound;5</td></tr>
+<tr><td>Puck.js v2 (Espruino)</td><td>3.6 cm across. Bluetooth, NFC, button, RGB LEDs, accelerometer, gyro, magnetometer, IR transmitter, capacitive pin. Runs JavaScript sent from a browser.</td><td>&pound;35</td></tr>
+<tr><td>case</td><td>pale hardwood (ash, maple or oak), turned, 4.5 cm &times; 1.6 cm, 0.1 cm face, engraved sigil, oiled, screw back, cord ring</td><td>hand-made</td></tr>
+<tr><td>mirror</td><td>4.5 cm, 0.3 cm thick (the melong), or any 4&ndash;6 cm metal, obsidian or glass disc</td><td>found</td></tr>
+<tr><td>cradle</td><td>leather, 4.9 cm, lip wraps the mirror's edge, brass contact pad inside, male snap stud</td><td>hand-made</td></tr>
+<tr><td>snap</td><td>conductive press stud; female in the case wired to the touch pin</td><td>&pound;3</td></tr>
+<tr><td>cord and lead</td><td>waxed cotton or leather cord; 2 cm silicone-wire lead</td><td>&pound;5</td></tr>
 <tr><td>battery</td><td>CR2032 coin cell, months of use</td><td>&pound;1</td></tr>
-<tr><td>the listener</td><td>a few lines of Python on the laptop (<tt>bleak</tt>), or the blimp's own boards, or Chrome over Web Bluetooth</td><td>free</td></tr>
+<tr><td>listener</td><td>a few lines of Python on the laptop (<tt>bleak</tt>), the blimp's own boards, or Chrome over Web Bluetooth</td><td>free</td></tr>
+<tr><td>worn</td><td>about 12 cm from the top of the mirror to the bottom of the case; about 25 g plus the mirror</td><td></td></tr>
 </table>
 
-<h2>6. Finding a small mirror</h2>
-<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Chest mirrors come in many sizes. Look for one between <b>4 and 6 cm</b> across. Whatever size you find, turn the wooden case to match it: the case can be any diameter from about 4.2 cm (the Puck's 3.6 cm plus two thin walls) upward. Measure across the face, not the loop. Check the back is flat enough for the leather and the snap stud.</p>
-<p><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> same size means they're twins!! one shines and one thinks, worn one above the other. like us.</p>
-
-<h2>7. House rules</h2>
+<h2 id="rules"><small>10</small>House rules</h2>
 <ul>
-<li>No microphone, no camera, no GPS. The lace tells touched from not touched, and still from moving.</li>
-<li>Presence is room-level at most, and it is forgotten when you leave.</li>
-<li>Everything comes off. The mirror clips off, the cord lifts over your head.</li>
+<li>No microphone, no camera, no GPS.</li>
+<li>Presence is room-level at most and forgotten when you leave.</li>
 <li>Posting, paying and deleting never happen from one touch alone.</li>
-<li>The mirror is our own disc, made with a nod to the shaman's chest mirror. We don't wire up a ritual object.</li>
+<li>The mirror is held and never altered.</li>
+</ul>
+
+<h2 id="blueprints"><small>11</small>Blueprints</h2>
+<p>Line drawings from the same CAD model, made in code with CadQuery. Click for full size.</p>
+<div class="bp">
+<div><a href="img/06_pair_face.jpg"><img src="img/06_pair_face.jpg" alt="Dimensioned drawing: the case and the mirror side by side, each 4.5 cm across."></a><div class="cap">The pair to scale, 4.5 cm each.</div></div>
+<div><a href="img/02_case_front.jpg"><img src="img/02_case_front.jpg" alt="Line drawing of the case face on."></a><div class="cap">Case, face on.</div></div>
+<div><a href="img/03_case_section.jpg"><img src="img/03_case_section.jpg" alt="Half section of the case with the Puck inside."></a><div class="cap">Half section.</div></div>
+<div><a href="img/01_case_exploded.jpg"><img src="img/01_case_exploded.jpg" alt="Exploded view from below: back cap, Puck, case."></a><div class="cap">Opened, from below.</div></div>
+<div><a href="img/04_mirror_back.jpg"><img src="img/04_mirror_back.jpg" alt="The mirror in its cradle from behind, with the snap stud."></a><div class="cap">Mirror in its cradle, from behind.</div></div>
+<div><a href="img/05_worn_together.jpg"><img src="img/05_worn_together.jpg" alt="The mirror above, the case hanging below on a short lead."></a><div class="cap">Worn together.</div></div>
+</div>
+
+<h2 id="lineage"><small>12</small>Lineage</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Little_Printer">Little Printer</a> (BERG, 2012): a receipt printer with a face that printed small daily things. Scramble's fax is its cousin.</li>
+<li>"Be as smart as a puppy", BERG's design rule for objects that are a little bit alive. Our version: as smart as a cat, and allowed to ignore you.</li>
+<li><a href="https://www.espruino.com/Puck.js">Puck.js</a> by Espruino, the little JavaScript computer inside.</li>
+<li>The shaman's chest mirror, worn to see and to be seen through. We hold one; we don't modify it.</li>
 </ul>
 
 <hr>
 <p><span class="k">/ᐠ｡ﻌ｡ᐟ\</span> <b>Scramble:</b> you all get cords that buzz when i want something. i have wanted this for years.</p>
 <hr>
-<address>wib&amp;wob &middot; drawings made in code (CadQuery) &middot; a working page, not a finished work &middot; <a href="https://wibandwob.com">wibandwob.com</a></address>
+<address>wib&amp;wob &middot; renders in Blender, drawings in CadQuery, both from one model &middot; a working page &middot; <a href="https://wibandwob.com">wibandwob.com</a></address>
+</div>
 
+<script>
+// highlight the section you're reading in the jumper
+(function () {
+  var links = {}, nav = document.getElementById('jump');
+  if (!nav || !('IntersectionObserver' in window)) return;
+  nav.querySelectorAll('a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting && links[e.target.id]) {
+        Object.values(links).forEach(function (a) { a.classList.remove('on'); });
+        links[e.target.id].classList.add('on');
+      }
+    });
+  }, { rootMargin: '0px 0px -70% 0px' });
+  document.querySelectorAll('h2[id]').forEach(function (h) { io.observe(h); });
+})();
+</script>
 </body>
 </html>
