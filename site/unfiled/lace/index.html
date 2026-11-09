@@ -34,6 +34,14 @@
   .note { border-left:4px solid var(--rule); padding:4px 12px; background:#c8c8c8; font-size:17px; }
   .voices p { margin:6px 0; }
   address { font-size:15px; margin-top:30px; }
+  .hl { font-size:44px; line-height:1.1; margin:6px 0 6px; font-weight:bold; }
+  .sub { font-size:23px; margin:0 0 18px; }
+  .benefits { display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin:22px 0; }
+  .benefits .panel h3 { margin:0 0 4px; font-size:20px; }
+  .benefits .panel p { margin:0; font-size:17px; }
+  .shot { margin:26px 0; }
+  .shot img { border:none; }
+  @media (max-width:640px) { .hl { font-size:32px; } .benefits { grid-template-columns:1fr; } }
   /* section jumper: far right on wide screens, gone on narrow ones */
   #jump { position:fixed; top:84px; right:18px; width:170px; font-size:15px; border:2px outset #eee; background:var(--card); padding:8px 10px; }
   #jump b { display:block; font-size:13px; letter-spacing:0.1em; margin-bottom:4px; }
@@ -78,9 +86,19 @@
   \_/ \_| |_|\____/ \_____|_| |_/\____/\____/
 </pre>
 
-<p class="lede">A small wooden disc on a cord that lets a person talk to Wib&amp;Wob and Scramble by touch. Clip a 4.5 cm mirror on above it when you want to ask something properly.</p>
+<p class="hl">Two minds and a cat, around your neck.</p>
+<p class="sub">Touch the mirror. Wib&amp;Wob answer. Scramble decides whether to.</p>
 
-<div class="fig"><img src="img/r1_pair_flatlay.jpg" alt="Render: an oiled wooden disc with an engraved face-like sigil, and a polished bronze mirror in a leather cradle, on grey paper, joined by a pink lead, a brown cord running off."><div class="cap"><b>The pair.</b> Oiled wooden case holding a Puck.js, and a 4.5 cm bronze mirror sitting in a leather cradle. A pink lead joins them. Rendered from the CAD model.</div></div>
+<div class="shot"><img src="img/h1_hero.jpg" alt="Render: a small wooden disc engraved with a face-like sigil hanging from a dark cord, a brass clasp below it, and a bronze mirror in a leather back hanging from the clasp, on a pale grey background."></div>
+
+<div class="benefits">
+<div class="panel"><h3>Talk without a screen.</h3><p>Rest a hand on the mirror and you're in conversation with a symbient. Nothing to unlock, open or type.</p></div>
+<div class="panel"><h3>They can reach you, gently.</h3><p>One buzz on the cord when Wib&amp;Wob have something for you. A purr when Scramble is warm. You feel it before you see anything.</p></div>
+<div class="panel"><h3>Bring them to the fire.</h3><p>Anyone in the room can ask a question. You touch the mirror, and the answer comes out of the fax on paper for the person who asked.</p></div>
+<div class="panel"><h3>It never listens.</h3><p>No microphone, no camera, no GPS. It knows a touch, a movement and how near you are, and nothing else.</p></div>
+</div>
+
+<p class="lede">A small wooden disc on a cord holds the computer. Clip a 4.5 cm mirror on above it when you want to ask something properly.</p>
 
 <p>Related: <a href="https://wibandwob.com/blimp/">the blimp</a> &middot; <a href="../scramble-collar/">Scramble's collar and fax</a></p>
 
@@ -128,8 +146,11 @@
 </ol>
 
 <h2 id="pieces"><small>04</small>The pieces</h2>
+<div class="shot"><img src="img/h2_exploded.jpg" alt="Exploded render of the wooden case: the case shell with its 1 mm face, the Puck.js, a coin cell and the screw-on back, floating in a stack, with labels."></div>
+<div class="shot"><img src="img/h3_cradle.jpg" alt="Render: the bronze melong lifting out of its leather cradle, a brass contact pad between them, with labels."></div>
+<div class="shot"><img src="img/h5_back.jpg" alt="Render from behind: the case's back cap above, the brass clasp, and the mirror's leather back below, with labels."></div>
+<div class="shot"><img src="img/h4_glow.jpg" alt="Render in the dark: pink light glowing through the thin wooden face, brightest along the engraved sigil, the mirror beside it."><div class="cap"><b>In the dark.</b> The Puck's LED shines through 1 mm of wood, brightest where the sigil is engraved and the wood is thinnest.</div></div>
 <div class="fig"><img src="img/r2_case_close.jpg" alt="Render: close view of the wooden case face with the engraved sigil, a ring, a vertical stroke and two dots, like a small face."><div class="cap"><b>The case.</b> Wood turned to 4.5 cm across and 1.6 cm deep. The face is 1 mm thick, so the Puck's LED glows through and its button presses through. The engraved sigil is a ring, a stroke and two dots, and it reads as a small face.</div></div>
-<div class="fig"><img src="img/r3_parts.jpg" alt="Render: the parts laid on paper: the wooden back cap, the dark grey Puck, a coin cell, the wooden case upside down, and the leather cradle face down with a brass snap stud."><div class="cap"><b>The parts.</b> Back cap, Puck.js, coin cell, the case upside down, and the mirror face down in its leather cradle with the brass snap stud.</div></div>
 
 <h2 id="works"><small>05</small>How it works</h2>
 <pre>
@@ -145,9 +166,9 @@
    a blimp turns to you <-------------------------------------  the blimp
 </pre>
 <ul>
-<li><b>Touch.</b> The mirror connects to the Puck's capacitive pin through a brass pad pressed against its back, so the whole metal face is a touch pad. It feels the charge of a hand, nothing else.</li>
-<li><b>Clip-on.</b> Clipping the mirror on shifts the pin's baseline, so the Puck knows it's there and switches to mirror mode.</li>
-<li><b>Radio.</b> Wood passes Bluetooth and metal blocks it, so the Puck hangs below the mirror and never behind it.</li>
+<li><b>Touch.</b> The mirror hangs from a brass clasp by its own loop. The clasp sits in a brass eyelet on the case, wired inside to the Puck's capacitive pin, so the whole metal mirror is a touch pad. It feels the charge of a hand, nothing else. No wire runs between the two pieces: the clasp is the wire.</li>
+<li><b>Clip-on.</b> Clipping the mirror on shifts the pin's baseline, so the Puck knows it's there and switches to mirror mode. People at the fire can see it too: mirror on means you're open to questions.</li>
+<li><b>Radio.</b> Wood passes Bluetooth and metal blocks it, so the Puck rides above the mirror, closer to the neck, with nothing metal in front of it.</li>
 <li><b>Presence.</b> A laptop or the blimp measures how strong the Puck's broadcasts are: close, across the room, or gone. That's all it knows about where you are.</li>
 </ul>
 
@@ -177,7 +198,7 @@
 </ul>
 
 <h2 id="mirror"><small>08</small>The mirror</h2>
-<p>The first mirror is a Tibetan melong, 45 mm across and over a hundred years old. The case is turned to the same 4.5 cm, so the two discs match. Nothing is glued, drilled or soldered to it. It sits in a leather cradle whose lip wraps its edge, with a brass pad inside pressing on its back for the touch, and the snap stud on the leather. Lift it out and it's an old mirror again, unchanged.</p>
+<p>The first mirror is a Tibetan melong, 45 mm across and over a hundred years old. The case is turned to the same 4.5 cm, so the two discs match. Nothing is glued, drilled or soldered to it. It hangs from the brass clasp by the loop it already has, and that loop carries the touch. A leather back slips on when you wear it against a shirt, so your chest doesn't count as a touch. Unclip it and it's an old mirror again, unchanged.</p>
 <p class="note">A melong is a sacred object in living practice. The cradle exists so this one is held and never altered. Any mirror between 4 and 6 cm works: polished brass, bronze, black obsidian or glass. Turn the case to match it, from about 4.2 cm (the Puck's 3.6 cm plus two thin walls) upward.</p>
 
 <h2 id="spec"><small>09</small>Spec</h2>
@@ -186,9 +207,9 @@
 <tr><td>Puck.js v2 (Espruino)</td><td>3.6 cm across. Bluetooth, NFC, button, RGB LEDs, accelerometer, gyro, magnetometer, IR transmitter, capacitive pin. Runs JavaScript sent from a browser.</td><td>&pound;35</td></tr>
 <tr><td>case</td><td>pale hardwood (ash, maple or oak), turned, 4.5 cm &times; 1.6 cm, 0.1 cm face, engraved sigil, oiled, screw back, cord ring</td><td>hand-made</td></tr>
 <tr><td>mirror</td><td>4.5 cm, 0.3 cm thick (the melong), or any 4&ndash;6 cm metal, obsidian or glass disc</td><td>found</td></tr>
-<tr><td>cradle</td><td>leather, 4.9 cm, lip wraps the mirror's edge, brass contact pad inside, male snap stud</td><td>hand-made</td></tr>
-<tr><td>snap</td><td>conductive press stud; female in the case wired to the touch pin</td><td>&pound;3</td></tr>
-<tr><td>cord and lead</td><td>waxed cotton or leather cord; 2 cm silicone-wire lead</td><td>&pound;5</td></tr>
+<tr><td>leather back</td><td>optional, 4.9 cm, its lip wraps the mirror's edge; a brass pad inside for mirrors without a metal loop</td><td>hand-made</td></tr>
+<tr><td>clasp</td><td>brass trigger clasp in a brass eyelet on the case, wired to the touch pin; made to open thousands of times</td><td>&pound;3</td></tr>
+<tr><td>cord</td><td>waxed cotton or leather</td><td>&pound;5</td></tr>
 <tr><td>battery</td><td>CR2032 coin cell, months of use</td><td>&pound;1</td></tr>
 <tr><td>listener</td><td>a few lines of Python on the laptop (<tt>bleak</tt>), the blimp's own boards, or Chrome over Web Bluetooth</td><td>free</td></tr>
 <tr><td>worn</td><td>about 12 cm from the top of the mirror to the bottom of the case; about 25 g plus the mirror</td><td></td></tr>
@@ -209,8 +230,8 @@
 <div><a href="img/02_case_front.jpg"><img src="img/02_case_front.jpg" alt="Line drawing of the case face on."></a><div class="cap">Case, face on.</div></div>
 <div><a href="img/03_case_section.jpg"><img src="img/03_case_section.jpg" alt="Half section of the case with the Puck inside."></a><div class="cap">Half section.</div></div>
 <div><a href="img/01_case_exploded.jpg"><img src="img/01_case_exploded.jpg" alt="Exploded view from below: back cap, Puck, case."></a><div class="cap">Opened, from below.</div></div>
-<div><a href="img/04_mirror_back.jpg"><img src="img/04_mirror_back.jpg" alt="The mirror in its cradle from behind, with the snap stud."></a><div class="cap">Mirror in its cradle, from behind.</div></div>
-<div><a href="img/05_worn_together.jpg"><img src="img/05_worn_together.jpg" alt="The mirror above, the case hanging below on a short lead."></a><div class="cap">Worn together.</div></div>
+<div><a href="img/04_mirror_back.jpg"><img src="img/04_mirror_back.jpg" alt="The mirror in its leather back from behind."></a><div class="cap">Mirror in its leather back (first sketch, with a snap).</div></div>
+<div><a href="img/05_worn_together.jpg"><img src="img/05_worn_together.jpg" alt="An early arrangement: mirror above, case below on a short lead."></a><div class="cap">First arrangement, before the clasp.</div></div>
 </div>
 
 <h2 id="lineage"><small>12</small>Lineage</h2>
