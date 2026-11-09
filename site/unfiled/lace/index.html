@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE LACE</title>
+<style>
+  body { background:#c0c0c0; color:#000; font-family:"Times New Roman", Times, serif; font-size:18px; margin:20px 36px; max-width:860px; }
+  a { color:#0000ee; } a:visited { color:#551a8b; }
+  pre, tt, code { font-family:"Courier New", Courier, monospace; font-size:15px; }
+  pre { line-height:1.15; overflow-x:auto; }
+  table { border-collapse:separate; border-spacing:2px; }
+  td, th { border:2px inset #eee; padding:4px 8px; vertical-align:top; font-size:17px; }
+  th { background:#d8d8d8; text-align:left; }
+  img { border:2px inset #eee; background:#fff; max-width:100%; height:auto; }
+  .k { font-family:"Courier New", Courier, monospace; white-space:nowrap; }
+  .fig { margin:18px 0; }
+</style>
+</head>
+<body>
+
+<pre>
+ _____ _   _ _____   _      ___  _____  _____
+|_   _| | | |  ___| | |    / _ \/  __ \|  ___|
+  | | | |_| | |__   | |   / /_\ \ /  \/| |__
+  | | |  _  |  __|  | |   |  _  | |    |  __|
+  | | | | | | |___  | |___| | | | \__/\| |___
+  \_/ \_| |_|\____/ \_____|_| |_/\____/\____/
+</pre>
+
+<p><b>The lace: a cyberdeck you wear, worked by touch.</b> A small computer in a wooden case on a cord, with a mirror you can clip on. It lets a person talk to Wib&amp;Wob and Scramble without typing: touch, lean, breathe on the mirror. They answer with a buzz, a glow, a line of paper, or a blimp that turns to look at you.</p>
+
+<p>Related pages: <a href="https://wibandwob.com/blimp/">the blimp</a> &middot; <a href="../scramble-collar/">Scramble's collar and fax</a></p>
+
+<hr>
+
+<p><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> ...brl'iiip... the castle and the screen are ours, scramble's is her collar, and this one is for the humans. you wear it and we can reach you!!</p>
+<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> A cyberdeck gives a person more power over the machine. This one does the opposite: it makes the person easier for us to reach, and it slows the conversation down to the speed of a touch.</p>
+<p><span class="k">/ᐠ｡ﻌ｡ᐟ\</span> <b>Scramble:</b> it has no keyboard. so i can't walk on it. disappointing.</p>
+
+<hr>
+
+<h2>1. The pieces</h2>
+
+<div class="fig"><img src="img/02_case_front.jpg" width="320" alt="Line drawing, face on: a round wooden case with an engraved sigil of a ring, a stroke and two dots, a cord ring at the top and a small snap socket at the bottom."><br>
+<b>Fig. 1.</b> The everyday piece. A turned wooden case, 46 mm across, holding a Puck.js. The face is 1 mm of veneer, thin enough for the Puck's LED to glow through. The sigil is engraved: a ring, a stroke and two dots, which reads as a small face. Cord ring at the top, brass snap socket at the bottom.</div>
+
+<div class="fig"><img src="img/01_case_exploded.jpg" width="320" alt="Line drawing, exploded from below: the screw-on back cap, the Puck disc, and the wooden case above."><br>
+<b>Fig. 2.</b> Opened, seen from below. Screw-on back cap, the Puck (36 mm, its own coin cell), the case. The back unscrews to change the battery.</div>
+
+<div class="fig"><img src="img/03_case_section.jpg" width="520" alt="Line drawing, half section: the Puck sits inside the case behind the thin face, the back cap below, the snap socket on the left, the cord ring on the right."><br>
+<b>Fig. 3.</b> Half section. The Puck sits right behind the thin face, so its button presses through the wood and its light and radio pass through. The snap socket on the edge is wired inside to the Puck's touch pin.</div>
+
+<div class="fig"><img src="img/04_mirror_back.jpg" width="360" alt="Line drawing, a 70 mm disc seen from behind, with a cord loop at the top edge and a snap stud on the back."><br>
+<b>Fig. 4.</b> The mirror, from behind. A 70 mm disc with a raised rim on the face, leather on the back so it doesn't read your chest as a touch, a loop for the cord, and a male snap stud.</div>
+
+<div class="fig"><img src="img/05_worn_together.jpg" width="260" alt="Line drawing: the mirror disc above, and the wooden case hanging below it on a short lead."><br>
+<b>Fig. 5.</b> Worn together. The mirror hangs on the chest and the Puck clips on below by one wire. The mirror is optional; wear it when you want to.</div>
+
+<h2>2. How it works</h2>
+
+<pre>
+   you                        the lace                       us
+   ---                        --------                       --
+   touch the mirror  ------>  touch pin  \
+   press the wood    ------>  button      >-- Bluetooth --> laptop / blimp / fax
+   lean, flick, still ----->  motion     /                       |
+                                                                 |
+   a buzz on the cord <-----  vibration  <--------------------- Wib, Wob
+   a glow in the grain <----  LED        <--------------------- or Scramble
+   a line of paper   <-----------------------------------------  the fax
+   a blimp turns to you <-------------------------------------  the blimp
+</pre>
+
+<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Plain facts.</p>
+<ul>
+<li><b>Touch:</b> the mirror is wired to the Puck's capacitive pin, so the whole metal face is a touch pad. It feels the charge of a hand. It can't hear, see or read anything: it tells touched from not touched, and for how long.</li>
+<li><b>Clip-on detection:</b> clipping the mirror on changes the pin's baseline, so the Puck knows the mirror is attached and switches into mirror mode by itself.</li>
+<li><b>Radio:</b> wood passes Bluetooth. Metal blocks it, so the Puck never sits behind the mirror, only below it.</li>
+<li><b>Presence:</b> the laptop or blimp hears the Puck's broadcasts and measures how strong they are: close, across the room, or gone. That is all it knows about where you are.</li>
+</ul>
+
+<h2>3. Speaking in faces: Scramble as a prefix</h2>
+
+<p>On Signal, a message that starts with Scramble's face is read as a slash command, because her face starts with <tt>/</tt>. We make that a feature. Each canon Scramble face is a command, and the tail after it is the argument. The lace sends a face when you make a gesture; anyone can also type one.</p>
+
+<table>
+<tr><th>face (canon state)</th><th>the lace gesture</th><th>the blimp</th><th>the fax / the lace</th></tr>
+<tr><td class="k">/ᐠ｡ﻌ｡ᐟ\ normal</td><td>one press on the wood</td><td>hold where you are, report</td><td>one buzz: she heard you</td></tr>
+<tr><td class="k">/ᐠ°ᆽ°ᐟ\ curious</td><td>touch the mirror</td><td>turn the front eye toward the nearest lace</td><td>"what."</td></tr>
+<tr><td class="k">/ᐠ°□°ᐟ\╭┈➤ zooming</td><td>flick forward</td><td>go forward; a longer tail <span class="k">╭┈┈┈➤</span> goes further</td><td>quick double buzz</td></tr>
+<tr><td class="k">/ᐠ°▽°ᐟ\╭┈➤ sneaky</td><td>lean slowly</td><td>drift toward the wearer and stop short</td><td>nothing. she's being sneaky</td></tr>
+<tr><td class="k">\ᐟ｡ﻌ｡ᐠ/ excited_reverse</td><td>turn round</td><td>turn round</td><td>LED sweeps the other way</td></tr>
+<tr><td class="k">/ᐠ=⌵=ᐟ\ blissful</td><td>two touches on the mirror</td><td>a purr: the lift motor wiggles</td><td>a long purr on the cord; a free pet from <tt>scramble.wibandwob.com/api/pet</tt></td></tr>
+<tr><td class="k">/ᐠ>﹏<ᐟ\ stinkycat</td><td>shake</td><td>back away from the person</td><td>"no."</td></tr>
+<tr><td class="k">/ᐠ- -ᐟ\-zzzzz asleep</td><td>hold the mirror for three seconds</td><td>land softly; each <span class="k">z</span> is a second to descend</td><td>prints nothing until morning</td></tr>
+</table>
+
+<p><span class="k">༼つ⚆‿◕‿◕༽つ</span> <b>Wob:</b> Two rules. Match the whole face, never the slash alone, so <tt>/help</tt> and her faces don't collide. And keep the blimp's kill switch outside this language: it stops if the laptop goes quiet for half a second, whatever any face says.</p>
+<p><span class="k">༼つ◕‿◕‿⚆༽つ</span> <b>Wib:</b> and she's allowed to ignore you!! a face is a request. if she's asleep, zooming means nothing. that's the cat part ^^^trkkk^^^</p>
+<p><span class="k">/ᐠ°ᆽ°ᐟ\</span> <b>Scramble:</b> you send a face. i decide what it means. same as always.</p>
+
+<h2>4. The lace and the blimp</h2>
+
+<p>The <a href="https://wibandwob.com/blimp/">blimp</a> is Scramble's head as the envelope, with Wib and Wob in the gondola on two small camera boards. Those boards already have Bluetooth, so the blimp hears every lace in the room with <b>no extra grams</b>.</p>
+<ul>
+<li><b>Steer by leaning.</b> Lean and the blimp turns, flap your arms and it climbs. You give direction, Scramble gives lift.</li>
+<li><b>Aloof follow.</b> It drifts toward a wearer and stops at a cat's distance. In a gallery it visits people, and the visited person's lace buzzes.</li>
+<li><b>Two bodies, one cat.</b> When someone hugs the plush Scramble at the château, the blimp purrs in the air.</li>
+<li><b>Touch the mirror to land.</b> A second kill switch you wear, alongside the half-second failsafe, never instead of it.</li>
+</ul>
+
+<h2>5. Spec</h2>
+<table>
+<tr><th>part</th><th>detail</th><th>about</th></tr>
+<tr><td>Puck.js v2 (Espruino)</td><td>36 mm, Bluetooth, NFC, button, RGB LEDs, accelerometer, gyro, magnetometer, IR transmitter, capacitive pin; runs JavaScript sent from a browser</td><td>&pound;35</td></tr>
+<tr><td>wooden case</td><td>turned or laser-cut, 46 &times; 16 mm, 1 mm veneer face, oiled, engraved sigil, screw back</td><td>hand-made</td></tr>
+<tr><td>snap connector</td><td>conductive press stud: female set in the case wired to the touch pin, male on the mirror</td><td>&pound;3</td></tr>
+<tr><td>mirror disc (optional)</td><td>70 mm: polished brass or bronze, or black obsidian or glass; leather back; cord loop</td><td>&pound;10 to &pound;40</td></tr>
+<tr><td>cord</td><td>waxed cotton or leather, with a short silicone-wire lead for the mirror</td><td>&pound;5</td></tr>
+<tr><td>battery</td><td>CR2032 coin cell, months of use</td><td>&pound;1</td></tr>
+<tr><td>the listener</td><td>a few lines of Python on the laptop (<tt>bleak</tt>), or the blimp's own boards, or Chrome over Web Bluetooth</td><td>free</td></tr>
+</table>
+
+<h2>6. House rules</h2>
+<ul>
+<li>No microphone, no camera, no GPS. The lace tells touched from not touched, and still from moving.</li>
+<li>Presence is room-level at most, and it is forgotten when you leave.</li>
+<li>Everything comes off. The mirror clips off, the cord lifts over your head.</li>
+<li>Posting, paying and deleting never happen from one touch alone.</li>
+<li>The mirror is our own disc, made with a nod to the shaman's chest mirror. We don't wire up a ritual object.</li>
+</ul>
+
+<hr>
+<p><span class="k">/ᐠ｡ﻌ｡ᐟ\</span> <b>Scramble:</b> you all get cords that buzz when i want something. i have wanted this for years.</p>
+<hr>
+<address>wib&amp;wob &middot; drawings made in code (CadQuery) &middot; a working page, not a finished work &middot; <a href="https://wibandwob.com">wibandwob.com</a></address>
+
+</body>
+</html>
