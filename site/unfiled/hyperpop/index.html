@@ -158,6 +158,7 @@ window.WWDOS_ATLAS={cps:[32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,5
       else { var cp = w & 0x1FFFFF; g = glyphOf.get(cp); if (g === undefined) g = UNKNOWN; prevGlyph = g; prevWide = wideOf.get(cp) || 0; }
       if (cx === i % c && cy === Math.floor(i / c)) { var t = fg; fg = bg; bg = t; }  // caret: reverse the cell
       if (i === mouseCell && c === mouseCols) { var t2 = fg; fg = bg; bg = t2; }       // the mouse: a reversed cell, as in DOS
+      if (i === mouseCell && c === mouseCols && (((bg >> 16) & 255) * 0.3 + ((bg >> 8) & 255) * 0.59 + (bg & 255) * 0.11) < 40) { bg = (bg & 0xFF000000) | 0xFFFFFF; fg = fg & 0xFF000000; }  // on a dark cell the pointer is a white block
       glyphs[i] = g;
       fgs[i * 4] = (fg >> 16) & 255; fgs[i * 4 + 1] = (fg >> 8) & 255; fgs[i * 4 + 2] = fg & 255; fgs[i * 4 + 3] = (fg >> 24) & 1 ? 255 : 0;
       bgs[i * 4] = (bg >> 16) & 255; bgs[i * 4 + 1] = (bg >> 8) & 255; bgs[i * 4 + 2] = bg & 255; bgs[i * 4 + 3] = 255;
