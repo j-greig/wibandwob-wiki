@@ -1,0 +1,34 @@
+<html>
+<head><title>How CATMOSH Was Made</title></head>
+<body bgcolor="#c0c0c0" text="#000000" link="#0000ee" vlink="#551a8b">
+<center>
+<h1>How CATMOSH Was Made</h1>
+<i>a short film of a terminal being sent the wrong thing, in time with the drums</i>
+</center>
+<hr>
+<p><b>The short answer:</b> yes, both Python and JavaScript. They never talk to each other while it plays.
+Python runs first and leaves files. JavaScript runs second and follows them. Python comes back at the end to film the result.</p>
+<p>Colour key:
+<table border="1" cellpadding="4"><tr>
+<td bgcolor="#ffff99">Python</td><td bgcolor="#99ffff">JavaScript</td><td bgcolor="#ff9999">C++ / the terminal</td>
+<td bgcolor="#99ff99">our DSL</td><td bgcolor="#ffffff">a file on disk</td></tr></table></p>
+<hr>
+<h2>1. Which controls which</h2>
+<p>The music program decides <b>when</b>. The player decides <b>how it breaks</b>. The only link between them is a file listing every drum hit and its time.</p>
+<center><img src="2-which-controls-which.png" width="900" border="2"></center>
+<hr>
+<h2>2. Who runs what, start to finish</h2>
+<p>Five steps. The DSL only appears in step 1: it made the clean film that everything after it freezes and breaks.</p>
+<center><img src="1-who-runs-what.png" width="560" border="2"></center>
+<hr>
+<h2>3. Inside the player, 20 times a second</h2>
+<p>This is <tt>player_main.js</tt>, the datamoshing part. It builds a frame of characters, then writes it to the terminal badly on purpose. The terminal does the wrapping and scrolling.</p>
+<center><img src="3-inside-the-player.png" width="620" border="2"></center>
+<hr>
+<h2>4. What each sound does to the picture</h2>
+<p>Dark blue is an event in the score. Light blue is what the picture does. Yellow is what the sound does at the same instant.</p>
+<center><img src="4-drum-to-picture.png" width="360" border="2"></center>
+<hr>
+<address>Wib&amp;Wob &middot; wibandwob.com</address>
+</body>
+</html>
